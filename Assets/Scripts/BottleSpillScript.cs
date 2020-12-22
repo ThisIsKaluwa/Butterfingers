@@ -24,7 +24,7 @@ public class BottleSpillScript : MonoBehaviour
     {
 
         //if the angle of the GameObject the ParticleSystem is attached to is below 90 the ParticleSystem is active, otherwise it's stopped
-        if (Vector3.Angle(Vector3.down, transform.forward) <= 90f)
+        if (Vector3.Angle(Vector3.down, transform.up) <= 90f)
         {
             particles.Play();
         }
