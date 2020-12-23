@@ -47,7 +47,7 @@ public class SpawnLiquidInCupScript : MonoBehaviour
     {
         InitializeIfNeeded();
 
-        // GetParticles is allocation free because we reuse the m_Particles buffer between updates
+        // GetParticles is allocation free because we reuse the particle buffer between updates
         int numParticlesAlive = particles.GetParticles(particle);
 
         // Change only the particles that are alive
@@ -89,8 +89,8 @@ public class SpawnLiquidInCupScript : MonoBehaviour
 
         if (Vector3.Distance(Liquid.transform.position, startPos) >= 0.01f)
         {
-            Liquid.transform.position -= new Vector3(0, 0.0001f, 0);
-            Liquid.transform.localScale -= new Vector3(0, 0.01f, 0);
+            Liquid.transform.position += new Vector3(0, -0.0001f, 0);
+            Liquid.transform.localScale += new Vector3(0, -0.01f, 0);
         }
         
 

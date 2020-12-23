@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6478869836549106347}
   - component: {fileID: 8241521407614917015}
   m_Layer: 0
-  m_Name: Ketchup_Mustard
+  m_Name: Mustard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8598992687153584881}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.189, y: -0.123, z: 0.542}
+  m_LocalPosition: {x: -0.087, y: -0.248, z: 0.573}
   m_LocalScale: {x: 0.0015, y: 0.0015, z: 0.0015}
   m_Children: []
   m_Father: {fileID: 0}
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6067409850511221803, guid: fa076177e7855fc4db04b3e7e38ae2ea, type: 3}
+  - {fileID: 2100000, guid: 6aa001221be3211499aed4b6836c6ad5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
