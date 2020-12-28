@@ -15,6 +15,7 @@ public class SpawnLiquidInCupScript : MonoBehaviour
     Vector3 startSize; 
     bool glassIsFull = false;
     bool glassIsUpright = true;
+    bool noMoreDespawn = false;
 
     // Start is called before the first frame update
     void Start()
@@ -96,17 +97,24 @@ public class SpawnLiquidInCupScript : MonoBehaviour
 
         glassIsFull = false;
 
-        while(Liquid.transform.localScale.y >= 0.05f){
 
-
-        Liquid.transform.Translate(new Vector3 (0, - 0.001f, 0) * Time.deltaTime * 20 ,Space.Self);
+        if (Liquid.transform.localScale.y >= 0.06f)
+        {
+            
+        Liquid.transform.Translate(new Vector3 (0, - 0.001f, 0) * Time.deltaTime * 16.5f ,Space.Self);
 
         Vector3 size = Liquid.transform.localScale;
         size.y -= 0.1f * Time.deltaTime * 20;
         Liquid.transform.localScale = size;
+
+        }
+        else
+        {
+             Liquid.GetComponent<Renderer>().enabled = false;
         }
 
-        Liquid.GetComponent<Renderer>().enabled = false;
+        
+
     }
 
     bool checkIfGlassUpright(){
