@@ -8,9 +8,9 @@ public class SpawnLiquidInCupScript : MonoBehaviour
     public ParticleSystem particles; 
     ParticleSystem.Particle[] particle;
     public GameObject Liquid;
-    public GameObject glass;
+    public GameObject Glass;
 
-
+    GameObject newLiquid;
     Vector3 startPos;
     Vector3 startSize; 
     bool glassIsFull = false;
@@ -20,8 +20,11 @@ public class SpawnLiquidInCupScript : MonoBehaviour
     void Start()
     {
         Liquid.GetComponent<Renderer>().enabled = false;
-        startPos = Liquid.transform.position;
+        startPos = Liquid.transform.localPosition;
         startSize = Liquid.transform.localScale;
+
+        Debug.Log(startPos);
+        Debug.Log(startSize);
 
     }
 
@@ -54,14 +57,18 @@ public class SpawnLiquidInCupScript : MonoBehaviour
         for (int i = 0; i < numParticlesAlive; i++)
         {
 
-            if (Vector3.Distance(particle[i].position, glass.transform.position) <= 0.2 && !glassIsFull)
+            if (Vector3.Distance(particle[i].position, Glass.transform.position) <= 0.2 && !glassIsFull)
             {
                 
                 Liquid.GetComponent<Renderer>().enabled = true;
-                Liquid.transform.position += new Vector3(0, 0.0001f, 0);
-                Liquid.transform.localScale += new Vector3(0, 0.01f, 0);
-
-                 
+                
+                Vector3 pos = Liquid.transform.position;
+                pos.y += 0.001f * Time.deltaTime * 2;
+                Liquid.transform.position = pos;  
+             
+                Vector3 size = Liquid.transform.localScale;
+                size.y += 0.1f * Time.deltaTime * 2;
+                Liquid.transform.localScale = size;
 
                 if (Liquid.transform.localScale.y >= 4.8f)
                 {
@@ -69,6 +76,7 @@ public class SpawnLiquidInCupScript : MonoBehaviour
                 }
             }
         }
+
 
         // Apply the particle changes to the Particle System
         particles.SetParticles(particle, numParticlesAlive);
@@ -87,19 +95,14 @@ public class SpawnLiquidInCupScript : MonoBehaviour
 
         glassIsFull = false;
 
-        if (Vector3.Distance(Liquid.transform.position, startPos) >= 0.01f)
-        {
-            Liquid.transform.position += new Vector3(0, -0.0001f, 0);
-            Liquid.transform.localScale += new Vector3(0, -0.01f, 0);
-        }
-        
+        Liquid.transform.position = startPos;
+        Liquid.transform.localScale = startSize;
 
-        Liquid.GetComponent<Renderer>().enabled = false;
         
     }
 
     bool checkIfGlassUpright(){
-        if (Vector3.Dot(glass.transform.up, Vector3.up) >= 0.5f)
+        if (Vector3.Dot(Glass.transform.up, Vector3.up) >= 0.5f)
         {
             return true;
         }
