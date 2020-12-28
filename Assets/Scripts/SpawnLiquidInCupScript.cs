@@ -20,11 +20,9 @@ public class SpawnLiquidInCupScript : MonoBehaviour
     void Start()
     {
         Liquid.GetComponent<Renderer>().enabled = false;
-        startPos = Liquid.transform.localPosition;
+        startPos = Liquid.transform.position;
         startSize = Liquid.transform.localScale;
 
-        Debug.Log(startPos);
-        Debug.Log(startSize);
 
     }
 
@@ -61,16 +59,19 @@ public class SpawnLiquidInCupScript : MonoBehaviour
             {
                 
                 Liquid.GetComponent<Renderer>().enabled = true;
+
+                Liquid.transform.Translate(new Vector3 (0, + 0.001f, 0) * Time.deltaTime * 2 ,Space.Self);
                 
-                Vector3 pos = Liquid.transform.position;
-                pos.y += 0.001f * Time.deltaTime * 2;
-                Liquid.transform.position = pos;  
+                // Vector3 pos = Liquid.transform.position;
+                // pos.y += 0.001f * Time.deltaTime * 2;
+                // Liquid.transform.position = pos;  
              
                 Vector3 size = Liquid.transform.localScale;
                 size.y += 0.1f * Time.deltaTime * 2;
                 Liquid.transform.localScale = size;
 
-                if (Liquid.transform.localScale.y >= 4.8f)
+
+                if (Liquid.transform.localScale.y >= 5.0f)
                 {
                     glassIsFull = true;
                 }
@@ -95,10 +96,17 @@ public class SpawnLiquidInCupScript : MonoBehaviour
 
         glassIsFull = false;
 
-        Liquid.transform.position = startPos;
-        Liquid.transform.localScale = startSize;
+        while(Liquid.transform.localScale.y >= 0.05f){
 
-        
+
+        Liquid.transform.Translate(new Vector3 (0, - 0.001f, 0) * Time.deltaTime * 20 ,Space.Self);
+
+        Vector3 size = Liquid.transform.localScale;
+        size.y -= 0.1f * Time.deltaTime * 20;
+        Liquid.transform.localScale = size;
+        }
+
+        Liquid.GetComponent<Renderer>().enabled = false;
     }
 
     bool checkIfGlassUpright(){
