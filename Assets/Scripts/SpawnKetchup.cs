@@ -11,17 +11,23 @@ public class SpawnKetchup : MonoBehaviour
     public GameObject KetchupSquiggle;
     public GameObject KetchupGoesHere;
 
+    Renderer rendererForKetchupGoesHere; 
+    float ketchupHereHeight;
     bool noKetchupYet = true;
 
     // Start is called before the first frame update
     void Start()
     {
 
+        rendererForKetchupGoesHere = KetchupGoesHere.GetComponent<Renderer>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        ketchupHereHeight = rendererForKetchupGoesHere.bounds.size.y;
+        
 
         spawnCondiment();
 
@@ -40,7 +46,7 @@ public class SpawnKetchup : MonoBehaviour
 
             if (Vector3.Distance(k_Particle[i].position, KetchupGoesHere.transform.position) <= 0.02 && noKetchupYet)
             {
-                Instantiate(KetchupSquiggle, new Vector3(0, 0, 0), Quaternion.identity);
+                Instantiate(KetchupSquiggle, new Vector3(KetchupGoesHere.transform.position.x, KetchupGoesHere.transform.position.y + ketchupHereHeight/2, KetchupGoesHere.transform.position.z), Quaternion.identity);
 
 
                 noKetchupYet = false;

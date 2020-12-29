@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnLiquidInCupScript : MonoBehaviour
+public class SimpleLiquidScript : MonoBehaviour
 {
 
     public ParticleSystem particles; 
@@ -10,19 +10,14 @@ public class SpawnLiquidInCupScript : MonoBehaviour
     public GameObject Liquid;
     public GameObject Glass;
 
-    GameObject newLiquid;
-    Vector3 startPos;
-    Vector3 startSize; 
+    
     bool glassIsFull = false;
     bool glassIsUpright = true;
-    bool noMoreDespawn = false;
 
     // Start is called before the first frame update
     void Start()
     {
         Liquid.GetComponent<Renderer>().enabled = false;
-        startPos = Liquid.transform.position;
-        startSize = Liquid.transform.localScale;
 
 
     }
@@ -62,10 +57,6 @@ public class SpawnLiquidInCupScript : MonoBehaviour
                 Liquid.GetComponent<Renderer>().enabled = true;
 
                 Liquid.transform.Translate(new Vector3 (0, + 0.001f, 0) * Time.deltaTime * 2 ,Space.Self);
-                
-                // Vector3 pos = Liquid.transform.position;
-                // pos.y += 0.001f * Time.deltaTime * 2;
-                // Liquid.transform.position = pos;  
              
                 Vector3 size = Liquid.transform.localScale;
                 size.y += 0.1f * Time.deltaTime * 2;
@@ -112,9 +103,6 @@ public class SpawnLiquidInCupScript : MonoBehaviour
         {
              Liquid.GetComponent<Renderer>().enabled = false;
         }
-
-        
-
     }
 
     bool checkIfGlassUpright(){
