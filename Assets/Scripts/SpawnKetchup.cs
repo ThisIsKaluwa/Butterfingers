@@ -13,6 +13,7 @@ public class SpawnKetchup : MonoBehaviour
 
     Renderer rendererForKetchupGoesHere; 
     float ketchupHereHeight;
+    float ketchupHereDepth;
     bool noKetchupYet = true;
 
     // Start is called before the first frame update
@@ -27,7 +28,7 @@ public class SpawnKetchup : MonoBehaviour
     void Update()
     {
         ketchupHereHeight = rendererForKetchupGoesHere.bounds.size.y;
-        
+        ketchupHereDepth = rendererForKetchupGoesHere.bounds.size.z;
 
         spawnCondiment();
 
@@ -46,10 +47,18 @@ public class SpawnKetchup : MonoBehaviour
 
             if (Vector3.Distance(k_Particle[i].position, KetchupGoesHere.transform.position) <= 0.02 && noKetchupYet)
             {
-                Instantiate(KetchupSquiggle, new Vector3(KetchupGoesHere.transform.position.x, KetchupGoesHere.transform.position.y + ketchupHereHeight/2, KetchupGoesHere.transform.position.z), Quaternion.identity);
+                if (Physics.CheckSphere(KetchupGoesHere.transform.position, 0.05f))
+                {
+                    Instantiate(KetchupSquiggle, new Vector3(KetchupGoesHere.transform.position.x, KetchupGoesHere.transform.position.y + ketchupHereHeight / 2, KetchupGoesHere.transform.position.z  - ketchupHereDepth / 4), Quaternion.identity);
 
 
-                noKetchupYet = false;
+                    noKetchupYet = false;
+                }
+                else
+                {
+                    Instantiate(KetchupSquiggle, new Vector3(KetchupGoesHere.transform.position.x, KetchupGoesHere.transform.position.y + ketchupHereHeight / 2, KetchupGoesHere.transform.position.z), Quaternion.identity);
+                    noKetchupYet = false;
+                }
             }
         }
     }

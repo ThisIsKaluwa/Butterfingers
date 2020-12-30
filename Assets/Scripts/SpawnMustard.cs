@@ -46,7 +46,7 @@ public class SpawnMustard : MonoBehaviour
         for (int i = 0; i < numParticlesAlive; i++)
         {
 
-            if (Vector3.Distance(m_Particle[i].position, MustardGoesHere.transform.position) <= 0.02 && noMustardYet)
+            if (Vector3.Distance(m_Particle[i].position, MustardGoesHere.transform.position) <= 0.1 && noMustardYet)
             {
 
                 if (Physics.CheckSphere(MustardGoesHere.transform.position, 0.05f))
