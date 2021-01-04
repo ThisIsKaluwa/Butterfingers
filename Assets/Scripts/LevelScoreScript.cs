@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/* This script handles the score a player receives after completing a level */
+/* This script handles the score a player receives after completing a level 
+This Script relies on a timer being used to meassure how sucessful the player is
+*/
 public class LevelScoreScript : MonoBehaviour
 {
 
