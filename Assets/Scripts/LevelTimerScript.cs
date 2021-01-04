@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-/* This script handles the countdown that the player sees before the actual level with all its tasks starts */
-public class CountdownScript : MonoBehaviour
+/* This script handles the countdown that the player sees while they are playing a level */
+public class LevelTimerScript : MonoBehaviour
 {
-    public float timeRemaining = 5;
+    public float timeRemaining = 30;
     public bool timerIsRunning = false;
     public Text timeText; //for displaying the seconds on screen in game
 
