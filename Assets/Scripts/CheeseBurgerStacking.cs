@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/* This script handles the correct way of stacking a burger 
-The correct order (from bottom to top) is: lower bun, ketchup, patty, mustard and a top bun
+/* This script handles the correct way of stacking a cheese burger 
+The correct order (from bottom to top) is: lower bun, ketchup, patty, cheese and a top bun
  */
-public class BurgerStacking : MonoBehaviour
+public class CheeseBurgerStacking : MonoBehaviour
 {
 
-    public GameObject TopBun;
+    public GameObject UpperBun;
+    public GameObject Cheese;
     public GameObject Patty;
     public GameObject LowerBun;
     private bool isStacked = false;
@@ -26,15 +27,17 @@ public class BurgerStacking : MonoBehaviour
     {
         bool isBunUpright = checkIfBunUpright();
         bool lowerBunCorrect = isLowerBunCorrect();
-        bool TopBunCorrect = isTopBunCorrect();
+        bool upperBunCorrect = isUpperBunCorrect();
         bool pattyCorrect = isPattyCorrect();
+        bool cheeseCorrect = isCheeseCorrect();
 
 
-        if (isBunUpright && lowerBunCorrect && TopBunCorrect && pattyCorrect && !isStacked)
+        if (isBunUpright && lowerBunCorrect && upperBunCorrect && pattyCorrect && cheeseCorrect && !isStacked)
         {
             IsAllStackedScript.howManyThingsAreStacked++;
-            TopBun.GetComponent<Rigidbody>().isKinematic = true;
+            UpperBun.GetComponent<Rigidbody>().isKinematic = true;
             LowerBun.GetComponent<Rigidbody>().isKinematic = true;
+            Cheese.GetComponent<Rigidbody>().isKinematic = true;
             Patty.GetComponent<Rigidbody>().isKinematic = true;
 
             isStacked = true;
@@ -60,9 +63,9 @@ public class BurgerStacking : MonoBehaviour
     }
 
     /* Checks to see if the upper burger bun is correctly placed */
-    bool isTopBunCorrect()
+    bool isUpperBunCorrect()
     {
-        if (Vector3.Distance(TopBun.transform.position, Patty.transform.position) <= 0.03f)
+        if (Vector3.Distance(UpperBun.transform.position, Cheese.transform.position) <= 0.03f)
         {
             return true;
         }
@@ -93,6 +96,22 @@ public class BurgerStacking : MonoBehaviour
     bool isPattyCorrect()
     {
         if (Vector3.Distance(Patty.transform.position, LowerBun.transform.position) <= 0.03f)
+        {
+            return true;
+        }
+
+        else
+        {
+            return false;
+        }
+
+    }
+
+    /* Checks to see if the cheese is correctly placed */
+    bool isCheeseCorrect()
+    {
+
+        if (Vector3.Distance(Cheese.transform.position, Patty.transform.position) <= 0.03f)
         {
             return true;
         }
