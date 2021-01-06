@@ -1540,8 +1540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74dadcab6236c014aa706e28875f26b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UpperBun: {fileID: 1272321611}
-  Cheese: {fileID: 1674581876}
+  TopBun: {fileID: 1272321611}
   Patty: {fileID: 698356419}
   LowerBun: {fileID: 198249661}
 --- !u!114 &1607909388
