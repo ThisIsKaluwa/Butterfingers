@@ -200,7 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 386174568999755909}
   m_Layer: 0
-  m_Name: counter Variant 1
+  m_Name: counter adjusted
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
