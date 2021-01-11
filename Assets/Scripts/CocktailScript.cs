@@ -23,12 +23,17 @@ public class CocktailScript : MonoBehaviour
     ParticleSystem particles;
     ParticleSystem.Particle[] particle;
 
+    bool containsOJ;
+    bool containsVodka;
+
     // Start is called before the first frame update
     void Start()
     {
         Liquid.GetComponent<Renderer>().enabled = false;
+        containsOJ = false;
+        containsVodka = false;
 
-
+        
     }
 
     // Update is called once per frame
@@ -40,6 +45,11 @@ public class CocktailScript : MonoBehaviour
         if (glassIsUpright)
         {
             CheckWhichLiquid();
+
+            if (containsOJ && containsVodka)
+            {
+                
+            }
         }
 
         else
@@ -51,18 +61,19 @@ public class CocktailScript : MonoBehaviour
 
     void CheckWhichLiquid(){
 
-        if (Vodka.isPlaying)
-        {
-            material = Vodka.GetComponent<Renderer>().material;
-            particles = Vodka;
-            particle = V_particle;
-            SpawnLiquid();
-        }
-        if (OrangeJuice.isPlaying)
+        
+        if (containsOJ)
         {
             material = OrangeJuice.GetComponent<Renderer>().material;
             particles = OrangeJuice;
             particle = O_particle;
+            SpawnLiquid();
+        }
+        else
+        {
+            material = Vodka.GetComponent<Renderer>().material;
+            particles = Vodka;
+            particle = V_particle;
             SpawnLiquid();
         }
         
@@ -95,6 +106,15 @@ public class CocktailScript : MonoBehaviour
                 if (Liquid.transform.localScale.y >= 5.0f)
                 {
                     glassIsFull = true;
+                }
+
+                if(particles == OrangeJuice)
+                {
+                    containsOJ = true;
+                }
+                if(particles == Vodka)
+                {
+                    containsVodka = true;
                 }
             }
         }
