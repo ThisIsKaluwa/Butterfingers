@@ -21,7 +21,6 @@ public class SpawnMustard : MonoBehaviour
     {
 
         rendererForMustardGoesHere = MustardGoesHere.GetComponent<Renderer>();
-
     }
 
     // Update is called once per frame
@@ -42,6 +41,8 @@ public class SpawnMustard : MonoBehaviour
 
         int numParticlesAlive = Mustard.GetParticles(m_Particle);
 
+
+
         // Change only the particles that are alive
         for (int i = 0; i < numParticlesAlive; i++)
         {
@@ -49,9 +50,9 @@ public class SpawnMustard : MonoBehaviour
             if (Vector3.Distance(m_Particle[i].position, MustardGoesHere.transform.position) <= 0.1 && noMustardYet)
             {
 
-                if (Physics.CheckSphere(MustardGoesHere.transform.position, 0.05f))
+                if (FindCondimentScript.IsThereCondiment("ketchup"))
                 {
-                    Instantiate(MustardSquiggle, new Vector3(MustardGoesHere.transform.position.x, MustardGoesHere.transform.position.y + mustardHereHeight / 2, MustardGoesHere.transform.position.z  - mustardHereDepth / 4), Quaternion.identity);
+                    Instantiate(MustardSquiggle, new Vector3(MustardGoesHere.transform.position.x, MustardGoesHere.transform.position.y + mustardHereHeight / 2, MustardGoesHere.transform.position.z - mustardHereDepth / 4), Quaternion.identity);
 
 
                     noMustardYet = false;
@@ -60,6 +61,7 @@ public class SpawnMustard : MonoBehaviour
                 {
                     Instantiate(MustardSquiggle, new Vector3(MustardGoesHere.transform.position.x, MustardGoesHere.transform.position.y + mustardHereHeight / 2, MustardGoesHere.transform.position.z), Quaternion.identity);
                     noMustardYet = false;
+                    FindCondimentScript.SetCondiment("mustard");
                 }
             }
         }
