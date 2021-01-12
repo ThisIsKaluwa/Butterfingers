@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* This script handles the 'mixing' of a cocktail (specifically a screwdriver), which contains two inedients  */
 public class CocktailScript : MonoBehaviour
 {
+
 
     public ParticleSystem Vodka;
     ParticleSystem.Particle[] V_particle;
@@ -13,12 +15,10 @@ public class CocktailScript : MonoBehaviour
     public GameObject Liquid;
     public GameObject Glass;
 
-
-
     bool glassIsFull = false;
     bool glassIsUpright = true;
 
-    Material material;
+    Material material; //needed to determine what color the cocktail currently has
 
     ParticleSystem particles;
     ParticleSystem.Particle[] particle;
@@ -55,6 +55,7 @@ public class CocktailScript : MonoBehaviour
 
     }
 
+    /* Check which particle system is used to fill the glass to determine which color he Liquid will be */
     void CheckWhichLiquid()
     {
 
@@ -117,7 +118,6 @@ public class CocktailScript : MonoBehaviour
             }
         }
 
-
         // Apply the particle changes to the Particle System
         particles.SetParticles(particle, numParticlesAlive);
 
@@ -127,6 +127,7 @@ public class CocktailScript : MonoBehaviour
         }
     }
 
+    /* Initialize the particle system with a set amount of particles */
     void InitializeIfNeeded()
     {
         if (particles == null)
@@ -136,6 +137,7 @@ public class CocktailScript : MonoBehaviour
             particle = new ParticleSystem.Particle[particles.main.maxParticles];
     }
 
+    /* If the glass is tipped over more than a specific angle, 'empty' the cup, by diminishing the liquid inside */
     void DespawnLiquid()
     {
 
@@ -158,6 +160,7 @@ public class CocktailScript : MonoBehaviour
         }
     }
 
+    /* See if the glass can be filled with liquid, or if it is too tilted for that */
     bool checkIfGlassUpright()
     {
         if (Vector3.Dot(Glass.transform.up, Vector3.up) >= 0.5f)

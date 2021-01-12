@@ -76,6 +76,7 @@ public class ColaScript : MonoBehaviour
         particles.SetParticles(particle, numParticlesAlive);
     }
 
+    /* Initialize the particle system with a set amount of particles */
     void InitializeIfNeeded()
     {
         if (particles == null)
@@ -85,6 +86,7 @@ public class ColaScript : MonoBehaviour
             particle = new ParticleSystem.Particle[particles.main.maxParticles];
     }
 
+    /* If the glass is tipped over more than a specific angle, 'empty' the cup, by diminishing the liquid inside */
     void DespawnLiquid(){
 
         glassIsFull = false;
@@ -106,6 +108,7 @@ public class ColaScript : MonoBehaviour
         }
     }
 
+    /* See if the glass can be filled with liquid, or if it is too tilted for that */
     bool checkIfGlassUpright(){
         if (Vector3.Dot(Glass.transform.up, Vector3.up) >= 0.5f)
         {
