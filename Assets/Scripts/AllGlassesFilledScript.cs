@@ -20,7 +20,7 @@ public class AllGlassesFilledScript : MonoBehaviour
     {
         if (everyGlassToFill == everyFilledGlass)
         {
-            //every glass is filled
+            IsTheLevelFinishedScript.allDrinksReady = true;
         }
     }
 }

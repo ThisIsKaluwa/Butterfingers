@@ -22,8 +22,7 @@ public class IsAllStackedScript : MonoBehaviour
     {
         if (howManyThingsAreStacked == howManyThingsToStack)
         {
-
-            //EverythingisStacked
+            IsTheLevelFinishedScript.allMealsReady = true;
         }
     }
 }
