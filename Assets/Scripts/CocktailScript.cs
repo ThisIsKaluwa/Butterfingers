@@ -12,6 +12,8 @@ public class CocktailScript : MonoBehaviour
     public GameObject Liquid;
     public GameObject Glass;
 
+    Collider collide;
+
     bool glassIsFull = false;
     bool glassIsUpright = true;
 
@@ -28,6 +30,7 @@ public class CocktailScript : MonoBehaviour
     {
         AllGlassesFilledScript.everyGlassToFill++;
         Liquid.GetComponent<Renderer>().enabled = false;
+        collide = Glass.transform.Find("PourCollider").GetComponent<Collider>();
         containsOJ = false;
         containsVodka = false;
 
@@ -91,7 +94,7 @@ public class CocktailScript : MonoBehaviour
         for (int i = 0; i < numParticlesAlive; i++)
         {
 
-            if (Vector3.Distance(particle[i].position, Glass.transform.position) <= 0.2 && !glassIsFull)
+            if (Vector3.Distance(particle[i].position, collide.transform.position) <= 0.05 && !glassIsFull)
             {
                 Liquid.GetComponent<Renderer>().enabled = true;
                 Liquid.GetComponent<Renderer>().material = material;

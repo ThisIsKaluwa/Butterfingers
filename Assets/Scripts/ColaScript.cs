@@ -10,7 +10,7 @@ public class ColaScript : MonoBehaviour
     public GameObject Liquid;
     public GameObject Glass;
 
-    Collider Collider;
+    Collider collide;
 
     bool glassIsFull = false;
     bool glassIsUpright = true;
@@ -20,7 +20,7 @@ public class ColaScript : MonoBehaviour
     {
         Liquid.GetComponent<Renderer>().enabled = false;
         AllGlassesFilledScript.everyGlassToFill++;
-        Collider = Glass.transform.Find("PourCollider").GetComponent<Collider>();
+        collide = Glass.transform.Find("PourCollider").GetComponent<Collider>();
     }
 
     // Update is called once per frame
@@ -52,7 +52,7 @@ public class ColaScript : MonoBehaviour
         // Change only the particles that are alive
         for (int i = 0; i < numParticlesAlive; i++)
         {
-            if (Vector3.Distance(particle[i].position, Collider.transform.position) <= 0.05 && !glassIsFull)
+            if (Vector3.Distance(particle[i].position, collide.transform.position) <= 0.05 && !glassIsFull)
             {
                 Liquid.GetComponent<Renderer>().enabled = true;
 
