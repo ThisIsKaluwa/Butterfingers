@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SimpleLiquidScript : MonoBehaviour
+public class ColaScript : MonoBehaviour
 {
 
     public ParticleSystem particles; 
@@ -18,7 +18,7 @@ public class SimpleLiquidScript : MonoBehaviour
     void Start()
     {
         Liquid.GetComponent<Renderer>().enabled = false;
-
+        AllGlassesFilledScript.everyGlassToFill++;
 
     }
 
@@ -66,6 +66,7 @@ public class SimpleLiquidScript : MonoBehaviour
                 if (Liquid.transform.localScale.y >= 5.0f)
                 {
                     glassIsFull = true;
+                    AllGlassesFilledScript.everyFilledGlass++;
                 }
             }
         }
@@ -87,7 +88,7 @@ public class SimpleLiquidScript : MonoBehaviour
     void DespawnLiquid(){
 
         glassIsFull = false;
-
+        AllGlassesFilledScript.everyFilledGlass--;
 
         if (Liquid.transform.localScale.y >= 0.06f)
         {
