@@ -6,8 +6,9 @@ using UnityEngine.UI;
 /* This script handles the countdown that the player sees while they are playing a level */
 public class LevelTimerScript : MonoBehaviour
 {
-    public float timeRemaining = 30;
-    public bool timerIsRunning = false;
+    public static float timeRemaining = 40;
+    public static bool timerIsRunning = false;
+
     public Text timeText; //for displaying the seconds on screen in game
 
     private void Start()
@@ -43,4 +44,5 @@ public class LevelTimerScript : MonoBehaviour
 
         timeText.text = string.Format("{0:0}",seconds);
     }
+
 }

@@ -25,6 +25,7 @@ public class FriesScript : MonoBehaviour
         if (collectedFries.Count == allTheFries)
         {
             IsAllStackedScript.howManyThingsAreStacked++;
+            Debug.Log("Done!");
         }
 
     }
