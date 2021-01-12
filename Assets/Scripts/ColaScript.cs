@@ -10,7 +10,8 @@ public class ColaScript : MonoBehaviour
     public GameObject Liquid;
     public GameObject Glass;
 
-    
+    Collider Collider;
+
     bool glassIsFull = false;
     bool glassIsUpright = true;
 
@@ -19,7 +20,7 @@ public class ColaScript : MonoBehaviour
     {
         Liquid.GetComponent<Renderer>().enabled = false;
         AllGlassesFilledScript.everyGlassToFill++;
-
+        Collider = Glass.transform.Find("PourCollider").GetComponent<Collider>();
     }
 
     // Update is called once per frame
@@ -40,6 +41,7 @@ public class ColaScript : MonoBehaviour
         
     }
 
+    /* Creates the 'liquid' inside the glass*/
     void SpawnLiquid()
     {
         InitializeIfNeeded();
@@ -50,10 +52,8 @@ public class ColaScript : MonoBehaviour
         // Change only the particles that are alive
         for (int i = 0; i < numParticlesAlive; i++)
         {
-
-            if (Vector3.Distance(particle[i].position, Glass.transform.position) <= 0.2 && !glassIsFull)
+            if (Vector3.Distance(particle[i].position, Collider.transform.position) <= 0.05 && !glassIsFull)
             {
-                
                 Liquid.GetComponent<Renderer>().enabled = true;
 
                 Liquid.transform.Translate(new Vector3 (0, + 0.001f, 0) * Time.deltaTime * 2 ,Space.Self);
@@ -71,12 +71,11 @@ public class ColaScript : MonoBehaviour
             }
         }
 
-
         // Apply the particle changes to the Particle System
         particles.SetParticles(particle, numParticlesAlive);
     }
 
-    /* Initialize the particle system with a set amount of particles */
+     /* Initialize the particle system with a set amount of particles if it doesn't exist correctly*/
     void InitializeIfNeeded()
     {
         if (particles == null)

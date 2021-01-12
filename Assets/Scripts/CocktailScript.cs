@@ -8,10 +8,7 @@ public class CocktailScript : MonoBehaviour
 
 
     public ParticleSystem Vodka;
-    ParticleSystem.Particle[] V_particle;
-
     public ParticleSystem OrangeJuice;
-    ParticleSystem.Particle[] O_particle;
     public GameObject Liquid;
     public GameObject Glass;
 
@@ -59,26 +56,30 @@ public class CocktailScript : MonoBehaviour
     void CheckWhichLiquid()
     {
 
-        if (Vodka.isPlaying || OrangeJuice.isPlaying)
+        if (OrangeJuice.isPlaying)
         {
-            if (containsOJ)
-            {
-                material = OrangeJuice.GetComponent<Renderer>().material;
-                particles = OrangeJuice;
-                particle = O_particle;
-                SpawnLiquid();
-            }
+            material = OrangeJuice.GetComponent<Renderer>().material;
+            particles = OrangeJuice;
+            SpawnLiquid();
+        }
 
-            else
+        if (Vodka.isPlaying)
+        {
+            if (!containsOJ)
             {
                 material = Vodka.GetComponent<Renderer>().material;
-                particles = Vodka;
-                particle = V_particle;
-                SpawnLiquid();
             }
+            else
+            {
+                material = OrangeJuice.GetComponent<Renderer>().material;
+            }
+
+            particles = Vodka;
+            SpawnLiquid();
         }
     }
 
+    /* Creates the 'liquid' inside the glass*/
     void SpawnLiquid()
     {
         InitializeIfNeeded();
@@ -127,7 +128,7 @@ public class CocktailScript : MonoBehaviour
         }
     }
 
-    /* Initialize the particle system with a set amount of particles */
+    /* Initialize the particle system with a set amount of particles if it doesn't exist correctly*/
     void InitializeIfNeeded()
     {
         if (particles == null)
