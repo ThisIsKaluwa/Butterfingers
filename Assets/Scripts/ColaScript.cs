@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SimpleLiquidScript : MonoBehaviour
+public class ColaScript : MonoBehaviour
 {
 
     public ParticleSystem particles; 
@@ -10,7 +10,8 @@ public class SimpleLiquidScript : MonoBehaviour
     public GameObject Liquid;
     public GameObject Glass;
 
-    
+    Collider collide;
+
     bool glassIsFull = false;
     bool glassIsUpright = true;
 
@@ -18,8 +19,8 @@ public class SimpleLiquidScript : MonoBehaviour
     void Start()
     {
         Liquid.GetComponent<Renderer>().enabled = false;
-
-
+        AllGlassesFilledScript.everyGlassToFill++;
+        collide = Glass.transform.Find("PourCollider").GetComponent<Collider>();
     }
 
     // Update is called once per frame
@@ -40,6 +41,7 @@ public class SimpleLiquidScript : MonoBehaviour
         
     }
 
+    /* Creates the 'liquid' inside the glass*/
     void SpawnLiquid()
     {
         InitializeIfNeeded();
@@ -50,10 +52,8 @@ public class SimpleLiquidScript : MonoBehaviour
         // Change only the particles that are alive
         for (int i = 0; i < numParticlesAlive; i++)
         {
-
-            if (Vector3.Distance(particle[i].position, Glass.transform.position) <= 0.2 && !glassIsFull)
+            if (Vector3.Distance(particle[i].position, collide.transform.position) <= 0.05 && !glassIsFull)
             {
-                
                 Liquid.GetComponent<Renderer>().enabled = true;
 
                 Liquid.transform.Translate(new Vector3 (0, + 0.001f, 0) * Time.deltaTime * 2 ,Space.Self);
@@ -66,15 +66,16 @@ public class SimpleLiquidScript : MonoBehaviour
                 if (Liquid.transform.localScale.y >= 5.0f)
                 {
                     glassIsFull = true;
+                    AllGlassesFilledScript.everyFilledGlass++;
                 }
             }
         }
-
 
         // Apply the particle changes to the Particle System
         particles.SetParticles(particle, numParticlesAlive);
     }
 
+     /* Initialize the particle system with a set amount of particles if it doesn't exist correctly*/
     void InitializeIfNeeded()
     {
         if (particles == null)
@@ -84,10 +85,11 @@ public class SimpleLiquidScript : MonoBehaviour
             particle = new ParticleSystem.Particle[particles.main.maxParticles];
     }
 
+    /* If the glass is tipped over more than a specific angle, 'empty' the cup, by diminishing the liquid inside */
     void DespawnLiquid(){
 
         glassIsFull = false;
-
+        AllGlassesFilledScript.everyFilledGlass--;
 
         if (Liquid.transform.localScale.y >= 0.06f)
         {
@@ -105,6 +107,7 @@ public class SimpleLiquidScript : MonoBehaviour
         }
     }
 
+    /* See if the glass can be filled with liquid, or if it is too tilted for that */
     bool checkIfGlassUpright(){
         if (Vector3.Dot(Glass.transform.up, Vector3.up) >= 0.5f)
         {
