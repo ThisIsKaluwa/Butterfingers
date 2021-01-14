@@ -16,12 +16,11 @@ public class SpawnKetchup : MonoBehaviour
     float ketchupHereDepth;
     bool noKetchupYet = true;
 
+
     // Start is called before the first frame update
     void Start()
     {
-
         rendererForKetchupGoesHere = KetchupGoesHere.GetComponent<Renderer>();
-
     }
 
     // Update is called once per frame
@@ -47,17 +46,16 @@ public class SpawnKetchup : MonoBehaviour
 
             if (Vector3.Distance(k_Particle[i].position, KetchupGoesHere.transform.position) <= 0.02 && noKetchupYet)
             {
-                if (Physics.CheckSphere(KetchupGoesHere.transform.position, 0.05f))
+                if (FindCondimentScript.IsThereCondiment("mustard"))
                 {
                     Instantiate(KetchupSquiggle, new Vector3(KetchupGoesHere.transform.position.x, KetchupGoesHere.transform.position.y + ketchupHereHeight / 2, KetchupGoesHere.transform.position.z  - ketchupHereDepth / 4), Quaternion.identity);
-
-
                     noKetchupYet = false;
                 }
                 else
                 {
                     Instantiate(KetchupSquiggle, new Vector3(KetchupGoesHere.transform.position.x, KetchupGoesHere.transform.position.y + ketchupHereHeight / 2, KetchupGoesHere.transform.position.z), Quaternion.identity);
                     noKetchupYet = false;
+                    FindCondimentScript.SetCondiment("ketchup");
                 }
             }
         }

@@ -8,24 +8,13 @@ This Script relies on a timer being used to meassure how sucessful the player is
 public class LevelScoreScript : MonoBehaviour
 {
 
-    float timeLeft;
-    // Start is called before the first frame update
-    void Start()
-    {
-        //TODO: Exchange with correct script (Time)
-        timeLeft = 24;
-        CalculateLevelScore();
-    }
+    public static float timeLeft;
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
+    // Start is called before the first frame update
 
     /* Calculates a score according to how long the player needed to complete the level */
-    void CalculateLevelScore(){
-        int timeNeededInPercent = (int) ((timeLeft / 30) * 100);
+    public static void CalculateLevelScore(){
+        int timeNeededInPercent = (int) ((timeLeft / 40) * 100);
         Debug.Log(timeNeededInPercent);
 
       if (timeNeededInPercent <= 100 && timeNeededInPercent >= 80)
