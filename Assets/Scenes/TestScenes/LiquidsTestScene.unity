@@ -727,7 +727,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560424515}
   m_LocalRotation: {x: -0.00654299, y: -0.021171218, z: 0.0018829552, w: 0.99975276}
-  m_LocalPosition: {x: 0.092, y: -0.089, z: 0.539}
+  m_LocalPosition: {x: 0.092, y: -0.089, z: 1.081}
   m_LocalScale: {x: 0.05, y: 0.1, z: 0.05}
   m_Children:
   - {fileID: 117645953}
@@ -1884,7 +1884,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752941508}
   m_LocalRotation: {x: -0.00654299, y: -0.021171218, z: 0.0018829552, w: 0.99975276}
-  m_LocalPosition: {x: 0.092, y: -0.089, z: 1.049}
+  m_LocalPosition: {x: 0.092, y: -0.089, z: 0.486}
   m_LocalScale: {x: 0.05, y: 0.1, z: 0.05}
   m_Children:
   - {fileID: 925097036}
@@ -2173,7 +2173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6201404674960953814, guid: 1ca6c24fbee8d204fa7b428fc5bdc1ba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.248
+      value: 0.652
       objectReference: {fileID: 0}
     - target: {fileID: 6201404674960953814, guid: 1ca6c24fbee8d204fa7b428fc5bdc1ba, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2207,6 +2207,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6682869001314726843, guid: 1ca6c24fbee8d204fa7b428fc5bdc1ba, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.3
+      objectReference: {fileID: 0}
     - target: {fileID: 6720496675440216940, guid: 1ca6c24fbee8d204fa7b428fc5bdc1ba, type: 3}
       propertyPath: m_Name
       value: CocktailGlass
@@ -2234,7 +2238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7381625515281541409, guid: 172e8fba3f8496e41ab44c298db43db4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.735
+      value: 1.779
       objectReference: {fileID: 0}
     - target: {fileID: 7381625515281541409, guid: 172e8fba3f8496e41ab44c298db43db4, type: 3}
       propertyPath: m_LocalRotation.x
