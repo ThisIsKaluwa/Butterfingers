@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 622a68a42b6605a479e1a30079fcac36, type: 2}
     - target: {fileID: 3855548906465421087, guid: e1fa4360c291ace4b8a3ee2da751ad48, type: 3}
       propertyPath: m_Name
-      value: plakat
+      value: HotDog2
       objectReference: {fileID: 0}
     - target: {fileID: 4524562783235489189, guid: e1fa4360c291ace4b8a3ee2da751ad48, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4524562783235489189, guid: e1fa4360c291ace4b8a3ee2da751ad48, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8866.586
+      value: 8866.761
       objectReference: {fileID: 0}
     - target: {fileID: 4524562783235489189, guid: e1fa4360c291ace4b8a3ee2da751ad48, type: 3}
       propertyPath: m_LocalRotation.x
