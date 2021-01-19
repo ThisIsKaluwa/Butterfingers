@@ -10,10 +10,10 @@ PrefabInstance:
     - target: {fileID: 901085350875954973, guid: 9fc3d90923e5095409b0885da8e6513f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b61c23e5b97ff6f498a1940ebf3f9bc9, type: 2}
+      objectReference: {fileID: 2100000, guid: f0a574ec5af54d5448a6152c0acde8fd, type: 2}
     - target: {fileID: 2858046103755611969, guid: 9fc3d90923e5095409b0885da8e6513f, type: 3}
       propertyPath: m_Name
-      value: plakat
+      value: HotDog
       objectReference: {fileID: 0}
     - target: {fileID: 3234149017667143163, guid: 9fc3d90923e5095409b0885da8e6513f, type: 3}
       propertyPath: m_LocalPosition.x
