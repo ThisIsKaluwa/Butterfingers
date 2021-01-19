@@ -66,7 +66,7 @@ PrefabInstance:
     - target: {fileID: -6347273634670502643, guid: 1a53cceebf5cdf34686405b9dfb40e8b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2e62c3b472711a748b3aff98a36787b1, type: 2}
+      objectReference: {fileID: 2100000, guid: 989855ea0d3332347b2af1675951bbb4, type: 2}
     - target: {fileID: 919132149155446097, guid: 1a53cceebf5cdf34686405b9dfb40e8b, type: 3}
       propertyPath: m_Name
       value: BurgerPlakat Variant
