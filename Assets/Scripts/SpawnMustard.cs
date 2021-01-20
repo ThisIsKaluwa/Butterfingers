@@ -52,14 +52,15 @@ public class SpawnMustard : MonoBehaviour
 
                 if (FindCondimentScript.IsThereCondiment("ketchup"))
                 {
-                    Instantiate(MustardSquiggle, new Vector3(MustardGoesHere.transform.position.x, MustardGoesHere.transform.position.y + mustardHereHeight / 2, MustardGoesHere.transform.position.z - mustardHereDepth / 4), Quaternion.identity);
-
+                    Instantiate(MustardSquiggle, new Vector3(MustardGoesHere.transform.position.x, MustardGoesHere.transform.position.y + mustardHereHeight / 2, 
+                    MustardGoesHere.transform.position.z - mustardHereDepth / 4), Quaternion.identity);
 
                     noMustardYet = false;
                 }
                 else
                 {
-                    Instantiate(MustardSquiggle, new Vector3(MustardGoesHere.transform.position.x, MustardGoesHere.transform.position.y + mustardHereHeight / 2, MustardGoesHere.transform.position.z), Quaternion.identity);
+                    Instantiate(MustardSquiggle, new Vector3(MustardGoesHere.transform.position.x, MustardGoesHere.transform.position.y + mustardHereHeight / 2, 
+                    MustardGoesHere.transform.position.z), Quaternion.identity);
                     noMustardYet = false;
                     FindCondimentScript.SetCondiment("mustard");
                 }

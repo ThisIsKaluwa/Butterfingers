@@ -48,12 +48,14 @@ public class SpawnKetchup : MonoBehaviour
             {
                 if (FindCondimentScript.IsThereCondiment("mustard"))
                 {
-                    Instantiate(KetchupSquiggle, new Vector3(KetchupGoesHere.transform.position.x, KetchupGoesHere.transform.position.y + ketchupHereHeight / 2, KetchupGoesHere.transform.position.z  - ketchupHereDepth / 4), Quaternion.identity);
+                    Instantiate(KetchupSquiggle, new Vector3(KetchupGoesHere.transform.position.x, KetchupGoesHere.transform.position.y + ketchupHereHeight / 2, 
+                    KetchupGoesHere.transform.position.z  - ketchupHereDepth / 4), Quaternion.identity);
                     noKetchupYet = false;
                 }
                 else
                 {
-                    Instantiate(KetchupSquiggle, new Vector3(KetchupGoesHere.transform.position.x, KetchupGoesHere.transform.position.y + ketchupHereHeight / 2, KetchupGoesHere.transform.position.z), Quaternion.identity);
+                    Instantiate(KetchupSquiggle, new Vector3(KetchupGoesHere.transform.position.x, KetchupGoesHere.transform.position.y + ketchupHereHeight / 2, 
+                    KetchupGoesHere.transform.position.z), Quaternion.identity);
                     noKetchupYet = false;
                     FindCondimentScript.SetCondiment("ketchup");
                 }
