@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 530535629426596007}
   - component: {fileID: -660632456989914667}
   - component: {fileID: 7075072879605194351}
+  - component: {fileID: 1860563311375080224}
   m_Layer: 0
   m_Name: Patty
   m_TagString: Untagged
@@ -129,3 +130,16 @@ MonoBehaviour:
     layerIndex: 0
   _eventTable:
     _entries: []
+--- !u!65 &1860563311375080224
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6924404665714349634}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8598533, y: 0.34968302, z: 1.9072962}
+  m_Center: {x: -0.02723813, y: 1.0432625, z: 0.021936893}
