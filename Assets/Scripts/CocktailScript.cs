@@ -11,6 +11,8 @@ public class CocktailScript : MonoBehaviour
     public ParticleSystem OrangeJuice;
     public GameObject Liquid;
     public GameObject Glass;
+    public GameObject Umbrella;
+
 
     Collider collide;
 
@@ -30,6 +32,7 @@ public class CocktailScript : MonoBehaviour
     {
         AllGlassesFilledScript.everyGlassToFill++;
         Liquid.GetComponent<Renderer>().enabled = false;
+        Umbrella.GetComponent<Renderer>().enabled = false;
         collide = Glass.transform.Find("PourCollider").GetComponent<Collider>();
         containsOJ = false;
         containsVodka = false;
@@ -127,6 +130,7 @@ public class CocktailScript : MonoBehaviour
 
         if (containsOJ && containsVodka && glassIsFull)
         {
+            Umbrella.GetComponent<Renderer>().enabled = true;
             AllGlassesFilledScript.everyFilledGlass++;
         }
     }
@@ -146,6 +150,7 @@ public class CocktailScript : MonoBehaviour
     {
 
         glassIsFull = false;
+        Umbrella.GetComponent<Renderer>().enabled = false;
         AllGlassesFilledScript.everyFilledGlass--;
 
         if (Liquid.transform.localScale.y >= 0.06f)
