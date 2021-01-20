@@ -135,7 +135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7381625515281541409}
   m_Layer: 0
-  m_Name: ColaGlass
+  m_Name: GlassAndLiquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
