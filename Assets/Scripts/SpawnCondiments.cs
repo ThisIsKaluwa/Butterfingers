@@ -61,7 +61,7 @@ public class SpawnCondiments : MonoBehaviour
         for (int i = 0; i < numParticlesAlive; i++)
         {
 
-            if (Vector3.Distance(particle[i].position, CondimentsSpawnHere.transform.position) <= 0.02)
+            if (Vector3.Distance(particle[i].position, CondimentsSpawnHere.transform.position) <= 0.04)
             {
 
                 if (particles == Ketchup && noKetchupYet)

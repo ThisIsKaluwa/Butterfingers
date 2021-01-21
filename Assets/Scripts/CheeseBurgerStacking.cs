@@ -67,7 +67,7 @@ public class CheeseBurgerStacking : MonoBehaviour
     /* Checks to see if the upper burger bun is correctly placed */
     bool isTopBunCorrect()
     {
-        if (Vector3.Distance(TopBun.transform.position, Patty.transform.position) <= 0.15f)
+        if (Vector3.Distance(TopBun.transform.position, Patty.transform.position) <= 0.13f)
         {
             return true;
         }
@@ -82,7 +82,7 @@ public class CheeseBurgerStacking : MonoBehaviour
     /* Checks to see if the burger patty is correctly placed */
     bool isPattyCorrect()
     {
-        if (Vector3.Distance(Patty.transform.position, Cheese.transform.position) <= 0.15f)
+        if (Vector3.Distance(Patty.transform.position, Cheese.transform.position) <= 0.13f)
         {
             return true;
         }
@@ -96,7 +96,7 @@ public class CheeseBurgerStacking : MonoBehaviour
     /* Checks to see if the cucumber is correctly placed */
     bool isCucumberCorrect()
     {
-        if (Vector3.Distance(Patty.transform.position, Cucumber.transform.position) <= 0.15f)
+        if (Vector3.Distance(Patty.transform.position, Cucumber.transform.position) <= 0.1f)
         {
             return true;
         }
@@ -110,7 +110,7 @@ public class CheeseBurgerStacking : MonoBehaviour
     /* Checks to see if the cheese is correctly placed */
     bool isCheeseCorrect()
     {
-        if (Vector3.Distance(BottomBun.transform.position, Cheese.transform.position) <= 0.15f)
+        if (Vector3.Distance(BottomBun.transform.position, Cheese.transform.position) <= 0.13f)
         {
             return true;
         }
