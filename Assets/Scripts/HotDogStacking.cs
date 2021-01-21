@@ -40,8 +40,6 @@ public class HotDogStacking : MonoBehaviour
             }
 
             isStacked = true;
-
-            Debug.Log("Done");
         }
     }
 

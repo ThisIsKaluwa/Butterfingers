@@ -8,7 +8,7 @@ public class FriesScript : MonoBehaviour
 {
     public GameObject Fry;
 
-    int allTheFries = 5;
+    int allTheFries = 7;
 
     List<GameObject> collectedFries = new List<GameObject>();
     // Start is called before the first frame update
@@ -25,7 +25,6 @@ public class FriesScript : MonoBehaviour
         if (collectedFries.Count == allTheFries)
         {
             IsAllStackedScript.howManyThingsAreStacked++;
-            Debug.Log("Done!");
         }
 
     }

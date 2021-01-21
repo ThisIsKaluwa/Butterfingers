@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4320395327315106947}
   - component: {fileID: 4955565454373991581}
   - component: {fileID: 4955565454373991582}
+  - component: {fileID: 7090012059367510137}
   m_Layer: 0
   m_Name: FoodTray_Correct
   m_TagString: Untagged
@@ -149,6 +150,19 @@ MonoBehaviour:
     layerIndex: 0
   _eventTable:
     _entries: []
+--- !u!114 &7090012059367510137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212109035858712666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e8bf287cf34bb409ef3e4e1e4ff833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fry: {fileID: 5491127703237629416, guid: 157bd058c7b048b41b006e9cfa25338b, type: 3}
 --- !u!1 &485325893459476038
 GameObject:
   m_ObjectHideFlags: 0
