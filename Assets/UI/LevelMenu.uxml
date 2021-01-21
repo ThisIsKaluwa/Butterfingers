@@ -1,0 +1,24 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="styles.uss" />
+    <ui:VisualElement name="MeunuContainer" style="width: 100%; height: 100%; background-image: none; -unity-background-scale-mode: scale-and-crop; -unity-slice-top: 0; -unity-slice-left: 0; -unity-background-image-tint-color: rgb(156, 156, 156); display: flex;">
+        <ui:VisualElement name="MenuWrapper" class="window" style="display: flex;">
+            <ui:VisualElement name="Header" style="width: 90%; align-items: center; flex-direction: row; margin-left: auto; margin-right: auto; justify-content: space-between; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; height: 30%;">
+                <ui:VisualElement>
+                    <ui:Label text="Butterfingers" display-tooltip-when-elided="true" name="headline" class="h1" style="align-items: flex-start; width: 90%; margin-bottom: 0;" />
+                    <ui:Label text="Pause Menu" display-tooltip-when-elided="true" class="unity-label" style="-unity-font: url(&apos;/Assets/Fonts/Imprima-Regular.ttf&apos;); font-size: 24px; color: rgba(225, 0, 0, 255);" />
+                </ui:VisualElement>
+                <ui:Button text="X" display-tooltip-when-elided="true" name="Close" class="button--close" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Content" style="flex-direction: row; width: 90%; height: 70%; align-items: flex-start; justify-content: center;">
+                <ui:VisualElement name="ImageWrapper" style="width: 50%; height: 100%; background-image: none; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; -unity-background-scale-mode: scale-and-crop; -unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; justify-content: center; align-items: center;">
+                    <ui:IMGUIContainer name="KetchupImage" style="background-image: url(&apos;/Assets/UI/Images/spatula.png&apos;); width: 250px; height: 250px; justify-content: flex-start;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="ButtonWrapper" style="width: 50%; height: 100%; justify-content: center; align-items: center;">
+                    <ui:Button text="Retry Level" display-tooltip-when-elided="true" enable-rich-text="false" name="retryLevel" style="-unity-font-style: normal; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" />
+                    <ui:Button text="Tutorial" display-tooltip-when-elided="true" name="tutorial" style="border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" />
+                    <ui:Button text="End Game" display-tooltip-when-elided="true" name="endGame" style="border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -109,3 +109,16 @@
     opacity: 1;
     color: rgba(210, 210, 210, 0.39);
 }
+
+.unity-label {
+}
+
+.tutorial-image {
+    width: 50%;
+    margin-right: 15px;
+}
+
+.tutorial-label {
+    white-space: normal;
+    width: 50%;
+}
