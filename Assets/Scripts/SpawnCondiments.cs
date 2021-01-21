@@ -68,12 +68,12 @@ public class SpawnCondiments : MonoBehaviour
                 {
                     if ((Vector3.Dot(CondimentsSpawnHere.transform.up, Vector3.up)) <= 1.0f && (Vector3.Dot(CondimentsSpawnHere.transform.up, Vector3.up)) >= 0.8f)
                     {
-                        condiments[3].enabled = true;
+                        condiments[1].enabled = true;
                         noKetchupYet = false;
                     }
                     else
                     {
-                        condiments[1].enabled = true;
+                        condiments[3].enabled = true;
                         noKetchupYet = false;
                     }
 
@@ -84,13 +84,13 @@ public class SpawnCondiments : MonoBehaviour
 
                     if ((Vector3.Dot(CondimentsSpawnHere.transform.up, Vector3.up)) <= 1.0f && (Vector3.Dot(CondimentsSpawnHere.transform.up, Vector3.up)) >= 0.8f)
                     {
-                        condiments[4].enabled = true;
+                        condiments[2].enabled = true;
                         noMustardYet = false;
                     }
 
                     else
                     {
-                        condiments[2].enabled = true;
+                        condiments[4].enabled = true;
                         noMustardYet = false;
                     }
                 }
