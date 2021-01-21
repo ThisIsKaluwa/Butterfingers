@@ -35,13 +35,13 @@ public class SpawnCondiments : MonoBehaviour
     void Update()
     {
 
-        if (Ketchup.isPlaying)
+        if (Ketchup != null && Ketchup.isPlaying)
         {
             particles = Ketchup;
             spawnCondiment();
         }
 
-        if (Mustard.isPlaying)
+        if (Mustard != null && Mustard.isPlaying)
         {
             particles = Mustard;
             spawnCondiment();

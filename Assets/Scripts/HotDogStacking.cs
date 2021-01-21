@@ -15,20 +15,25 @@ public class HotDogStacking : MonoBehaviour
     public GameObject SecondBun;
 
     private bool isStacked = false;
-  
+
+    Renderer[] condiments;
+
 
     // Start is called before the first frame update
     void Start()
     {
-         IsAllStackedScript.howManyThingsToStack ++; //add one to the total of items needed to be stacked
+        IsAllStackedScript.howManyThingsToStack++; //add one to the total of items needed to be stacked
+        condiments = Sausage.GetComponentsInChildren<Renderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
         bool cucumbersCorrect = areCucumbersCorrect();
+        bool condimentsCorrect = areCondimentsCorrect();
 
-        if (Vector3.Distance(Bun.transform.position, Sausage.transform.position) <= 0.12f && Vector3.Distance(SecondBun.transform.position, Sausage.transform.position) <= 0.12f && cucumbersCorrect && !isStacked)
+        if (Vector3.Distance(Bun.transform.position, Sausage.transform.position) <= 0.12f &&
+            Vector3.Distance(SecondBun.transform.position, Sausage.transform.position) <= 0.12f && cucumbersCorrect && condimentsCorrect && !isStacked)
         {
             IsAllStackedScript.howManyThingsAreStacked++;
             Bun.GetComponent<Rigidbody>().isKinematic = true;
@@ -43,6 +48,7 @@ public class HotDogStacking : MonoBehaviour
         }
     }
 
+    /* Checks if 3 cucumbers are placed correctly */
     bool areCucumbersCorrect()
     {
         int correct = 0;
@@ -56,6 +62,20 @@ public class HotDogStacking : MonoBehaviour
         }
 
         if (correct == 3)
+        {
+            return true;
+        }
+
+        else
+        {
+            return false;
+        }
+    }
+
+    /* Checks if mustard and ketchup are spawned, must both be on the same side */
+    bool areCondimentsCorrect()
+    {
+        if (condiments[1].enabled && condiments[2].enabled || condiments[3].enabled && condiments[4].enabled)
         {
             return true;
         }
