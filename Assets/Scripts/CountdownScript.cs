@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 /* This script handles the countdown that the player sees before the actual level with all its tasks starts */
 public class CountdownScript : MonoBehaviour
@@ -14,7 +14,7 @@ public class CountdownScript : MonoBehaviour
         //Gets the UI Document
         var UIDocument = GetComponent<UIDocument>().rootVisualElement;
         //Gets the Timer Label from the UIDocument with a Query
-        timerLabel = UIDocument.Q<Label>("CountDownLabel");
+        timerLabel = UIDocument.Q<Label>("StartCountDownLabel");
     }
 
     private void Start()

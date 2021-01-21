@@ -1,17 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 /* This script handles the score the player receives at the end of the game, based on all the individual scores a player got */
 public class DisplayResultScript : MonoBehaviour
 {
-    private Label scoreLabel; //for displaying the Score on screen in game 
+    private Label finalScoreLabel; //for displaying the Score on screen in game 
 
     private void OnEnable() {
         //Gets the UI Document
         var UIDocument = GetComponent<UIDocument>().rootVisualElement;
         //Gets the Score Label from the UIDocument with a Query
-        scoreLabel = UIDocument.Q<Label>("ScoreCount");
+        finalScoreLabel = UIDocument.Q<Label>("ScoreCount");
     }
 
     int endScore;
@@ -34,23 +35,23 @@ public class DisplayResultScript : MonoBehaviour
 
         if (finalScore == 5)
         {
-            scoreLabel.text = "S RANK";
+            finalScoreLabel.text = "S RANK";
         }
         if (finalScore == 4)
         {
-            scoreLabel.text = "A RANK";
+            finalScoreLabel.text = "A RANK";
         }
         if (finalScore == 3)
         {
-            scoreLabel.text = "B RANK";
+            finalScoreLabel.text = "B RANK";
         }
         if (finalScore == 2)
         {
-            scoreLabel.text = "C RANK";
+            finalScoreLabel.text = "C RANK";
         }
         if (finalScore == 1)
         {
-            scoreLabel.text = "D RANK";
+            finalScoreLabel.text = "D RANK";
         }
 
     }

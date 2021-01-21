@@ -15,7 +15,7 @@ public class LevelTimerScript : MonoBehaviour
         //Gets the UI Document
         var UIDocument = GetComponent<UIDocument>().rootVisualElement;
         //Gets the Timer Label from the UIDocument with a Query
-        timerLabel = UIDocument.Q<Label>("StartCountDownLabel");
+        timerLabel = UIDocument.Q<Label>("CountDownLabel");
     }
 
     private void Start()
