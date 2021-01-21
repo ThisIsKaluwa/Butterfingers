@@ -9,6 +9,7 @@ public class IsTheLevelFinishedScript : MonoBehaviour
     public static bool allDrinksReady;
     public static bool allMealsReady;
     public static int timeLevelWasFinishedWith;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,8 +42,18 @@ public class IsTheLevelFinishedScript : MonoBehaviour
     }
 
     void LoadTheNextLevel(){
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        int nextScene = scene +1;
 
-        SceneManager.LoadScene(1);
+        if (nextScene == 10)
+        {
+            //game is done
+        }
+        else
+        {
+             SceneManager.LoadScene(nextScene);
+        }
+       
     }
     
 }

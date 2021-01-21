@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +8,7 @@ public class FriesScript : MonoBehaviour
 {
     public GameObject Fry;
 
+    Renderer[] ketchup;
     int allTheFries = 7;
 
     List<GameObject> collectedFries = new List<GameObject>();
@@ -16,13 +17,14 @@ public class FriesScript : MonoBehaviour
     {
         IsAllStackedScript.howManyThingsToStack++;
         SpawnTheFries(allTheFries);
+        ketchup = GetComponentsInChildren<Renderer>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (collectedFries.Count == allTheFries)
+        if (collectedFries.Count == allTheFries && ketchup[1].enabled)
         {
             IsAllStackedScript.howManyThingsAreStacked++;
         }
@@ -39,6 +41,7 @@ public class FriesScript : MonoBehaviour
         }
     }
 
+    /* Counts how many fries are put into the tray */
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Collectable")
@@ -47,6 +50,7 @@ public class FriesScript : MonoBehaviour
         }
     }
 
+     /* Counts how many fries exit the tray */
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Collectable")
