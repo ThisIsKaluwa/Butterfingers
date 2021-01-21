@@ -13,7 +13,6 @@ public class CheeseBurgerStacking : MonoBehaviour
 
     public GameObject Cucumber;
     public GameObject Patty;
-
     public GameObject Cheese;
     public GameObject BottomBun;
     private bool isStacked = false;
