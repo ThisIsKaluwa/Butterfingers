@@ -999,6 +999,9 @@ GameObject:
   - component: {fileID: 1384635090}
   - component: {fileID: 1384635091}
   - component: {fileID: 1384635092}
+  - component: {fileID: 1384635095}
+  - component: {fileID: 1384635094}
+  - component: {fileID: 1384635093}
   m_Layer: 0
   m_Name: Scriptholder
   m_TagString: Untagged
@@ -1054,6 +1057,42 @@ MonoBehaviour:
   Ketchup: {fileID: 2138211366}
   Mustard: {fileID: 1417555019}
   CondimentsSpawnHere: {fileID: 1436967402}
+--- !u!114 &1384635093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384635089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48da4841d9b8b0847b41ac1259694cc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1384635094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384635089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f26c515dd708342af98c50ba6d5eca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1384635095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384635089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcbec32651e4b4842be6552d72e8da19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &1417555019 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 4053358276739319646, guid: a58d5918b70d4fe41aa83fbdbcbb47ad, type: 3}
