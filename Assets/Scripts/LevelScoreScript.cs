@@ -10,36 +10,42 @@ public class LevelScoreScript : MonoBehaviour
 
     public static float timeLeft;
 
-    // Start is called before the first frame update
+    private Label scoreLabel; //for displaying the Score on screen in game 
+
+    private void OnEnable() {
+        //Gets the UI Document
+        var UIDocument = GetComponent<UIDocument>().rootVisualElement;
+        //Gets the Score Label from the UIDocument with a Query
+        scoreLabel = UIDocument.Q<Label>("CountDownLabel");
+    }
 
     /* Calculates a score according to how long the player needed to complete the level */
     public static void CalculateLevelScore(){
         int timeNeededInPercent = (int) ((timeLeft / 40) * 100);
-        Debug.Log(timeNeededInPercent);
 
       if (timeNeededInPercent <= 100 && timeNeededInPercent >= 80)
       {
-          Debug.Log("S RANK");
+          scoreLabel.text = "S RANK";
           EndScoreScript.Score += 5;
       }
       if (timeNeededInPercent <= 79 && timeNeededInPercent >= 50)
       {
-          Debug.Log("A RANK");
+          scoreLabel.text = "A RANK";
           EndScoreScript.Score += 4;
       }
       if (timeNeededInPercent <= 49 && timeNeededInPercent >= 30)
       {
-          Debug.Log("B RANK");
+          scoreLabel.text = "B RANK";
           EndScoreScript.Score += 3;
       }
       if (timeNeededInPercent <= 29 && timeNeededInPercent >= 10)
       {
-          Debug.Log("C RANK");
+          scoreLabel.text = "C RANK";
           EndScoreScript.Score += 2;
       }
       if (timeNeededInPercent <= 9 && timeNeededInPercent >= 0)
       {
-          Debug.Log("D RANK");
+          scoreLabel.text = "D RANK";
           EndScoreScript.Score += 1;
       }
     }

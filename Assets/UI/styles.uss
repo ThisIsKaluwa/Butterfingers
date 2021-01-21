@@ -1,0 +1,111 @@
+.unity-button {
+    border-left-color: rgb(225, 0, 0);
+    border-right-color: rgb(225, 0, 0);
+    border-top-color: rgb(225, 0, 0);
+    border-bottom-color: rgb(225, 0, 0);
+    background-color: rgba(56, 56, 56, 0);
+    color: rgb(225, 0, 0);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+    width: 80%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -unity-font: url('/Assets/Fonts/Imprima-Regular.ttf');
+    height: auto;
+    border-left-width: 3px;
+    border-right-width: 3px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    font-size: 24px;
+    -unity-font-style: normal;
+    cursor: initial;
+}
+
+.h1 {
+    -unity-font: url('/Assets/Fonts/Chewy-Regular.ttf');
+    color: rgb(225, 0, 0);
+    font-size: 48px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.button--close {
+    width: 35px;
+    height: 35px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    white-space: normal;
+    -unity-font-style: normal;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 16px;
+    -unity-font: url('/Assets/Fonts/Chewy-Regular.ttf');
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+}
+
+.unity-button:hover {
+    background-color: rgba(195, 30, 63, 0.59);
+    color: rgb(232, 217, 202);
+    cursor: resource('HandTex');
+}
+
+.life-tomato {
+    width: 70px;
+    height: 70px;
+    background-image: url('/Assets/UI/Images/tomato.png');
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 5px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.window {
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+    top: 25%;
+    bottom: 25%;
+    -unity-background-image-tint-color: rgb(56, 56, 56);
+    background-color: rgba(247, 243, 230, 0.73);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left-color: rgb(129, 152, 158);
+    border-right-color: rgb(129, 152, 158);
+    border-top-color: rgb(129, 152, 158);
+    border-bottom-color: rgb(129, 152, 158);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    opacity: 1;
+    color: rgba(210, 210, 210, 0.39);
+}

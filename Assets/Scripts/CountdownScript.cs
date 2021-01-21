@@ -8,7 +8,14 @@ public class CountdownScript : MonoBehaviour
 {
     public float timeRemaining = 5;
     public bool timerIsRunning = false;
-    public Text timeText; //for displaying the seconds on screen in game
+    private Label timerLabel; //for displaying the seconds on screen in game 
+
+    private void OnEnable() {
+        //Gets the UI Document
+        var UIDocument = GetComponent<UIDocument>().rootVisualElement;
+        //Gets the Timer Label from the UIDocument with a Query
+        timerLabel = UIDocument.Q<Label>("CountDownLabel");
+    }
 
     private void Start()
     {
@@ -41,6 +48,6 @@ public class CountdownScript : MonoBehaviour
 
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
-        timeText.text = string.Format("{0:0}",seconds);
+        timerLabel.text = string.Format("{0:0}",seconds);
     }
 }

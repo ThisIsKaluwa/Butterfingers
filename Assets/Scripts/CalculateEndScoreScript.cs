@@ -5,6 +5,14 @@ using UnityEngine;
 /* This script handles the score the player receives at the end of the game, based on all the individual scores a player got */
 public class DisplayResultScript : MonoBehaviour
 {
+    private Label scoreLabel; //for displaying the Score on screen in game 
+
+    private void OnEnable() {
+        //Gets the UI Document
+        var UIDocument = GetComponent<UIDocument>().rootVisualElement;
+        //Gets the Score Label from the UIDocument with a Query
+        scoreLabel = UIDocument.Q<Label>("ScoreCount");
+    }
 
     int endScore;
     // Start is called before the first frame update
@@ -26,23 +34,23 @@ public class DisplayResultScript : MonoBehaviour
 
         if (finalScore == 5)
         {
-            Debug.Log("S RANK");
+            scoreLabel.text = "S RANK";
         }
         if (finalScore == 4)
         {
-            Debug.Log("A RANK");
+            scoreLabel.text = "A RANK";
         }
         if (finalScore == 3)
         {
-            Debug.Log("B RANK");
+            scoreLabel.text = "B RANK";
         }
         if (finalScore == 2)
         {
-            Debug.Log("C RANK");
+            scoreLabel.text = "C RANK";
         }
         if (finalScore == 1)
         {
-            Debug.Log("D RANK");
+            scoreLabel.text = "D RANK";
         }
 
     }

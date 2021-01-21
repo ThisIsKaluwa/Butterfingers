@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 /* This script handles the countdown that the player sees while they are playing a level */
 public class LevelTimerScript : MonoBehaviour
@@ -9,7 +9,14 @@ public class LevelTimerScript : MonoBehaviour
     public static float timeRemaining = 40;
     public static bool timerIsRunning = false;
 
-    public Text timeText; //for displaying the seconds on screen in game
+    private Label timerLabel; //for displaying the seconds on screen in game 
+
+    private void OnEnable() {
+        //Gets the UI Document
+        var UIDocument = GetComponent<UIDocument>().rootVisualElement;
+        //Gets the Timer Label from the UIDocument with a Query
+        timerLabel = UIDocument.Q<Label>("StartCountDownLabel");
+    }
 
     private void Start()
     {
@@ -39,10 +46,12 @@ public class LevelTimerScript : MonoBehaviour
     void DisplayTime(float timeToDisplay)
     {
         timeToDisplay += 1;
-
+        
+        //Calculates and stores the timer value in sec
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
-        timeText.text = string.Format("{0:0}",seconds);
+        //Sets the timer value to the label
+        timerLabel.text = string.Format("{0:0}",seconds);
     }
 
 }

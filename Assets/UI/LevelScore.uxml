@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="styles.uss" />
+    <ui:VisualElement name="ScoreContainer" style="width: 100%; height: 100%; background-image: url(&apos;/Assets/UI/Images/anton-nazaretian-JCHlsKSgbSk-unsplash.jpg&apos;); -unity-background-scale-mode: scale-and-crop;">
+        <ui:VisualElement name="ScoreWrapper" class="window" style="width: 40%; height: 40%; margin-right: auto; margin-left: auto; top: 30%; bottom: 30%; justify-content: center;">
+            <ui:VisualElement name="ScoreLabelWrapper" style="max-width: none; width: 80%; height: 60%; flex-direction: row; align-items: center; justify-content: center;">
+                <ui:VisualElement name="LabelWrapper">
+                    <ui:Label text="Your Score:" display-tooltip-when-elided="true" name="YourScoreLabel" class="h1" />
+                </ui:VisualElement>
+                <ui:VisualElement name="ScoreCountWrapper" style="margin-left: 35px; margin-right: 35px; margin-top: 35px; margin-bottom: 35px;">
+                    <ui:Label text="B&#10;" display-tooltip-when-elided="true" name="ScoreCountLabel" style="-unity-font: url(&apos;/Assets/Fonts/Imprima-Regular.ttf&apos;); color: rgb(225, 1, 1); font-size: 150px; -unity-font-style: bold;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
