@@ -33,6 +33,7 @@ public class MenuScript : MonoBehaviour
 
     void StartGame(){
         SceneManager.LoadScene("Level1");
+        StoreLivesScript.lives = 2;
     }
 
     void ToggleTutorial() {

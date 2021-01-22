@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 /* This script handles the displaying of lives in the current level */
-public class DisplayLivesScript : MonoBehaviour
+public class DisplayLifesScript : MonoBehaviour
 {
     private VisualElement tomato1; 
     private VisualElement tomato2; 
@@ -21,10 +21,10 @@ public class DisplayLivesScript : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    int howManyLives;
+    public int howManyLives;
     void Start()
     {
-        howManyLives = StoreLivesScript.Life;
+        howManyLives = StoreLivesScript.lives;
         DisplayLives();
     }
 
@@ -38,6 +38,8 @@ public class DisplayLivesScript : MonoBehaviour
     {
         if (howManyLives == 3)
         {
+
+            Debug.Log("Here");
             //display 3 lives
             tomato1.style.display = DisplayStyle.Flex;
             tomato2.style.display = DisplayStyle.Flex;
