@@ -1440,7 +1440,7 @@ PrefabInstance:
     - target: {fileID: 645077002588600576, guid: 49b2f0d6f32e7fa4b96001fffb674c8d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6b122d51341784f4dac0c7fb446ce04d, type: 2}
+      objectReference: {fileID: 2100000, guid: 0592ba65057a9424883f4fd1c8d3e136, type: 2}
     - target: {fileID: 645077002588600577, guid: 49b2f0d6f32e7fa4b96001fffb674c8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.51
@@ -1500,6 +1500,11 @@ Transform:
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 645077002588600607, guid: 49b2f0d6f32e7fa4b96001fffb674c8d, type: 3}
   m_PrefabInstance: {fileID: 889532697}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &940766507 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3194327540383277600, guid: 1ca6c24fbee8d204fa7b428fc5bdc1ba, type: 3}
+  m_PrefabInstance: {fileID: 1322107364611221044}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1000875684 stripped
 Transform:
@@ -2163,6 +2168,10 @@ PrefabInstance:
       propertyPath: OrangeJuice
       value: 
       objectReference: {fileID: 925097039}
+    - target: {fileID: 1322107364196331231, guid: 1ca6c24fbee8d204fa7b428fc5bdc1ba, type: 3}
+      propertyPath: Umbrella
+      value: 
+      objectReference: {fileID: 940766507}
     - target: {fileID: 6201404674960953814, guid: 1ca6c24fbee8d204fa7b428fc5bdc1ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.002
@@ -2206,6 +2215,10 @@ PrefabInstance:
     - target: {fileID: 6201404674960953814, guid: 1ca6c24fbee8d204fa7b428fc5bdc1ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494324764025001975, guid: 1ca6c24fbee8d204fa7b428fc5bdc1ba, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.77
       objectReference: {fileID: 0}
     - target: {fileID: 6682869001314726843, guid: 1ca6c24fbee8d204fa7b428fc5bdc1ba, type: 3}
       propertyPath: m_LocalPosition.y
