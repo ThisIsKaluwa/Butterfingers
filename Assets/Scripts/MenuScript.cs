@@ -23,10 +23,8 @@ public class MenuScript : MonoBehaviour
         startButton = UIDocument.Q<Button>("start");
         tutorialButton = UIDocument.Q<Button>("tutorial");
         closeTutorialButton = UIDocument.Q<Button>("Close");
-        menuWrapper = UIDocument.Q<Button>("MenuWrapper");
-        tutorialWrapper = UIDocument.Q<Button>("TutorialWrapper");
-
-
+        menuWrapper = UIDocument.Q<VisualElement>("MenuWrapper");
+        tutorialWrapper = UIDocument.Q<VisualElement>("TutorialWrapper");
 
         startButton.RegisterCallback<ClickEvent>(e => StartGame());
         tutorialButton.RegisterCallback<ClickEvent>(e => ToggleTutorial());
@@ -34,7 +32,7 @@ public class MenuScript : MonoBehaviour
     }
 
     void StartGame(){
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Level1");
     }
 
     void ToggleTutorial() {

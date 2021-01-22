@@ -27,9 +27,9 @@ public class PauseMenuScript : MonoBehaviour
         closeTutorialButton = UIDocument.Q<Button>("CloseTutorial");
         closeButton = UIDocument.Q<Button>("Close");
         endGameButton = UIDocument.Q<Button>("end");
-        menuWrapper = UIDocument.Q<Button>("MenuWrapper");
-        tutorialWrapper = UIDocument.Q<Button>("MenuContainer");
-        menuContainer = UIDocument.Q<Button>("TutorialWrapper");
+        menuWrapper = UIDocument.Q<VisualElement>("MenuWrapper");
+        menuContainer = UIDocument.Q<VisualElement>("MenuContainer");
+        tutorialWrapper = UIDocument.Q<VisualElement>("TutorialWrapper");
 
 
         tutorialButton.RegisterCallback<ClickEvent>(e => ToggleTutorial());
@@ -40,13 +40,13 @@ public class PauseMenuScript : MonoBehaviour
     }
 
     void EndGame(){
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Level0");
     }
 
     void ToggleTutorial() {
         if (tutorialShown) {
-            menuWrapper.style.display = DisplayStyle.Flex;
             tutorialWrapper.style.display = DisplayStyle.None;
+            menuWrapper.style.display = DisplayStyle.Flex;
             tutorialShown = false;
         } else {
             menuWrapper.style.display = DisplayStyle.None;
