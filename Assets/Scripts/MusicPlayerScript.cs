@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /* This script handles the playing of the background music throughout the game*/
 public class MusicPlayerScript : MonoBehaviour
@@ -14,5 +15,13 @@ public class MusicPlayerScript : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
