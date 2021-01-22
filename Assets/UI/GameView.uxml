@@ -3,9 +3,9 @@
     <ui:VisualElement name="ScreenContainer" style="width: 90%; height: 90%; margin-left: auto; margin-right: auto; top: 5%; bottom: 5%;">
         <ui:VisualElement name="Header" style="flex-direction: row; height: 25%;">
             <ui:VisualElement name="LifeCountWrapper" style="flex-direction: row; width: 30%;">
-                <ui:VisualElement name="Tomato1" class="life-tomato" />
-                <ui:VisualElement name="Tomato2" class="life-tomato" />
-                <ui:VisualElement name="Tomato3" class="life-tomato" />
+                <ui:VisualElement name="Tomato1" style="display: none;" class="life-tomato" />
+                <ui:VisualElement name="Tomato2" style="display: none;" class="life-tomato" />
+                <ui:VisualElement name="Tomato3" style="display: none;" class="life-tomato" />
             </ui:VisualElement>
             <ui:VisualElement name="CountDownWrapper" style="width: 70%; align-items: flex-end;">
                 <ui:Label text="Counter&#10;" display-tooltip-when-elided="true" name="CountDownLabel" class="h1" style="-unity-font: url(&apos;/Assets/Fonts/Chewy-Regular.ttf&apos;); font-size: 100px;" />
