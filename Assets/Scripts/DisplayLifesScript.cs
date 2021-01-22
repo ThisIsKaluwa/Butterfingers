@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 /* This script handles the displaying of lives in the current level */
 public class DisplayLifesScript : MonoBehaviour
@@ -38,8 +39,6 @@ public class DisplayLifesScript : MonoBehaviour
     {
         if (howManyLives == 3)
         {
-
-            Debug.Log("Here");
             //display 3 lives
             tomato1.style.display = DisplayStyle.Flex;
             tomato2.style.display = DisplayStyle.Flex;
@@ -59,6 +58,7 @@ public class DisplayLifesScript : MonoBehaviour
         }
         if (howManyLives == 0)
         {   
+            Debug.Log("Here");
             //display 0 lives
             tomato3.style.display = DisplayStyle.None;
             tomato2.style.display = DisplayStyle.None;
@@ -69,6 +69,6 @@ public class DisplayLifesScript : MonoBehaviour
 
     void NoMoreLives()
     {
-        //Display failure Screen and reset to main menu
+        SceneManager.LoadScene(0);
     }
 }

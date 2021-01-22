@@ -23,7 +23,7 @@ public class LevelTimerScript : MonoBehaviour
     {
         // Starts the timer automatically
         timerIsRunning = true;
-        timeRemaining = 10;
+        timeRemaining = 90;
     }
 
     //Update is called once per frame 
@@ -52,11 +52,12 @@ public class LevelTimerScript : MonoBehaviour
     {
         timeToDisplay += 1;
 
+        float minutes = Mathf.FloorToInt(timeToDisplay / 60); 
         //Calculates and stores the timer value in sec
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         //Sets the timer value to the label
-        timerLabel.text = string.Format("{0:0}", seconds);
+        timerLabel.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
 }
