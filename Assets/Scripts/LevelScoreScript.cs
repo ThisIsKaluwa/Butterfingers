@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -17,7 +17,6 @@ public class LevelScoreScript : MonoBehaviour
         //Gets the Score Label from the UIDocument with a Query
         scoreLabel = UIDocument.Q<Label>("ScoreCountLabel");
     }
-
 
     /* Calculates a score according to how long the player needed to complete the level */
     public static void CalculateLevelScore(){

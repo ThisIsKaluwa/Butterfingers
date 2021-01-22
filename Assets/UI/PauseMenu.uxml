@@ -1,17 +1,22 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="styles.uss" />
-    <ui:VisualElement name="MeunuContainer" style="width: 100%; height: 100%; background-image: url(&apos;/Assets/UI/Images/heidi-kaden-olb3vROGzOQ-unsplash.jpg&apos;); -unity-background-scale-mode: stretch-to-fill; -unity-slice-top: 0; -unity-slice-left: 0; -unity-background-image-tint-color: rgb(156, 156, 156); display: flex;">
+    <ui:VisualElement name="MenuContainer" style="width: 100%; height: 100%; background-image: none; -unity-background-scale-mode: scale-and-crop; -unity-slice-top: 0; -unity-slice-left: 0; -unity-background-image-tint-color: rgb(156, 156, 156); display: flex;">
         <ui:VisualElement name="MenuWrapper" class="window" style="display: flex;">
             <ui:VisualElement name="Header" style="width: 90%; align-items: center; flex-direction: row; margin-left: auto; margin-right: auto; justify-content: space-between; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; height: 30%;">
-                <ui:Label text="Butterfingers" display-tooltip-when-elided="true" name="headline" class="h1" style="align-items: flex-start; width: 90%; margin-bottom: 0;" />
+                <ui:VisualElement style="width: 50%;">
+                    <ui:Label text="Butterfingers" display-tooltip-when-elided="true" name="headline" class="h1" style="align-items: flex-start; width: 90%; margin-bottom: 0;" />
+                    <ui:Label text="Pause Menu" display-tooltip-when-elided="true" class="unity-label" style="-unity-font: url(&apos;/Assets/Fonts/Imprima-Regular.ttf&apos;); font-size: 24px; color: rgb(225, 0, 0);" />
+                </ui:VisualElement>
+                <ui:Button text="X" display-tooltip-when-elided="true" name="Close" class="button--close" />
             </ui:VisualElement>
             <ui:VisualElement name="Content" style="flex-direction: row; width: 90%; height: 70%; align-items: flex-start; justify-content: center;">
                 <ui:VisualElement name="ImageWrapper" style="width: 50%; height: 100%; background-image: none; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; -unity-background-scale-mode: scale-and-crop; -unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; justify-content: center; align-items: center;">
-                    <ui:IMGUIContainer name="KetchupImage" style="background-image: url(&apos;/Assets/UI/Images/kisspng-ketchup-computer-icons-condiment-bottle-mustard-5ae38a890a15a2.0245154115248615770413.png&apos;); width: 250px; height: 250px; justify-content: flex-start;" />
+                    <ui:IMGUIContainer name="KetchupImage" style="background-image: url(&apos;/Assets/UI/Images/spatula.png&apos;); width: 250px; height: 250px; justify-content: flex-start;" />
                 </ui:VisualElement>
                 <ui:VisualElement name="ButtonWrapper" style="width: 50%; height: 100%; justify-content: center; align-items: center;">
-                    <ui:Button text="Start Game" display-tooltip-when-elided="true" enable-rich-text="false" name="start" style="-unity-font-style: bold; border-left-width: 3px; border-right-width: 3px; border-top-width: 3px; border-bottom-width: 3px;" />
+                    <ui:Button text="Retry Level" display-tooltip-when-elided="true" enable-rich-text="false" name="retry" style="-unity-font-style: normal; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" />
                     <ui:Button text="Tutorial" display-tooltip-when-elided="true" name="tutorial" style="border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" />
+                    <ui:Button text="End Game" display-tooltip-when-elided="true" name="end" style="border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
@@ -21,7 +26,7 @@
                     <ui:Label text="Butterfingers" display-tooltip-when-elided="true" name="headline" class="h1" style="align-items: flex-start; width: 90%; margin-bottom: 0;" />
                     <ui:Label text="Tutorial" display-tooltip-when-elided="true" name="Label" class="tutorial-description" />
                 </ui:VisualElement>
-                <ui:Button text="X" display-tooltip-when-elided="true" name="Close" class="button--close" />
+                <ui:Button text="X" display-tooltip-when-elided="true" name="CloseTutorial" class="button--close" />
             </ui:VisualElement>
             <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" style="width: 100%; height: 80%;">
                 <ui:VisualElement style="flex-direction: column; width: 100%; margin-left: 0; margin-right: 0; margin-top: 25px; margin-bottom: 25px;">
