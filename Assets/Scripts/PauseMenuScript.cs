@@ -15,6 +15,7 @@ public class PauseMenuScript : MonoBehaviour
     private static VisualElement tutorialWrapper;
     private static VisualElement menuContainer;
     private bool tutorialShown = false;
+    private bool isPaused = false;
 
 
     private void OnEnable() {
@@ -39,6 +40,34 @@ public class PauseMenuScript : MonoBehaviour
         endGameButton.RegisterCallback<ClickEvent>(e => EndGame() );
     }
 
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        menuContainer.style.display = DisplayStyle.None;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            if (isPaused) {
+                CloseMenu();
+            } else {
+                Pause();
+            }
+
+        }
+    }
+
+
+    void Pause() { 
+        menuContainer.style.display = DisplayStyle.Flex;
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+
     void EndGame(){
         SceneManager.LoadScene("Level0");
     }
@@ -57,6 +86,7 @@ public class PauseMenuScript : MonoBehaviour
 
     void CloseMenu(){
         menuContainer.style.display = DisplayStyle.None;
+        Time.timeScale = 1f;
     }
 
 
@@ -64,5 +94,6 @@ public class PauseMenuScript : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene(); 
         SceneManager.LoadScene(scene.name);
         menuContainer.style.display = DisplayStyle.None;
+        Time.timeScale = 1f;
     }
 }
