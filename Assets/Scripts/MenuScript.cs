@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
+/* This Level handles the Menu at the start of the game */
 public class MenuScript : MonoBehaviour
 {
 
@@ -31,11 +32,13 @@ public class MenuScript : MonoBehaviour
         closeTutorialButton.RegisterCallback<ClickEvent>(e => ToggleTutorial());
     }
 
+    //Executed when the player presses "Start Game"
     void StartGame(){
         SceneManager.LoadScene("Level1");
-        StoreLivesScript.lives = 3;
+        StoreLifesScript.lifes = 3;
     }
 
+    //Excuted when the player presses "Tutorial"
     void ToggleTutorial() {
 
         if (tutorialShown) {

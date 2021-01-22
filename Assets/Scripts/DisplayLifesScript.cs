@@ -4,15 +4,16 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
-/* This script handles the displaying of lives in the current level */
+/* This script handles the displaying of lifes in the current level */
 public class DisplayLifesScript : MonoBehaviour
 {
-    private VisualElement tomato1; 
-    private VisualElement tomato2; 
-    private VisualElement tomato3; 
+    private VisualElement tomato1;
+    private VisualElement tomato2;
+    private VisualElement tomato3;
 
-
-    private void OnEnable() {
+    //This function is called when the object becomes enabled and active.
+    private void OnEnable()
+    {
         //Gets the UI Document
         var UIDocument = GetComponent<UIDocument>().rootVisualElement;
         //Gets the IMG Conatiner from the UI Document with a query
@@ -21,23 +22,31 @@ public class DisplayLifesScript : MonoBehaviour
         tomato3 = UIDocument.Q<VisualElement>("Tomato3");
     }
 
+
+    int howManyLifes;
+
     // Start is called before the first frame update
-    public int howManyLives;
     void Start()
     {
-        howManyLives = StoreLivesScript.lives;
-        DisplayLives();
+        howManyLifes = StoreLifesScript.lifes;
+        Debug.Log(howManyLifes);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Time.timeSinceLevelLoad >= 0.2f)
+        {
+            DisplayLifes();
+        }
+
     }
 
-    void DisplayLives()
+    //Displays the correct amount of tomatoes
+    void DisplayLifes()
     {
-        if (howManyLives == 3)
+        if (howManyLifes == 3)
         {
             //display 3 lives
             tomato1.style.display = DisplayStyle.Flex;
@@ -45,29 +54,25 @@ public class DisplayLifesScript : MonoBehaviour
             tomato3.style.display = DisplayStyle.Flex;
         }
 
-        if (howManyLives == 2)
+        if (howManyLifes == 2)
         {
+
             //display 2 lives
             tomato3.style.display = DisplayStyle.None;
         }
-        if (howManyLives == 1)
+        if (howManyLifes == 1)
         {
             //display 1 lives
             tomato3.style.display = DisplayStyle.None;
             tomato2.style.display = DisplayStyle.None;
         }
-        if (howManyLives == 0)
-        {   
-            Debug.Log("Here");
-            //display 0 lives
-            tomato3.style.display = DisplayStyle.None;
-            tomato2.style.display = DisplayStyle.None;
-            tomato1.style.display = DisplayStyle.None;
-            NoMoreLives();
+        if (howManyLifes == 0)
+        {
+            GameOver();
         }
     }
 
-    void NoMoreLives()
+    void GameOver()
     {
         SceneManager.LoadScene(0);
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* This script handles the glass filling up with cola */
 public class ColaScript : MonoBehaviour
 {
 

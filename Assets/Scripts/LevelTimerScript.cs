@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+
 /* This script handles the countdown that the player sees while they are playing a level */
 public class LevelTimerScript : MonoBehaviour
 {
@@ -41,13 +42,14 @@ public class LevelTimerScript : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
-                StoreLivesScript.lives -= 1;
+                StoreLifesScript.lifes -= 1;
                 Scene scene = SceneManager.GetActiveScene();
                 SceneManager.LoadScene(scene.name);
             }
         }
     }
 
+    //Converts the remaining float time to a minute:seconds String
     void DisplayTime(float timeToDisplay)
     {
         timeToDisplay += 1;
