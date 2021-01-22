@@ -68,7 +68,9 @@ public class PauseMenuScript : MonoBehaviour
     }
 
 
-    void EndGame(){
+    void EndGame() {
+        Time.timeScale = 1f;
+        isPaused = false;
         SceneManager.LoadScene("Level0");
     }
 
