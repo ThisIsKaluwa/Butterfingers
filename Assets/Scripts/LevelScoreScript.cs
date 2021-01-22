@@ -9,7 +9,7 @@ This Script relies on a timer being used to meassure how sucessful the player is
 public class LevelScoreScript : MonoBehaviour
 {
     public static float timeLeft;
-    private static Label scoreLabel; //for displaying the Score on screen in game 
+    private static Label scoreLabel; //for displaying the Score on screen in game
 
     private void OnEnable() {
         //Gets the UI Document

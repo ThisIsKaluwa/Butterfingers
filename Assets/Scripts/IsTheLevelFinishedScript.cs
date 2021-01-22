@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class IsTheLevelFinishedScript : MonoBehaviour
 {
@@ -9,6 +10,15 @@ public class IsTheLevelFinishedScript : MonoBehaviour
     public static bool allDrinksReady;
     public static bool allMealsReady;
     public static int timeLevelWasFinishedWith;
+    private static VisualElement scoreWindow; 
+
+    private void OnEnable() {
+        //Gets the UI Document
+        var UIDocument = GetComponent<UIDocument>().rootVisualElement;
+        //Gets the Score Label from the UIDocument with a Query
+        scoreWindow = UIDocument.Q<VisualElement>("ScoreContainer");
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +47,8 @@ public class IsTheLevelFinishedScript : MonoBehaviour
 
         LevelScoreScript.CalculateLevelScore();
 
+        scoreWindow.style.display = DisplayStyle.Flex;
+
         Invoke("LoadTheNextLevel", 3.0f);
 
     }
@@ -52,6 +64,7 @@ public class IsTheLevelFinishedScript : MonoBehaviour
         else
         {
              SceneManager.LoadScene(nextScene);
+             scoreWindow.style.display = DisplayStyle.None;
         }
        
     }
