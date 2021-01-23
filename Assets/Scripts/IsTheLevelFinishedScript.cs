@@ -62,6 +62,7 @@ public class IsTheLevelFinishedScript : MonoBehaviour
         if (nextScene == 10)
         {
             //game is done
+            scoreWindow.style.display = DisplayStyle.None;
             endWindow.style.display = DisplayStyle.Flex;
         }
         else
