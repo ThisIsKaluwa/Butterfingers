@@ -30,11 +30,12 @@ public class CalculateEndScoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
     }
 
 
     //Calculates the final score a player receives according to all the level scores
-    void CalculateEndScore()
+    public void CalculateEndScore()
     {
         int finalScore = endScore / 10;
 

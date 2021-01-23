@@ -59,7 +59,7 @@ public class IsTheLevelFinishedScript : MonoBehaviour
         int scene = SceneManager.GetActiveScene().buildIndex;
         int nextScene = scene +1;
 
-        if (nextScene == 10)
+        if (nextScene == 11)
         {
             //game is done
             scoreWindow.style.display = DisplayStyle.None;
