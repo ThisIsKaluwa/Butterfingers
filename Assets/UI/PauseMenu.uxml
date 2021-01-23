@@ -16,7 +16,7 @@
                 <ui:VisualElement name="ButtonWrapper" style="width: 50%; height: 100%; justify-content: center; align-items: center;">
                     <ui:Button text="Retry Level" display-tooltip-when-elided="true" enable-rich-text="false" name="retry" style="-unity-font-style: normal; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" />
                     <ui:Button text="Tutorial" display-tooltip-when-elided="true" name="tutorial" style="border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" />
-                    <ui:Button text="End Game" display-tooltip-when-elided="true" name="end" style="border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" />
+                    <ui:Button text="Quit" display-tooltip-when-elided="true" name="end" style="border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>

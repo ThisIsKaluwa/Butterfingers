@@ -11,12 +11,14 @@ public class IsTheLevelFinishedScript : MonoBehaviour
     public static bool allMealsReady;
     public static int timeLevelWasFinishedWith;
     private static VisualElement scoreWindow; 
+    private static VisualElement endWindow; 
 
     private void OnEnable() {
         //Gets the UI Document
         var UIDocument = GetComponent<UIDocument>().rootVisualElement;
         //Gets the Score Label from the UIDocument with a Query
         scoreWindow = UIDocument.Q<VisualElement>("ScoreContainer");
+        endWindow = UIDocument.Q<VisualElement>("ScoreContainer");
     }
 
 
@@ -60,6 +62,7 @@ public class IsTheLevelFinishedScript : MonoBehaviour
         if (nextScene == 10)
         {
             //game is done
+            endWindow.style.display = DisplayStyle.Flex;
         }
         else
         {
