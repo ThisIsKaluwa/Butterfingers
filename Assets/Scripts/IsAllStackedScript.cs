@@ -8,8 +8,8 @@ public class IsAllStackedScript : MonoBehaviour
 {
 
 
-    public static int howManyThingsToStack;
-    public static int howManyThingsAreStacked;
+    public  int howManyThingsToStack;
+    public  int howManyThingsAreStacked;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class IsAllStackedScript : MonoBehaviour
     {
         if (howManyThingsAreStacked == howManyThingsToStack)
         {
-            IsTheLevelFinishedScript.allMealsReady = true;
+            GetComponent<IsTheLevelFinishedScript>().allMealsReady = true;
         }
     }
 }

@@ -20,7 +20,7 @@ public class LevelScoreScript : MonoBehaviour
 
     /* Calculates a score according to how long the player needed to complete the level */
     public static void CalculateLevelScore(){
-        int timeNeededInPercent = (int) ((timeLeft / 40) * 100);
+        int timeNeededInPercent = (int) ((timeLeft / 90) * 100);
 
       if (timeNeededInPercent <= 100 && timeNeededInPercent >= 80)
       {

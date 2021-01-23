@@ -7,11 +7,11 @@ using UnityEngine.UIElements;
 public class IsTheLevelFinishedScript : MonoBehaviour
 {
 
-    public static bool allDrinksReady;
-    public static bool allMealsReady;
-    public static int timeLevelWasFinishedWith;
-    private static VisualElement scoreWindow; 
-    private static VisualElement endWindow; 
+    public  bool allDrinksReady;
+    public  bool allMealsReady;
+    public  int timeLevelWasFinishedWith;
+    private  static VisualElement scoreWindow; 
+    private  static VisualElement endWindow; 
 
     private void OnEnable() {
         //Gets the UI Document

@@ -18,10 +18,12 @@ public class BurgerStacking : MonoBehaviour
 
     Renderer[] condiments;
 
+    IsAllStackedScript stacked;
+
     // Start is called before the first frame update
     void Start()
     {
-        IsAllStackedScript.howManyThingsToStack++; //increment how many items need to be stacked in the entire scene by one
+        GetComponent<IsAllStackedScript>().howManyThingsToStack++; //increment how many items need to be stacked in the entire scene by one
         condiments = Patty.GetComponentsInChildren<Renderer>();
     }
 
@@ -37,7 +39,7 @@ public class BurgerStacking : MonoBehaviour
 
         if (isTopBunUpright && topBunCorrect && pattyCorrect && cucumberCorrect && condimentsCorrect && !isStacked)
         {
-            IsAllStackedScript.howManyThingsAreStacked++;
+            GetComponent<IsAllStackedScript>().howManyThingsAreStacked++;
             TopBun.GetComponent<Rigidbody>().isKinematic = true;
             BottomBun.GetComponent<Rigidbody>().isKinematic = true;
             Patty.GetComponent<Rigidbody>().isKinematic = true;
@@ -68,7 +70,7 @@ public class BurgerStacking : MonoBehaviour
     /* Checks if the upper burger bun is correctly placed */
     bool isTopBunCorrect()
     {
-        if (Vector3.Distance(TopBun.transform.position, Patty.transform.position) <= 0.125f)
+        if (Vector3.Distance(TopBun.transform.position, Patty.transform.position) <= 0.08f)
         {
             return true;
         }

@@ -9,13 +9,16 @@ public class FriesScript : MonoBehaviour
     public GameObject Fry;
 
     Renderer[] ketchup;
-    int allTheFries = 7;
+    int allTheFries = 5;
 
     List<GameObject> collectedFries = new List<GameObject>();
+
+    IsAllStackedScript doneScript;
     // Start is called before the first frame update
     void Start()
     {
-        IsAllStackedScript.howManyThingsToStack++;
+        doneScript = GameObject.Find("Scriptholder").GetComponent<IsAllStackedScript>();
+        doneScript.howManyThingsToStack++;
         SpawnTheFries(allTheFries);
         ketchup = GetComponentsInChildren<Renderer>();
 
@@ -26,7 +29,7 @@ public class FriesScript : MonoBehaviour
     {
         if (collectedFries.Count == allTheFries && ketchup[1].enabled)
         {
-            IsAllStackedScript.howManyThingsAreStacked++;
+           doneScript.howManyThingsAreStacked++;
         }
 
     }
@@ -37,7 +40,7 @@ public class FriesScript : MonoBehaviour
 
         for (int i = 0; i < amount; i++)
         {
-            Instantiate(Fry, new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, -0.2f), Random.Range(0.3f, 0.5f)), Quaternion.identity);
+            Instantiate(Fry, new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.2f, -0.2f), Random.Range(0.6f, 0.5f)), Quaternion.identity);
         }
     }
 

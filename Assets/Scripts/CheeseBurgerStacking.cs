@@ -21,7 +21,7 @@ public class CheeseBurgerStacking : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        IsAllStackedScript.howManyThingsToStack++; //increment how many items need to be stacked in the entire scene by one
+        GetComponent<IsAllStackedScript>().howManyThingsToStack++; //increment how many items need to be stacked in the entire scene by one
         condiments = Patty.GetComponentsInChildren<Renderer>();
     }
 
@@ -38,7 +38,7 @@ public class CheeseBurgerStacking : MonoBehaviour
 
         if (isTopBunUpright && topBunCorrect && pattyCorrect && cucumberCorrect && cheeseCorrect && condimentsCorrect && !isStacked)
         {
-            IsAllStackedScript.howManyThingsAreStacked++;
+            GetComponent<IsAllStackedScript>().howManyThingsAreStacked++;
             TopBun.GetComponent<Rigidbody>().isKinematic = true;
             BottomBun.GetComponent<Rigidbody>().isKinematic = true;
             Patty.GetComponent<Rigidbody>().isKinematic = true;
@@ -97,7 +97,7 @@ public class CheeseBurgerStacking : MonoBehaviour
     /* Checks if the cucumber is correctly placed */
     bool isCucumberCorrect()
     {
-        if (Vector3.Distance(Patty.transform.position, Cucumber.transform.position) <= 0.1f)
+        if (Vector3.Distance(Patty.transform.position, Cucumber.transform.position) <= 0.3f)
         {
             return true;
         }

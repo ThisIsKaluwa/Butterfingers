@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -545,6 +545,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48da4841d9b8b0847b41ac1259694cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allDrinksReady: 0
+  allMealsReady: 0
+  timeLevelWasFinishedWith: 0
 --- !u!114 &373276497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1011,7 +1014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 295197901160664566, guid: 7c8e10da384d0454ea1adb61d1a3e2f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.311
+      value: -0.235
       objectReference: {fileID: 0}
     - target: {fileID: 295197901160664566, guid: 7c8e10da384d0454ea1adb61d1a3e2f6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1019,7 +1022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 295197901160664566, guid: 7c8e10da384d0454ea1adb61d1a3e2f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.652
+      value: 0.592
       objectReference: {fileID: 0}
     - target: {fileID: 295197901160664566, guid: 7c8e10da384d0454ea1adb61d1a3e2f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1262,7 +1265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8888423571404544972, guid: 624b98fc08409ce40969827aec26e9bf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.575071
+      value: 0.448
       objectReference: {fileID: 0}
     - target: {fileID: 8888423571404544972, guid: 624b98fc08409ce40969827aec26e9bf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1495,6 +1498,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48da4841d9b8b0847b41ac1259694cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allDrinksReady: 0
+  allMealsReady: 0
+  timeLevelWasFinishedWith: 0
 --- !u!114 &1428436649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1519,6 +1525,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f26c515dd708342af98c50ba6d5eca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  howManyThingsToStack: 0
+  howManyThingsAreStacked: 0
 --- !u!114 &1428436651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1531,6 +1539,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcbec32651e4b4842be6552d72e8da19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  everyGlassToFill: 0
+  everyFilledGlass: 0
 --- !u!114 &1428436652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1935,7 +1945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4381048118794237213, guid: 5789450bead4a3d4f86ad80da57f1d9e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.516
+      value: 0.421
       objectReference: {fileID: 0}
     - target: {fileID: 4381048118794237213, guid: 5789450bead4a3d4f86ad80da57f1d9e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1997,7 +2007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2288714984534018803, guid: 751b34be5c7ab0746acb81e837e73d3c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.533
+      value: 0.4631
       objectReference: {fileID: 0}
     - target: {fileID: 2288714984534018803, guid: 751b34be5c7ab0746acb81e837e73d3c, type: 3}
       propertyPath: m_LocalRotation.w

@@ -24,13 +24,17 @@ public class CocktailScript : MonoBehaviour
     ParticleSystem particles;
     ParticleSystem.Particle[] particle;
 
-    bool containsOJ;
-    bool containsVodka;
+    bool containsOJ = false;
+    bool containsVodka = false;
 
+    bool onceFilled = false;
+
+    AllGlassesFilledScript filledScript;
     // Start is called before the first frame update
     void Start()
     {
-        AllGlassesFilledScript.everyGlassToFill++;
+        filledScript = GameObject.Find("Scriptholder").GetComponent<AllGlassesFilledScript>();
+        filledScript.everyGlassToFill++;
         Liquid.GetComponent<Renderer>().enabled = false;
         Umbrella.GetComponent<Renderer>().enabled = false;
         collide = Glass.transform.Find("PourCollider").GetComponent<Collider>();
@@ -131,7 +135,8 @@ public class CocktailScript : MonoBehaviour
         if (containsOJ && containsVodka && glassIsFull)
         {
             Umbrella.GetComponent<Renderer>().enabled = true;
-            AllGlassesFilledScript.everyFilledGlass++;
+            filledScript.everyFilledGlass++;
+            onceFilled = true;
         }
     }
 
@@ -150,8 +155,16 @@ public class CocktailScript : MonoBehaviour
     {
 
         glassIsFull = false;
+
+        
+        if (onceFilled)
+        {
+            filledScript.everyFilledGlass--;
+            onceFilled = false;
+        }
+
         Umbrella.GetComponent<Renderer>().enabled = false;
-        AllGlassesFilledScript.everyFilledGlass--;
+        filledScript.everyFilledGlass--;
 
         if (Liquid.transform.localScale.y >= 0.06f)
         {

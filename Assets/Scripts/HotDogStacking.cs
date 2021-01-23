@@ -22,7 +22,7 @@ public class HotDogStacking : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        IsAllStackedScript.howManyThingsToStack++; //add one to the total of items needed to be stacked
+        GetComponent<IsAllStackedScript>().howManyThingsToStack++; //add one to the total of items needed to be stacked
         condiments = Sausage.GetComponentsInChildren<Renderer>();
     }
 
@@ -35,7 +35,7 @@ public class HotDogStacking : MonoBehaviour
         if (Vector3.Distance(Bun.transform.position, Sausage.transform.position) <= 0.12f &&
             Vector3.Distance(SecondBun.transform.position, Sausage.transform.position) <= 0.12f && cucumbersCorrect && condimentsCorrect && !isStacked)
         {
-            IsAllStackedScript.howManyThingsAreStacked++;
+            GetComponent<IsAllStackedScript>().howManyThingsAreStacked++;
             Bun.GetComponent<Rigidbody>().isKinematic = true;
             Sausage.GetComponent<Rigidbody>().isKinematic = true;
 
