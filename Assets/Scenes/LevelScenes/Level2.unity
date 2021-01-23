@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -612,8 +612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77feb47a35406074aa0ee497b222c644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 5
-  timerIsRunning: 0
 --- !u!114 &536603553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -789,6 +787,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48da4841d9b8b0847b41ac1259694cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allDrinksReady: 0
+  allMealsReady: 0
+  timeLevelWasFinishedWith: 0
 --- !u!114 &865023444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1358,6 +1359,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48da4841d9b8b0847b41ac1259694cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allDrinksReady: 0
+  allMealsReady: 0
+  timeLevelWasFinishedWith: 0
 --- !u!114 &1384635094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1370,6 +1374,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f26c515dd708342af98c50ba6d5eca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  howManyThingsToStack: 0
+  howManyThingsAreStacked: 0
 --- !u!114 &1384635095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1382,6 +1388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcbec32651e4b4842be6552d72e8da19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  everyGlassToFill: 0
+  everyFilledGlass: 0
 --- !u!114 &1384635096
 MonoBehaviour:
   m_ObjectHideFlags: 0
