@@ -24,27 +24,27 @@ public class LevelScoreScript : MonoBehaviour
 
       if (timeNeededInPercent <= 100 && timeNeededInPercent >= 80)
       {
-          scoreLabel.text = "S RANK";
+          scoreLabel.text = "S";
           EndScoreScript.Score += 5;
       }
       if (timeNeededInPercent <= 79 && timeNeededInPercent >= 50)
       {
-          scoreLabel.text = "A RANK";
+          scoreLabel.text = "A";
           EndScoreScript.Score += 4;
       }
       if (timeNeededInPercent <= 49 && timeNeededInPercent >= 30)
       {
-          scoreLabel.text = "B RANK";
+          scoreLabel.text = "B";
           EndScoreScript.Score += 3;
       }
       if (timeNeededInPercent <= 29 && timeNeededInPercent >= 10)
       {
-          scoreLabel.text = "C RANK";
+          scoreLabel.text = "C";
           EndScoreScript.Score += 2;
       }
       if (timeNeededInPercent <= 9 && timeNeededInPercent >= 0)
       {
-          scoreLabel.text = "D RANK";
+          scoreLabel.text = "D";
           EndScoreScript.Score += 1;
       }
     }
