@@ -16,11 +16,16 @@ public class ColaScript : MonoBehaviour
     bool glassIsFull = false;
     bool glassIsUpright = true;
 
+    bool onceFilled = false;
+
+    AllGlassesFilledScript filledScript;
+
     // Start is called before the first frame update
     void Start()
     {
         Liquid.GetComponent<Renderer>().enabled = false;
-        AllGlassesFilledScript.everyGlassToFill++;
+        filledScript = GameObject.Find("Scriptholder").GetComponent<AllGlassesFilledScript>();
+        filledScript.everyGlassToFill++;
         collide = Glass.transform.Find("PourCollider").GetComponent<Collider>();
     }
 
@@ -67,7 +72,8 @@ public class ColaScript : MonoBehaviour
                 if (Liquid.transform.localScale.y >= 5.0f)
                 {
                     glassIsFull = true;
-                    AllGlassesFilledScript.everyFilledGlass++;
+                    onceFilled = true;
+                    filledScript.everyFilledGlass++;
                 }
             }
         }
@@ -90,7 +96,13 @@ public class ColaScript : MonoBehaviour
     void DespawnLiquid(){
 
         glassIsFull = false;
-        AllGlassesFilledScript.everyFilledGlass--;
+
+        if (onceFilled)
+        {
+            filledScript.everyFilledGlass--;
+            onceFilled = false;
+        }
+        
 
         if (Liquid.transform.localScale.y >= 0.06f)
         {

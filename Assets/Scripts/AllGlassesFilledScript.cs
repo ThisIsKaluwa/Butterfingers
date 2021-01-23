@@ -6,8 +6,8 @@ using UnityEngine;
 public class AllGlassesFilledScript : MonoBehaviour
 {
 
-    public static int everyGlassToFill;
-    public static int everyFilledGlass;
+    public  int everyGlassToFill;
+    public  int everyFilledGlass;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class AllGlassesFilledScript : MonoBehaviour
     {
         if (everyGlassToFill == everyFilledGlass)
         {
-            IsTheLevelFinishedScript.allDrinksReady = true;
+            GetComponent<IsTheLevelFinishedScript>().allDrinksReady = true;
         }
     }
 }
