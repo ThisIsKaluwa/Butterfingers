@@ -35,7 +35,7 @@ public class MenuScript : MonoBehaviour
     //Executed when the player presses "Start Game"
     void StartGame(){
         SceneManager.LoadScene("Level1");
-        StoreLifesScript.lifes = 3;
+        StoreLivesScript.lives = 3;
     }
 
     //Excuted when the player presses "Tutorial"

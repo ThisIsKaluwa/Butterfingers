@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
-/* This script handles the displaying of lifes in the current level */
-public class DisplayLifesScript : MonoBehaviour
+/* This script handles the displaying of lives in the current level */
+public class DisplayLivesScript : MonoBehaviour
 {
     private VisualElement tomato1;
     private VisualElement tomato2;
@@ -23,13 +23,13 @@ public class DisplayLifesScript : MonoBehaviour
     }
 
 
-    int howManyLifes;
+    int howManyLives;
 
     // Start is called before the first frame update
     void Start()
     {
-        howManyLifes = StoreLifesScript.lifes;
-        Debug.Log(howManyLifes);
+        howManyLives = StoreLivesScript.lives;
+        Debug.Log(howManyLives);
 
     }
 
@@ -38,15 +38,15 @@ public class DisplayLifesScript : MonoBehaviour
     {
         if (Time.timeSinceLevelLoad >= 0.05f)
         {
-            DisplayLifes();
+            DisplayLives();
         }
 
     }
 
     //Displays the correct amount of tomatoes
-    void DisplayLifes()
+    void DisplayLives()
     {
-        if (howManyLifes == 3)
+        if (howManyLives == 3)
         {
             //display 3 lives
             tomato1.style.display = DisplayStyle.Flex;
@@ -54,21 +54,21 @@ public class DisplayLifesScript : MonoBehaviour
             tomato3.style.display = DisplayStyle.Flex;
         }
 
-        if (howManyLifes == 2)
+        if (howManyLives == 2)
         {
             //display 2 lives
             tomato3.style.display = DisplayStyle.None;
             tomato1.style.display = DisplayStyle.Flex;
             tomato2.style.display = DisplayStyle.Flex;
         }
-        if (howManyLifes == 1)
+        if (howManyLives == 1)
         {
             //display 1 lives
             tomato3.style.display = DisplayStyle.None;
             tomato2.style.display = DisplayStyle.None;
             tomato1.style.display = DisplayStyle.Flex;
         }
-        if (howManyLifes == 0)
+        if (howManyLives == 0)
         {
             GameOver();
             tomato3.style.display = DisplayStyle.None;
