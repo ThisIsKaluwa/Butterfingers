@@ -6,8 +6,8 @@ using UnityEngine.UIElements;
 /* This script handles the countdown that the player sees before the actual level with all its tasks starts */
 public class CountdownScript : MonoBehaviour
 {
-    public float timeRemaining = 90;
-    public bool timerIsRunning = false;
+    private float timeRemaining = 5;
+    private bool timerIsRunning = false;
     private Label timerLabel; //for displaying the seconds on screen in game 
     private VisualElement timerContainer;
     int howManyLives;

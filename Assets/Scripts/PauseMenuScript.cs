@@ -99,5 +99,6 @@ public class PauseMenuScript : MonoBehaviour
         menuContainer.style.display = DisplayStyle.None;
         isPaused = false;
         Time.timeScale = 1f;
+        LevelTimerScript.timerIsRunning = false;
     }
 }
