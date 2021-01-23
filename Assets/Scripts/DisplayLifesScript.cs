@@ -56,19 +56,24 @@ public class DisplayLifesScript : MonoBehaviour
 
         if (howManyLifes == 2)
         {
-
             //display 2 lives
             tomato3.style.display = DisplayStyle.None;
+            tomato1.style.display = DisplayStyle.Flex;
+            tomato2.style.display = DisplayStyle.Flex;
         }
         if (howManyLifes == 1)
         {
             //display 1 lives
             tomato3.style.display = DisplayStyle.None;
             tomato2.style.display = DisplayStyle.None;
+            tomato1.style.display = DisplayStyle.Flex;
         }
         if (howManyLifes == 0)
         {
             GameOver();
+            tomato3.style.display = DisplayStyle.None;
+            tomato2.style.display = DisplayStyle.None;
+            tomato1.style.display = DisplayStyle.None;
         }
     }
 
