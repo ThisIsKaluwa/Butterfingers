@@ -97,7 +97,6 @@ public class PauseMenuScript : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene(); 
         SceneManager.LoadScene(scene.name);
         menuContainer.style.display = DisplayStyle.None;
-        Time.timeScale = 1f;
         isPaused = false;
     }
 }

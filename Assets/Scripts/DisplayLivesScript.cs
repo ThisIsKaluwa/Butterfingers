@@ -7,9 +7,12 @@ using UnityEngine.SceneManagement;
 /* This script handles the displaying of lives in the current level */
 public class DisplayLivesScript : MonoBehaviour
 {
+    int howManyLives;
     private VisualElement tomato1;
     private VisualElement tomato2;
     private VisualElement tomato3;
+
+    private VisualElement LevelUIWrapper;
 
     //This function is called when the object becomes enabled and active.
     private void OnEnable()
@@ -20,17 +23,13 @@ public class DisplayLivesScript : MonoBehaviour
         tomato1 = UIDocument.Q<VisualElement>("Tomato1");
         tomato2 = UIDocument.Q<VisualElement>("Tomato2");
         tomato3 = UIDocument.Q<VisualElement>("Tomato3");
+        LevelUIWrapper = UIDocument.Q<VisualElement>("ScreenContainer");
     }
-
-
-    int howManyLives;
 
     // Start is called before the first frame update
     void Start()
     {
         howManyLives = StoreLivesScript.lives;
-        Debug.Log(howManyLives);
-
     }
 
     // Update is called once per frame
@@ -69,11 +68,9 @@ public class DisplayLivesScript : MonoBehaviour
             tomato1.style.display = DisplayStyle.Flex;
         }
         if (howManyLives == 0)
-        {
+        {   
+            LevelUIWrapper.style.display = DisplayStyle.None;
             GameOver();
-            tomato3.style.display = DisplayStyle.None;
-            tomato2.style.display = DisplayStyle.None;
-            tomato1.style.display = DisplayStyle.None;
         }
     }
 

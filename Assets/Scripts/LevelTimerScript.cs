@@ -10,7 +10,8 @@ public class LevelTimerScript : MonoBehaviour
     public static float timeRemaining;
     public static bool timerIsRunning = false;
 
-    private Label timerLabel; //for displaying the seconds on screen in game 
+    private Label timerLabel; //for displaying the seconds on screen in game
+    private VisualElement messageWrapper;
 
     private void OnEnable()
     {
@@ -18,13 +19,18 @@ public class LevelTimerScript : MonoBehaviour
         var UIDocument = GetComponent<UIDocument>().rootVisualElement;
         //Gets the Timer Label from the UIDocument with a Query
         timerLabel = UIDocument.Q<Label>("CountDownLabel");
+        messageWrapper = UIDocument.Q<VisualElement>("MessageWrapper");
     }
 
     private void Start()
     {
+        Invoke("startTimer", 5);
+    }
+
+    void startTimer(){
         // Starts the timer automatically
         timerIsRunning = true;
-        timeRemaining = 10;
+        timeRemaining = 5;
     }
 
     //Update is called once per frame 
@@ -39,14 +45,19 @@ public class LevelTimerScript : MonoBehaviour
             }
             else
             {
-                Debug.Log("Time has run out!");
+                messageWrapper.style.display = DisplayStyle.Flex;
                 timeRemaining = 0;
                 timerIsRunning = false;
-                StoreLivesScript.lives -= 1;
-                Scene scene = SceneManager.GetActiveScene();
-                SceneManager.LoadScene(scene.name);
+                timerLabel.text = "00:00";
+                Invoke("Lost", 2);
             }
         }
+    }
+
+    void Lost(){
+        StoreLivesScript.lives -= 1;
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 
     //Converts the remaining float time to a minute:seconds String
