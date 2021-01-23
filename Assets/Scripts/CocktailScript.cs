@@ -38,8 +38,6 @@ public class CocktailScript : MonoBehaviour
         Liquid.GetComponent<Renderer>().enabled = false;
         Umbrella.GetComponent<Renderer>().enabled = false;
         collide = Glass.transform.Find("PourCollider").GetComponent<Collider>();
-        containsOJ = false;
-        containsVodka = false;
 
     }
 
@@ -164,7 +162,6 @@ public class CocktailScript : MonoBehaviour
         }
 
         Umbrella.GetComponent<Renderer>().enabled = false;
-        filledScript.everyFilledGlass--;
 
         if (Liquid.transform.localScale.y >= 0.06f)
         {

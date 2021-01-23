@@ -37,6 +37,7 @@ public class HotDogStacking : MonoBehaviour
         {
             GetComponent<IsAllStackedScript>().howManyThingsAreStacked++;
             Bun.GetComponent<Rigidbody>().isKinematic = true;
+            SecondBun.GetComponent<Rigidbody>().isKinematic = true;
             Sausage.GetComponent<Rigidbody>().isKinematic = true;
 
             foreach (GameObject cucumber in Cucumbers)
