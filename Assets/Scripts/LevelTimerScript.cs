@@ -42,7 +42,7 @@ public class LevelTimerScript : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
-                StoreLifesScript.lifes -= 1;
+                StoreLivesScript.lives -= 1;
                 Scene scene = SceneManager.GetActiveScene();
                 SceneManager.LoadScene(scene.name);
             }

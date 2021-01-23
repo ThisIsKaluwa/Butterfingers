@@ -48,7 +48,7 @@
                         <ui:VisualElement class="tutorial-image" style="background-image: url(&apos;/Assets/UI/Images/Tutorial/Element 3@4x.png&apos;); -unity-background-scale-mode: scale-to-fit;" />
                         <ui:VisualElement class="tutorial-label">
                             <ui:Label text="3. Be Quick!" display-tooltip-when-elided="true" name="Label" class="h1" />
-                            <ui:Label text="You only have 40 seconds to stack all the food on the posters correctly. If you can not make it in time you will lose a life." display-tooltip-when-elided="true" class="tutorial-description" />
+                            <ui:Label text="You only have 90 seconds to stack all the food on the posters correctly. If you can not make it in time you will lose a life." display-tooltip-when-elided="true" class="tutorial-description" />
                         </ui:VisualElement>
                     </ui:VisualElement>
                     <ui:VisualElement name="4_Done" style="flex-direction: row; margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px;">
