@@ -8,7 +8,7 @@
                 <ui:VisualElement name="Tomato3" class="life-tomato" style="display: none;" />
             </ui:VisualElement>
             <ui:VisualElement name="CountDownWrapper" style="width: 70%; align-items: flex-end;">
-                <ui:Label text="01:30" display-tooltip-when-elided="true" name="CountDownLabel" class="h1" style="-unity-font: url(&apos;/Assets/Fonts/Chewy-Regular.ttf&apos;); font-size: 100px;" />
+                <ui:Label text="02:00" display-tooltip-when-elided="true" name="CountDownLabel" class="h1" style="-unity-font: url(&apos;/Assets/Fonts/Chewy-Regular.ttf&apos;); font-size: 100px;" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="MessageWrapper" style="align-items: center; justify-content: center; display: none;">
