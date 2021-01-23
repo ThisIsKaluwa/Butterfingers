@@ -98,5 +98,6 @@ public class PauseMenuScript : MonoBehaviour
         SceneManager.LoadScene(scene.name);
         menuContainer.style.display = DisplayStyle.None;
         isPaused = false;
+        Time.timeScale = 1f;
     }
 }
