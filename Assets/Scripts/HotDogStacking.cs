@@ -32,8 +32,8 @@ public class HotDogStacking : MonoBehaviour
         bool cucumbersCorrect = areCucumbersCorrect();
         bool condimentsCorrect = areCondimentsCorrect();
 
-        if (Vector3.Distance(Bun.transform.position, Sausage.transform.position) <= 0.12f &&
-            Vector3.Distance(SecondBun.transform.position, Sausage.transform.position) <= 0.12f && cucumbersCorrect && condimentsCorrect && !isStacked)
+        if (Vector3.Distance(Bun.transform.position, Sausage.transform.position) <= 0.1f &&
+            Vector3.Distance(SecondBun.transform.position, Sausage.transform.position) <= 0.1f && cucumbersCorrect && condimentsCorrect && !isStacked)
         {
             GetComponent<IsAllStackedScript>().howManyThingsAreStacked++;
             Bun.GetComponent<Rigidbody>().isKinematic = true;
