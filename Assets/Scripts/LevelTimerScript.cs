@@ -30,7 +30,7 @@ public class LevelTimerScript : MonoBehaviour
     void startTimer(){
         // Starts the timer automatically
         timerIsRunning = true;
-        timeRemaining = 500;
+        timeRemaining = 120;
     }
 
     //Update is called once per frame 
