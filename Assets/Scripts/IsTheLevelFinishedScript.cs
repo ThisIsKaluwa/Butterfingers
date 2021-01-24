@@ -11,15 +11,15 @@ public class IsTheLevelFinishedScript : MonoBehaviour
     public bool allMealsReady;
     public int timeLevelWasFinishedWith;
     private static VisualElement scoreWindow;
-    private static VisualElement endWindow;
-
+    private bool wrapUpOnlyOnce = true;
+   
     private void OnEnable()
     {
         //Gets the UI Document
         var UIDocument = GetComponent<UIDocument>().rootVisualElement;
         //Gets the Score Label from the UIDocument with a Query
         scoreWindow = UIDocument.Q<VisualElement>("ScoreContainer");
-        //endWindow = UIDocument.Q<VisualElement>("ScoreContainer");
+        
     }
 
 
@@ -33,9 +33,10 @@ public class IsTheLevelFinishedScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (allDrinksReady && allMealsReady)
+        if (allDrinksReady && allMealsReady && wrapUpOnlyOnce)
         {
             WrapUpTheLevel();
+            wrapUpOnlyOnce = false;
         }
     }
 
@@ -59,28 +60,23 @@ public class IsTheLevelFinishedScript : MonoBehaviour
 
     void LoadTheNextLevel()
     {
+
+        Debug.Log("Load Next");
+
+        
+
         int scene = SceneManager.GetActiveScene().buildIndex;
         int nextScene = scene + 1;
 
         if (nextScene == 11)
         {
-            //game is done
+            CalculateEndScoreScript.ShowEndScore();
             scoreWindow.style.display = DisplayStyle.None;
-            //endWindow.style.display = DisplayStyle.Flex;
-
-            Invoke("GameIsOver", 3.0f);
         }
         else
         {
             SceneManager.LoadScene(nextScene);
             scoreWindow.style.display = DisplayStyle.None;
         }
-
     }
-
-    void GameIsOver()
-    {
-        SceneManager.LoadScene(0);
-    }
-
 }

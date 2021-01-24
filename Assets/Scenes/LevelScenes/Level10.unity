@@ -329,6 +329,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48da4841d9b8b0847b41ac1259694cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allDrinksReady: 0
+  allMealsReady: 0
+  timeLevelWasFinishedWith: 0
 --- !u!114 &99526751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1301,7 +1304,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1181731072
 PrefabInstance:
@@ -1477,6 +1480,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48da4841d9b8b0847b41ac1259694cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allDrinksReady: 0
+  allMealsReady: 0
+  timeLevelWasFinishedWith: 0
 --- !u!4 &1278760102
 Transform:
   m_ObjectHideFlags: 0
@@ -1591,6 +1597,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcbec32651e4b4842be6552d72e8da19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  everyGlassToFill: 0
+  everyFilledGlass: 0
 --- !u!114 &1278760110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1603,6 +1611,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f26c515dd708342af98c50ba6d5eca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  howManyThingsToStack: 0
+  howManyThingsAreStacked: 0
 --- !u!1001 &1319836442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1810,8 +1820,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77feb47a35406074aa0ee497b222c644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 5
-  timerIsRunning: 0
 --- !u!114 &1518494752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2220,7 +2228,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 464466, guid: 869d20cdda15af24aab9e72b5f2eec78, type: 3}
   m_PrefabInstance: {fileID: 1476619789}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1739395097
+--- !u!1 &1734027006
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2228,10 +2236,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1739395101}
-  - component: {fileID: 1739395100}
-  - component: {fileID: 1739395098}
-  - component: {fileID: 1739395099}
+  - component: {fileID: 1734027009}
+  - component: {fileID: 1734027008}
+  - component: {fileID: 1734027007}
   m_Layer: 5
   m_Name: EndScore
   m_TagString: Untagged
@@ -2239,37 +2246,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1739395098
+--- !u!114 &1734027007
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739395097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48da4841d9b8b0847b41ac1259694cc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1739395099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739395097}
+  m_GameObject: {fileID: 1734027006}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8cbee19c888166547b235fa383e8d59d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1739395100
+--- !u!114 &1734027008
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739395097}
+  m_GameObject: {fileID: 1734027006}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f21c074d86024caca2a0034ce4f53f73, type: 3}
@@ -2279,19 +2274,19 @@ MonoBehaviour:
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 50c2ed933af67114eb4c82cc7caf5598, type: 3}
   m_SortingOrder: 0
---- !u!4 &1739395101
+--- !u!4 &1734027009
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739395097}
+  m_GameObject: {fileID: 1734027006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1767476516
 PrefabInstance:
@@ -2597,7 +2592,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1944805179 stripped
 MonoBehaviour:

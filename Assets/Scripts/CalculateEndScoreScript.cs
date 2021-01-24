@@ -9,6 +9,8 @@ public class CalculateEndScoreScript : MonoBehaviour
 {
     private Label finalScoreLabel; //for displaying the Score on screen in game 
     private Button backToStart;
+    private static VisualElement endWindow;
+
 
     private void OnEnable() {
         //Gets the UI Document
@@ -16,6 +18,7 @@ public class CalculateEndScoreScript : MonoBehaviour
         //Gets the Score Label from the UIDocument with a Query
         finalScoreLabel = UIDocument.Q<Label>("ScoreCount");
         backToStart = UIDocument.Q<Button>("BackToStart");
+        endWindow = UIDocument.Q<VisualElement>("EndScoreContainer");
 
         backToStart.RegisterCallback<ClickEvent>(e => EndGame() );
     }
@@ -62,7 +65,11 @@ public class CalculateEndScoreScript : MonoBehaviour
 
     }
 
+    public static void ShowEndScore() {
+        endWindow.style.display = DisplayStyle.Flex;
+    }
+
     void EndGame() {
-        SceneManager.LoadScene("Level0");
+        SceneManager.LoadScene(0);
     }
 }
