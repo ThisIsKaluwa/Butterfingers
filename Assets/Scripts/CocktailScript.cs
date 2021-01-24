@@ -113,6 +113,7 @@ public class CocktailScript : MonoBehaviour
 
                 if (Liquid.transform.localScale.y >= 5.0f)
                 {
+                    Umbrella.GetComponent<Renderer>().enabled = true;
                     glassIsFull = true;
                 }
 
@@ -132,7 +133,6 @@ public class CocktailScript : MonoBehaviour
 
         if (containsOJ && containsVodka && glassIsFull)
         {
-            Umbrella.GetComponent<Renderer>().enabled = true;
             filledScript.everyFilledGlass++;
             onceFilled = true;
         }
