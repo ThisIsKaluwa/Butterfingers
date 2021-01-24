@@ -4,7 +4,7 @@
         <ui:VisualElement name="EndScoreWindowWrapper" class="window" style="width: 40%; height: 40%; margin-right: auto; margin-left: auto; top: 30%; bottom: 30%; justify-content: center;">
             <ui:VisualElement name="ScoreCountWrapper" style="max-width: none; width: 80%; height: 60%; flex-direction: row; align-items: center; justify-content: center;">
                 <ui:VisualElement name="ScoreLabelWrapper">
-                    <ui:Label text="Your Score:" display-tooltip-when-elided="true" name="YourScoreLabel" class="h1" />
+                    <ui:Label text="Your Final Score:" display-tooltip-when-elided="true" name="YourScoreLabel" class="h1" />
                 </ui:VisualElement>
                 <ui:VisualElement name="ScoreCountLabelWrapper" style="margin-left: 35px; margin-right: 35px; margin-top: 35px; margin-bottom: 35px;">
                     <ui:Label text="B&#10;" display-tooltip-when-elided="true" name="ScoreCount" style="-unity-font: url(&apos;/Assets/Fonts/Imprima-Regular.ttf&apos;); color: rgb(225, 1, 1); font-size: 150px; -unity-font-style: bold;" />
