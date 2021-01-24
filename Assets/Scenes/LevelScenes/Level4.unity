@@ -691,6 +691,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48da4841d9b8b0847b41ac1259694cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allDrinksReady: 0
+  allMealsReady: 0
+  timeLevelWasFinishedWith: 0
 --- !u!114 &426134350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -888,6 +891,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48da4841d9b8b0847b41ac1259694cc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allDrinksReady: 0
+  allMealsReady: 0
+  timeLevelWasFinishedWith: 0
 --- !u!114 &548860882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -900,6 +906,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcbec32651e4b4842be6552d72e8da19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  everyGlassToFill: 0
+  everyFilledGlass: 0
 --- !u!114 &548860883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -912,6 +920,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f26c515dd708342af98c50ba6d5eca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  howManyThingsToStack: 0
+  howManyThingsAreStacked: 0
 --- !u!198 &713412961 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 440617686734137272, guid: efcb7a1d1671bad4e8fda50be4ef0fbe, type: 3}
@@ -1552,8 +1562,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77feb47a35406074aa0ee497b222c644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 5
-  timerIsRunning: 0
 --- !u!114 &1761267530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1670,7 +1678,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776077979}
   m_LocalRotation: {x: 0.17653336, y: -0.0053528193, z: -0.00075832667, w: 0.9842798}
-  m_LocalPosition: {x: -0.001, y: 0.101, z: 0.079}
+  m_LocalPosition: {x: -0.001, y: 0.101, z: 0.109}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
