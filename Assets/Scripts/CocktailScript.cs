@@ -19,7 +19,7 @@ public class CocktailScript : MonoBehaviour
     bool glassIsFull = false;
     bool glassIsUpright = true;
 
-    Material material; //needed to determine what color the cocktail currently has
+    Material material; //needed to determine what color the cocktail needs to be
 
     ParticleSystem particles;
     ParticleSystem.Particle[] particle;
@@ -113,7 +113,6 @@ public class CocktailScript : MonoBehaviour
 
                 if (Liquid.transform.localScale.y >= 5.0f)
                 {
-                    Umbrella.GetComponent<Renderer>().enabled = true;
                     glassIsFull = true;
                 }
 
@@ -133,6 +132,8 @@ public class CocktailScript : MonoBehaviour
 
         if (containsOJ && containsVodka && glassIsFull)
         {
+            Umbrella.GetComponent<Renderer>().enabled = true;
+            Debug.Log("Done");
             filledScript.everyFilledGlass++;
             onceFilled = true;
         }
