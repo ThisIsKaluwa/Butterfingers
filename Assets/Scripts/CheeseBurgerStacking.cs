@@ -68,7 +68,7 @@ public class CheeseBurgerStacking : MonoBehaviour
     /* Checks if the upper burger bun is correctly placed */
     bool isTopBunCorrect()
     {
-        if (Vector3.Distance(TopBun.transform.position, Patty.transform.position) <= 0.07f)
+        if (Vector3.Distance(TopBun.transform.position, Patty.transform.position) <= 0.1f)
         {
             return true;
         }
