@@ -1,4 +1,4 @@
-/* This script handles the score a player receives after completing a level 
+/** This script handles the score a player receives after completing a level 
 This Script relies on a timer being used to meassure how sucessful the player is
 */
 
@@ -11,16 +11,16 @@ using UnityEngine.UIElements;
 public class LevelScoreScript : MonoBehaviour
 {
     public static float timeLeft;
-    private static Label scoreLabel; //for displaying the Score on screen in game
+    private static Label scoreLabel; ///for displaying the Score on screen in game
 
     private void OnEnable() {
-        //Gets the UI Document
+        ///Gets the UI Document
         var UIDocument = GetComponent<UIDocument>().rootVisualElement;
-        //Gets the Score Label from the UIDocument with a Query
+        ///Gets the Score Label from the UIDocument with a Query
         scoreLabel = UIDocument.Q<Label>("ScoreCountLabel");
     }
 
-    /* Calculates a score according to how long the player needed to complete the level */
+    /** Calculates a score according to how long the player needed to complete the level */
     public static void CalculateLevelScore(){
         int timeNeededInPercent = (int) ((timeLeft / 120) * 100);
 

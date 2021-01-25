@@ -1,4 +1,4 @@
-﻿/* This script handles the 'mixing' of a cocktail (specifically a screwdriver), which contains two inedients  */
+﻿/*** This script handles the 'mixing' of a cocktail (specifically a screwdriver), which contains two inedients  */
 
 using System.Collections;
 using System.Collections.Generic;
@@ -20,7 +20,7 @@ public class CocktailScript : MonoBehaviour
     bool glassIsFull = false;
     bool glassIsUpright = true;
 
-    Material material; //needed to determine what color the cocktail needs to be
+    Material material; ////needed to determine what color the cocktail needs to be
 
     ParticleSystem particles;
     ParticleSystem.Particle[] particle;
@@ -31,7 +31,7 @@ public class CocktailScript : MonoBehaviour
     bool onceFilled = false;
 
     AllGlassesFilledScript filledScript;
-    // Start is called before the first frame update
+    /// Start is called before the first frame update
     void Start()
     {
         filledScript = GameObject.Find("Scriptholder").GetComponent<AllGlassesFilledScript>();
@@ -42,7 +42,7 @@ public class CocktailScript : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    /// Update is called once per frame
     void Update()
     {
 
@@ -61,7 +61,7 @@ public class CocktailScript : MonoBehaviour
 
     }
 
-    /* Check which particle system is used to fill the glass to determine which color he Liquid will be */
+    /** Check which particle system is used to fill the glass to determine which color he Liquid will be */
     void CheckWhichLiquid()
     {
 
@@ -88,15 +88,15 @@ public class CocktailScript : MonoBehaviour
         }
     }
 
-    /* Creates the 'liquid' inside the glass*/
+    /** Creates the 'liquid' inside the glass*/
     void SpawnLiquid()
     {
         InitializeIfNeeded();
 
-        // GetParticles is allocation free because we reuse the particle buffer between updates
+        /// GetParticles is allocation free because we reuse the particle buffer between updates
         int numParticlesAlive = particles.GetParticles(particle);
 
-        // Change only the particles that are alive
+        /// Change only the particles that are alive
         for (int i = 0; i < numParticlesAlive; i++)
         {
 
@@ -128,7 +128,7 @@ public class CocktailScript : MonoBehaviour
             }
         }
 
-        // Apply the particle changes to the Particle System
+        /// Apply the particle changes to the Particle System
         particles.SetParticles(particle, numParticlesAlive);
 
         if (containsOJ && containsVodka && glassIsFull)
@@ -140,7 +140,7 @@ public class CocktailScript : MonoBehaviour
         }
     }
 
-    /* Initialize the particle system with a set amount of particles if it doesn't exist correctly*/
+    /** Initialize the particle system with a set amount of particles if it doesn't exist correctly*/
     void InitializeIfNeeded()
     {
         if (particles == null)
@@ -150,7 +150,7 @@ public class CocktailScript : MonoBehaviour
             particle = new ParticleSystem.Particle[particles.main.maxParticles];
     }
 
-    /* If the glass is tipped over more than a specific angle, 'empty' the cup, by diminishing the liquid inside */
+    /** If the glass is tipped over more than a specific angle, 'empty' the cup, by diminishing the liquid inside */
     void DespawnLiquid()
     {
 
@@ -181,7 +181,7 @@ public class CocktailScript : MonoBehaviour
         }
     }
 
-    /* See if the glass can be filled with liquid, or if it is too tilted for that */
+    /** See if the glass can be filled with liquid, or if it is too tilted for that */
     bool checkIfGlassUpright()
     {
         if (Vector3.Dot(Glass.transform.up, Vector3.up) >= 0.5f)

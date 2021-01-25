@@ -1,4 +1,4 @@
-﻿/* This script is for handeling the score, saving it across scenes*/
+﻿/** This script is for handeling the score, saving it across scenes*/
 
 using System.Collections;
 using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿/* This script handles the checking whether or not the current level is finished
+﻿/** This script handles the checking whether or not the current level is finished
 It stops the timer is the player finishes the level, gets the score calculated at the right time and loads the next level */
 
 using System.Collections;
@@ -19,22 +19,22 @@ public class IsTheLevelFinishedScript : MonoBehaviour
    
     private void OnEnable()
     {
-        //Gets the UI Document
+        ///Gets the UI Document
         var UIDocument = GetComponent<UIDocument>().rootVisualElement;
-        //Gets the Score Label from the UIDocument with a Query
+        ///Gets the Score Label from the UIDocument with a Query
         scoreWindow = UIDocument.Q<VisualElement>("ScoreContainer");
         
     }
 
 
-    // Start is called before the first frame update
+    /// Start is called before the first frame update
     void Start()
     {
         allDrinksReady = false;
         allMealsReady = false;
     }
 
-    // Update is called once per frame
+    /// Update is called once per frame
     void Update()
     {
         if (allDrinksReady && allMealsReady && wrapUpOnlyOnce)
@@ -44,7 +44,7 @@ public class IsTheLevelFinishedScript : MonoBehaviour
         }
     }
 
-    //When every order is finished the level gets wrapped up by stopping the timer and calculating a score
+    ///When every order is finished the level gets wrapped up by stopping the timer and calculating a score
     void WrapUpTheLevel()
     {
 
@@ -63,7 +63,7 @@ public class IsTheLevelFinishedScript : MonoBehaviour
 
     }
 
-    //Responsible for which level should be loaded next, and if the game is over show the end screen
+    ///Responsible for which level should be loaded next, and if the game is over show the end screen
     void LoadTheNextLevel()
     {
 

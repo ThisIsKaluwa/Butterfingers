@@ -1,4 +1,4 @@
-﻿/* This Level handles the Menu at the start of the game 
+﻿/** This Level handles the Menu at the start of the game 
 The player can choose to either start the game or look at the tutorial */
 
 using System.Collections;
@@ -18,12 +18,12 @@ public class MenuScript : MonoBehaviour
     private static VisualElement tutorialWrapper;
     private bool tutorialShown = false;
 
-    //This function is called when the object becomes enabled and active.
+    ///This function is called when the object becomes enabled and active.
     private void OnEnable() {
-        //Gets the UI Document
+        ///Gets the UI Document
         var UIDocument = GetComponent<UIDocument>().rootVisualElement;
 
-        //Gets all the Menu Components by Query
+        ///Gets all the Menu Components by Query
         startButton = UIDocument.Q<Button>("start");
         tutorialButton = UIDocument.Q<Button>("tutorial");
         closeTutorialButton = UIDocument.Q<Button>("Close");
@@ -35,13 +35,13 @@ public class MenuScript : MonoBehaviour
         closeTutorialButton.RegisterCallback<ClickEvent>(e => ToggleTutorial());
     }
 
-    //Executed when the player presses "Start Game"
+    ///Executed when the player presses "Start Game"
     void StartGame(){
         SceneManager.LoadScene(1);
         StoreLivesScript.lives = 3;
     }
 
-    //Excuted when the player presses "Tutorial"
+    ///Excuted when the player presses "Tutorial"
     void ToggleTutorial() {
 
         if (tutorialShown) {

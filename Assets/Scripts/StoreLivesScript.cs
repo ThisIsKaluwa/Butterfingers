@@ -1,4 +1,4 @@
-﻿/* This script handles the tracking of the player lives thorughout the entire game, saving the current lives across scenes */
+﻿/** This script handles the tracking of the player lives thorughout the entire game, saving the current lives across scenes */
 
 using System.Collections;
 using System.Collections.Generic;

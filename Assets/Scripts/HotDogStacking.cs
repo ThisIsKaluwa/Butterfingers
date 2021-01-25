@@ -1,4 +1,4 @@
-/* This script handles the construction of a hotdog 
+/** This script handles the construction of a hotdog 
 A hotdog consists of two buns, a sausage and three cucumbers
 */
 
@@ -20,14 +20,14 @@ public class HotDogStacking : MonoBehaviour
     Renderer[] condiments;
 
 
-    // Start is called before the first frame update
+    /// Start is called before the first frame update
     void Start()
     {
-        GetComponent<IsAllStackedScript>().howManyThingsToStack++; //add one to the total of items needed to be stacked
+        GetComponent<IsAllStackedScript>().howManyThingsToStack++; ///add one to the total of items needed to be stacked
         condiments = Sausage.GetComponentsInChildren<Renderer>();
     }
 
-    // Update is called once per frame
+    /// Update is called once per frame
     void Update()
     {
         bool cucumbersCorrect = areCucumbersCorrect();
@@ -50,7 +50,7 @@ public class HotDogStacking : MonoBehaviour
         }
     }
 
-    /* Checks if 3 cucumbers are placed correctly */
+    /** Checks if 3 cucumbers are placed correctly */
     bool areCucumbersCorrect()
     {
         int correct = 0;
@@ -74,7 +74,7 @@ public class HotDogStacking : MonoBehaviour
         }
     }
 
-    /* Checks if mustard and ketchup are spawned, must both be on the same side */
+    /** Checks if mustard and ketchup are spawned, must both be on the same side */
     bool areCondimentsCorrect()
     {
         if (condiments[1].enabled && condiments[2].enabled || condiments[3].enabled && condiments[4].enabled)

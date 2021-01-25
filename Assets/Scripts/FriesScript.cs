@@ -1,4 +1,4 @@
-/* This scene handles the preparation of the fries, which are served in a paper tray
+/** This scene handles the preparation of the fries, which are served in a paper tray
 This script needs to be attached to the tray the fries should be collected in*/
 
 using System.Collections;
@@ -15,7 +15,7 @@ public class FriesScript : MonoBehaviour
     List<GameObject> collectedFries = new List<GameObject>();
 
     IsAllStackedScript doneScript;
-    // Start is called before the first frame update
+    /// Start is called before the first frame update
     void Start()
     {
         doneScript = GameObject.Find("Scriptholder").GetComponent<IsAllStackedScript>();
@@ -25,7 +25,7 @@ public class FriesScript : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    /// Update is called once per frame
     void Update()
     {
         if (collectedFries.Count == allTheFries && ketchup[1].enabled)
@@ -35,7 +35,7 @@ public class FriesScript : MonoBehaviour
 
     }
 
-    /* Instantiate a set amount of fries somewhere in the scene thats reachable by hand */
+    /** Instantiate a set amount of fries somewhere in the scene thats reachable by hand */
     void SpawnTheFries(int amount)
     {
 
@@ -45,7 +45,7 @@ public class FriesScript : MonoBehaviour
         }
     }
 
-    /* Counts how many fries are put into the tray */
+    /** Counts how many fries are put into the tray */
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Collectable")
@@ -54,7 +54,7 @@ public class FriesScript : MonoBehaviour
         }
     }
 
-     /* Counts how many fries exit the tray */
+     /** Counts how many fries exit the tray */
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Collectable")

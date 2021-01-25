@@ -1,4 +1,4 @@
-﻿/* This script handles the countdown that the player sees before the actual level with all its tasks starts */
+﻿/** This script handles the countdown that the player sees before the actual level with all its tasks starts */
 
 using System.Collections;
 using System.Collections.Generic;
@@ -9,22 +9,22 @@ public class CountdownScript : MonoBehaviour
 {
     private float timeRemaining = 5;
     private bool timerIsRunning = false;
-    private Label timerLabel; //for displaying the seconds on screen in game 
+    private Label timerLabel; ///for displaying the seconds on screen in game 
     private VisualElement timerContainer;
     int howManyLives;
 
-     //This function is called when the object becomes enabled and active.
+     ///This function is called when the object becomes enabled and active.
     private void OnEnable() {
-        //Gets the UI Document
+        ///Gets the UI Document
         var UIDocument = GetComponent<UIDocument>().rootVisualElement;
-        //Gets the Timer Label from the UIDocument with a Query
+        ///Gets the Timer Label from the UIDocument with a Query
         timerLabel = UIDocument.Q<Label>("StartCountDownLabel");
         timerContainer = UIDocument.Q<VisualElement>("CountDownWrapper");
     }
 
     private void Start()
     {
-        // Starts the timer automatically if more than 0 lives
+        /// Starts the timer automatically if more than 0 lives
         howManyLives = StoreLivesScript.lives;
         if (howManyLives > 0 ) {
             timerIsRunning = true;
@@ -33,7 +33,7 @@ public class CountdownScript : MonoBehaviour
         }
     }
 
-    //Update is called once per frame 
+    ///Update is called once per frame 
     void Update()
     {
         if (timerIsRunning)
@@ -52,7 +52,7 @@ public class CountdownScript : MonoBehaviour
         }
     }
 
-    //Show the time the player still has in seconds
+    ///Show the time the player still has in seconds
     void DisplayTime(float timeToDisplay)
     {
         timeToDisplay += 1;
@@ -62,14 +62,14 @@ public class CountdownScript : MonoBehaviour
         timerLabel.text = string.Format("{0:0}",seconds);
     }
 
-    //Show the timer on the display
+    ///Show the timer on the display
     void DisplayString(string stringToDisplay)
     {
         timerLabel.text = stringToDisplay;
         Invoke("Run", 1.0f);
     }
 
-    //once the game begins to run, don't show the timer anymore
+    ///once the game begins to run, don't show the timer anymore
     void Run() {
         timerContainer.style.display = DisplayStyle.None;
     }

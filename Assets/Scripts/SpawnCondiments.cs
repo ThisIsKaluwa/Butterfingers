@@ -1,4 +1,4 @@
-﻿/* This script handles how condiments appear on some food items
+﻿/** This script handles how condiments appear on some food items
 These items include: Burger patties, sausages, fries */
 
 using System.Collections;
@@ -22,7 +22,7 @@ public class SpawnCondiments : MonoBehaviour
     ParticleSystem.Particle[] particle;
 
 
-    // Start is called before the first frame update
+    /// Start is called before the first frame update
     void Start()
     {
         condiments = CondimentsSpawnHere.GetComponentsInChildren<Renderer>();
@@ -35,7 +35,7 @@ public class SpawnCondiments : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    /// Update is called once per frame
     void Update()
     {
 
@@ -54,7 +54,7 @@ public class SpawnCondiments : MonoBehaviour
 
     }
 
-    //Makes the condiments visible if particles hit the item
+    ///Makes the condiments visible if particles hit the item
     void spawnCondiment()
     {
 
@@ -62,7 +62,7 @@ public class SpawnCondiments : MonoBehaviour
 
         int numParticlesAlive = particles.GetParticles(particle);
 
-        // Change only the particles that are alive
+        /// Change only the particles that are alive
         for (int i = 0; i < numParticlesAlive; i++)
         {
 
@@ -103,7 +103,7 @@ public class SpawnCondiments : MonoBehaviour
         }
     }
 
-    /* Initialize the particle system with a set amount of particles if it doesn't exist correctly*/
+    /** Initialize the particle system with a set amount of particles if it doesn't exist correctly*/
     void InitializeIfNeeded()
     {
         if (particles == null)

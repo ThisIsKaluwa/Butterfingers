@@ -1,4 +1,4 @@
-/* This script handles the correct way of stacking a burger 
+/*** This script handles the correct way of stacking a burger 
 The correct order (from bottom to top) is: bottom bun, patty, cucumber and a top bun
  */
 
@@ -21,14 +21,14 @@ public class BurgerStacking : MonoBehaviour
 
     IsAllStackedScript stacked;
 
-    // Start is called before the first frame update
+    /// Start is called before the first frame update
     void Start()
     {
-        GetComponent<IsAllStackedScript>().howManyThingsToStack++; //increment how many items need to be stacked in the entire scene by one
+        GetComponent<IsAllStackedScript>().howManyThingsToStack++; ///increment how many items need to be stacked in the entire scene by one
         condiments = Patty.GetComponentsInChildren<Renderer>();
     }
 
-    // Update is called once per frame
+    /// Update is called once per frame
     void Update()
     {
         bool isTopBunUpright = checkIfTopBunUpright();
@@ -51,7 +51,7 @@ public class BurgerStacking : MonoBehaviour
     }
 
 
-    /* Checks if the upper bun of the buger is upright
+    /** Checks if the upper bun of the buger is upright
     @return true if the burger bun is upright (can be slightly tilted)
     @return false if the burger bun is flipped upside down
     */
@@ -68,7 +68,7 @@ public class BurgerStacking : MonoBehaviour
         }
     }
 
-    /* Checks if the upper burger bun is correctly placed */
+    /** Checks if the upper burger bun is correctly placed */
     bool isTopBunCorrect()
     {
         if (Vector3.Distance(TopBun.transform.position, Patty.transform.position) <= 0.07f)
@@ -83,7 +83,7 @@ public class BurgerStacking : MonoBehaviour
 
     }
 
-    /* Checks if the burger patty is correctly placed */
+    /** Checks if the burger patty is correctly placed */
     bool isPattyCorrect()
     {
         if (Vector3.Distance(Patty.transform.position, BottomBun.transform.position) <= 0.15f)
@@ -97,7 +97,7 @@ public class BurgerStacking : MonoBehaviour
         }
     }
 
-    /* Checks if cucumber is placed correctly */
+    /** Checks if cucumber is placed correctly */
     bool isCucumberCorrect()
     {
         if (Vector3.Distance(Patty.transform.position, Cucumber.transform.position) <= 0.1f)
@@ -111,7 +111,7 @@ public class BurgerStacking : MonoBehaviour
         }
     }
 
-    /* Checks if mustard and ketchup are spawned, must both be on the same side */
+    /** Checks if mustard and ketchup are spawned, must both be on the same side */
     bool areCondimentsCorrect()
     {
         if (condiments[1].enabled && condiments[2].enabled || condiments[3].enabled && condiments[4].enabled)

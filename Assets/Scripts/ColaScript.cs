@@ -1,4 +1,4 @@
-﻿/* This script handles the glass filling up with cola */
+﻿/*** This script handles the glass filling up with cola */
 
 using System.Collections;
 using System.Collections.Generic;
@@ -21,7 +21,7 @@ public class ColaScript : MonoBehaviour
 
     AllGlassesFilledScript filledScript;
 
-    // Start is called before the first frame update
+    /// Start is called before the first frame update
     void Start()
     {
         Liquid.GetComponent<Renderer>().enabled = false;
@@ -30,7 +30,7 @@ public class ColaScript : MonoBehaviour
         collide = Glass.transform.Find("PourCollider").GetComponent<Collider>();
     }
 
-    // Update is called once per frame
+    /// Update is called once per frame
     void Update()
     {
 
@@ -48,15 +48,15 @@ public class ColaScript : MonoBehaviour
         
     }
 
-    /* Creates the 'liquid' inside the glass*/
+    /** Creates the 'liquid' inside the glass*/
     void SpawnLiquid()
     {
         InitializeIfNeeded();
 
-        // GetParticles is allocation free because we reuse the particle buffer between updates
+        /// GetParticles is allocation free because we reuse the particle buffer between updates
         int numParticlesAlive = particles.GetParticles(particle);
 
-        // Change only the particles that are alive
+        /// Change only the particles that are alive
         for (int i = 0; i < numParticlesAlive; i++)
         {
             if (Vector3.Distance(particle[i].position, collide.transform.position) <= 0.05 && !glassIsFull)
@@ -79,11 +79,11 @@ public class ColaScript : MonoBehaviour
             }
         }
 
-        // Apply the particle changes to the Particle System
+        /// Apply the particle changes to the Particle System
         particles.SetParticles(particle, numParticlesAlive);
     }
 
-     /* Initialize the particle system with a set amount of particles if it doesn't exist correctly*/
+     /** Initialize the particle system with a set amount of particles if it doesn't exist correctly*/
     void InitializeIfNeeded()
     {
         if (particles == null)
@@ -93,7 +93,7 @@ public class ColaScript : MonoBehaviour
             particle = new ParticleSystem.Particle[particles.main.maxParticles];
     }
 
-    /* If the glass is tipped over more than a specific angle, 'empty' the cup, by diminishing the liquid inside */
+    /** If the glass is tipped over more than a specific angle, 'empty' the cup, by diminishing the liquid inside */
     void DespawnLiquid(){
 
         glassIsFull = false;
@@ -121,7 +121,7 @@ public class ColaScript : MonoBehaviour
         }
     }
 
-    /* See if the glass can be filled with liquid, or if it is too tilted for that */
+    /** See if the glass can be filled with liquid, or if it is too tilted for that */
     bool checkIfGlassUpright(){
         if (Vector3.Dot(Glass.transform.up, Vector3.up) >= 0.5f)
         {

@@ -1,4 +1,4 @@
-﻿/* This script handles the countdown that the player sees while they are playing a level */
+﻿/** This script handles the countdown that the player sees while they are playing a level */
 
 using System.Collections;
 using System.Collections.Generic;
@@ -12,15 +12,15 @@ public class LevelTimerScript : MonoBehaviour
     public static float timeRemaining;
     public static bool timerIsRunning = false;
 
-    private Label timerLabel; //for displaying the seconds on screen in game
+    private Label timerLabel; ///for displaying the seconds on screen in game
     private VisualElement messageWrapper;
 
-    //This function is called when the object becomes enabled and active.
+    ///This function is called when the object becomes enabled and active.
     private void OnEnable()
     {
-        //Gets the UI Document
+        ///Gets the UI Document
         var UIDocument = GetComponent<UIDocument>().rootVisualElement;
-        //Gets the Timer Label from the UIDocument with a Query
+        ///Gets the Timer Label from the UIDocument with a Query
         timerLabel = UIDocument.Q<Label>("CountDownLabel");
         messageWrapper = UIDocument.Q<VisualElement>("MessageWrapper");
     }
@@ -30,14 +30,14 @@ public class LevelTimerScript : MonoBehaviour
         Invoke("startTimer", 5);
     }
 
-    //Starts the timer with the correct amount of seconds
+    ///Starts the timer with the correct amount of seconds
     void startTimer(){
-        // Starts the timer automatically
+        /// Starts the timer automatically
         timerIsRunning = true;
         timeRemaining = 120;
     }
 
-    //Update is called once per frame 
+    ///Update is called once per frame 
     void Update()
     {
         if (timerIsRunning)
@@ -58,23 +58,23 @@ public class LevelTimerScript : MonoBehaviour
         }
     }
 
-    //if the time runs out, one life gets deducted and the scene reloads
+    ///if the time runs out, one life gets deducted and the scene reloads
     void Lost(){
         StoreLivesScript.lives -= 1;
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }
 
-    //Converts the remaining float time to a minute:seconds String
+    ///Converts the remaining float time to a minute:seconds String
     void DisplayTime(float timeToDisplay)
     {
         timeToDisplay += 1;
 
         float minutes = Mathf.FloorToInt(timeToDisplay / 60); 
-        //Calculates and stores the timer value in sec
+        ///Calculates and stores the timer value in sec
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
-        //Sets the timer value to the label
+        ///Sets the timer value to the label
         timerLabel.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
