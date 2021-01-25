@@ -1,9 +1,10 @@
-﻿using System.Collections;
+﻿/* This script handles the countdown that the player sees before the actual level with all its tasks starts */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-/* This script handles the countdown that the player sees before the actual level with all its tasks starts */
 public class CountdownScript : MonoBehaviour
 {
     private float timeRemaining = 5;

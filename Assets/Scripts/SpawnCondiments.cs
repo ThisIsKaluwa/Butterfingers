@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿/* This script handles how condiments appear on some food items
+These items include: Burger patties, sausages, fries */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/* This script handles how condiments appear on some food items
-These items include: Burger patties, sausages, fries */
+
 public class SpawnCondiments : MonoBehaviour
 {
 

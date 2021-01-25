@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿/* This script handles the countdown that the player sees while they are playing a level */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
-/* This script handles the countdown that the player sees while they are playing a level */
+
 public class LevelTimerScript : MonoBehaviour
 {
     public static float timeRemaining;

@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿/* This script handles the pausing of the game when the player hits "ESC" and how the pause menu functions */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
-/* This script handles the pausing of the game when the player hits "ESC" and how the pause menu functions */
+
 public class PauseMenuScript : MonoBehaviour
 {
     private static Button retryButton;

@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 /* This script must be attached to a ParticleSystem, which has to be a child of a GameObject
 This script handles when to play the ParticleSystem and when to stop it 
 
 created with the help of: https://www.infogamerhub.com/spill-effect-script/ 
 */
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class BottleSpillScript : MonoBehaviour
 {

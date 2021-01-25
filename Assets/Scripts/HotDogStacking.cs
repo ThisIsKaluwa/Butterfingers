@@ -1,11 +1,12 @@
+/* This script handles the construction of a hotdog 
+A hotdog consists of two buns, a sausage and three cucumbers
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/* This script handles the construction of a hotdog 
-A hotdog consists of two buns, a sausage and three cucumbers
-*/
 public class HotDogStacking : MonoBehaviour
 {
 

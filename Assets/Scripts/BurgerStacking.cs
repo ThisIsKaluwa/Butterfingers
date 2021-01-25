@@ -1,11 +1,12 @@
+/* This script handles the correct way of stacking a burger 
+The correct order (from bottom to top) is: bottom bun, patty, cucumber and a top bun
+ */
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/* This script handles the correct way of stacking a burger 
-The correct order (from bottom to top) is: bottom bun, patty, cucumber and a top bun
- */
 public class BurgerStacking : MonoBehaviour
 {
 

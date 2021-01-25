@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿/* This script is for handeling the score, saving it across scenes*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 
-/* This script is for handeling the score, saving it across scenes*/
+
 public static class EndScoreScript
 {
     private static int score;

@@ -1,9 +1,10 @@
+/* This scene handles the preparation of the fries, which are served in a paper tray
+This script needs to be attached to the tray the fries should be collected in*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/* This scene handles the preparation of the fries, which are served in a paper tray
-This script needs to be attached to the tray the fries should be collected in*/
 public class FriesScript : MonoBehaviour
 {
     public GameObject Fry;

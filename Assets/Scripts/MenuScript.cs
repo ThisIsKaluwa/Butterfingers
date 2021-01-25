@@ -1,11 +1,13 @@
-﻿using System.Collections;
+﻿/* This Level handles the Menu at the start of the game 
+The player can choose to either start the game or look at the tutorial */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
-/* This Level handles the Menu at the start of the game 
-The player can choose to either start the game or look at the tutorial */
+
 public class MenuScript : MonoBehaviour
 {
 

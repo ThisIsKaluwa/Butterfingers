@@ -1,10 +1,11 @@
-﻿using System.Collections;
+﻿/* This script handles the score the player receives at the end of the game, based on all the individual scores a player got */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
-/* This script handles the score the player receives at the end of the game, based on all the individual scores a player got */
 public class CalculateEndScoreScript : MonoBehaviour
 {
     private Label finalScoreLabel; //for displaying the Score on screen in game 

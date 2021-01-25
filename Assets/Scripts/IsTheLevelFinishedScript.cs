@@ -1,11 +1,13 @@
-﻿using System.Collections;
+﻿/* This script handles the checking whether or not the current level is finished
+It stops the timer is the player finishes the level, gets the score calculated at the right time and loads the next level */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-/* This script handles the checking whether or not the current level is finished
-It stops the timer is the player finishes the level, gets the score calculated at the right time and loads the next level */
+
 public class IsTheLevelFinishedScript : MonoBehaviour
 {
 

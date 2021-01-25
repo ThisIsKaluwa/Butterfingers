@@ -1,11 +1,13 @@
+/* This script handles the score a player receives after completing a level 
+This Script relies on a timer being used to meassure how sucessful the player is
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-/* This script handles the score a player receives after completing a level 
-This Script relies on a timer being used to meassure how sucessful the player is
-*/
+
 public class LevelScoreScript : MonoBehaviour
 {
     public static float timeLeft;

@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿/* This script handles the 'mixing' of a cocktail (specifically a screwdriver), which contains two inedients  */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/* This script handles the 'mixing' of a cocktail (specifically a screwdriver), which contains two inedients  */
 public class CocktailScript : MonoBehaviour
 {
 

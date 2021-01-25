@@ -1,9 +1,10 @@
-﻿using System.Collections;
+﻿/* This script handles the tracking of every meal that is yet to stack and every meal that is stacked to determine if every meal is assembled */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/* This script handles the tracking of every meal that is yet to stack and every meal that is stacked to determine if every meal is assembled */
 public class IsAllStackedScript : MonoBehaviour
 {
 

@@ -1,10 +1,11 @@
-﻿using System.Collections;
+﻿/* This script handles the displaying of lives in the current level */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
-/* This script handles the displaying of lives in the current level */
 public class DisplayLivesScript : MonoBehaviour
 {
     int howManyLives;
