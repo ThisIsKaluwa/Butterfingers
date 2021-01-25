@@ -1,4 +1,4 @@
-﻿/** This script handles the score the player receives at the end of the game, based on all the individual scores a player got */
+﻿/*! This script handles the score the player receives at the end of the game, based on all the individual scores a player got */
 
 using System.Collections;
 using System.Collections.Generic;
