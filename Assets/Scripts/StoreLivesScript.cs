@@ -6,7 +6,7 @@ using UnityEngine;
 public static class StoreLivesScript
 {
     public static int lives;
-    public static int Live 
+    public static int Life 
     {
         get 
         {

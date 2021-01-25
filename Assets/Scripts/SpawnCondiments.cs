@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* This script handles how condiments appear on some food items
+These items include: Burger patties, sausages, fries */
 public class SpawnCondiments : MonoBehaviour
 {
 
@@ -50,6 +52,7 @@ public class SpawnCondiments : MonoBehaviour
 
     }
 
+    //Makes the condiments visible if particles hit the item
     void spawnCondiment()
     {
 
@@ -98,6 +101,7 @@ public class SpawnCondiments : MonoBehaviour
         }
     }
 
+    /* Initialize the particle system with a set amount of particles if it doesn't exist correctly*/
     void InitializeIfNeeded()
     {
         if (particles == null)

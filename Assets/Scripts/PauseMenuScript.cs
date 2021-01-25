@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
+/* This script handles the pausing of the game when the player hits "ESC" and how the pause menu functions */
 public class PauseMenuScript : MonoBehaviour
 {
     private static Button retryButton;
@@ -17,7 +18,7 @@ public class PauseMenuScript : MonoBehaviour
     private bool tutorialShown = false;
     private bool isPaused = false;
 
-
+    //This function is called when the object becomes enabled and active.
     private void OnEnable() {
         //Gets the UI Document
         var UIDocument = GetComponent<UIDocument>().rootVisualElement;
@@ -60,20 +61,21 @@ public class PauseMenuScript : MonoBehaviour
         }
     }
 
-
+    //When the player hits pause the timer stops
     void Pause() { 
         menuContainer.style.display = DisplayStyle.Flex;
         Time.timeScale = 0f;
         isPaused = true;
     }
 
-
+    //end the game and brings the player back to the start menu
     void EndGame() {
         Time.timeScale = 1f;
         isPaused = false;
         SceneManager.LoadScene("Level0");
     }
 
+    //shows and hides the tutorial
     void ToggleTutorial() {
         if (tutorialShown) {
             tutorialWrapper.style.display = DisplayStyle.None;
@@ -86,13 +88,14 @@ public class PauseMenuScript : MonoBehaviour
         }
     }
 
+    //closes the menu and brings the player back to the level, the timer runs again
     void CloseMenu(){
         menuContainer.style.display = DisplayStyle.None;
         Time.timeScale = 1f;
         isPaused = false;
     }
 
-
+    //reloads the same level again 
     void Retry(){
         Scene scene = SceneManager.GetActiveScene(); 
         SceneManager.LoadScene(scene.name);

@@ -74,6 +74,7 @@ public class DisplayLivesScript : MonoBehaviour
         }
     }
 
+    //goes back to the start menu when the player lost all their lives
     void GameOver()
     {
         SceneManager.LoadScene(0);

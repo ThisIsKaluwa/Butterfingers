@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
-/* This Level handles the Menu at the start of the game */
+/* This Level handles the Menu at the start of the game 
+The player can choose to either start the game or look at the tutorial */
 public class MenuScript : MonoBehaviour
 {
 
@@ -15,7 +16,7 @@ public class MenuScript : MonoBehaviour
     private static VisualElement tutorialWrapper;
     private bool tutorialShown = false;
 
-
+    //This function is called when the object becomes enabled and active.
     private void OnEnable() {
         //Gets the UI Document
         var UIDocument = GetComponent<UIDocument>().rootVisualElement;

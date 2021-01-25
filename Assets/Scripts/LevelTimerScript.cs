@@ -13,6 +13,7 @@ public class LevelTimerScript : MonoBehaviour
     private Label timerLabel; //for displaying the seconds on screen in game
     private VisualElement messageWrapper;
 
+    //This function is called when the object becomes enabled and active.
     private void OnEnable()
     {
         //Gets the UI Document
@@ -27,6 +28,7 @@ public class LevelTimerScript : MonoBehaviour
         Invoke("startTimer", 5);
     }
 
+    //Starts the timer with the correct amount of seconds
     void startTimer(){
         // Starts the timer automatically
         timerIsRunning = true;
@@ -54,6 +56,7 @@ public class LevelTimerScript : MonoBehaviour
         }
     }
 
+    //if the time runs out, one life gets deducted and the scene reloads
     void Lost(){
         StoreLivesScript.lives -= 1;
         Scene scene = SceneManager.GetActiveScene();

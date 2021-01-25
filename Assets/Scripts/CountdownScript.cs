@@ -12,6 +12,7 @@ public class CountdownScript : MonoBehaviour
     private VisualElement timerContainer;
     int howManyLives;
 
+     //This function is called when the object becomes enabled and active.
     private void OnEnable() {
         //Gets the UI Document
         var UIDocument = GetComponent<UIDocument>().rootVisualElement;
@@ -50,6 +51,7 @@ public class CountdownScript : MonoBehaviour
         }
     }
 
+    //Show the time the player still has in seconds
     void DisplayTime(float timeToDisplay)
     {
         timeToDisplay += 1;
@@ -59,13 +61,14 @@ public class CountdownScript : MonoBehaviour
         timerLabel.text = string.Format("{0:0}",seconds);
     }
 
-
+    //Show the timer on the display
     void DisplayString(string stringToDisplay)
     {
         timerLabel.text = stringToDisplay;
         Invoke("Run", 1.0f);
     }
 
+    //once the game begins to run, don't show the timer anymore
     void Run() {
         timerContainer.style.display = DisplayStyle.None;
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/* This script handles the playing of the background music throughout the game*/
+/* This script handles the playing of the background music throughout the game, hindering the same music from spawning twice on level reload*/
 public class MusicPlayerScript : MonoBehaviour
 {
     void Awake()

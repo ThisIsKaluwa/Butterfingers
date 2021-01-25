@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
+/* This script handles the checking whether or not the current level is finished
+It stops the timer is the player finishes the level, gets the score calculated at the right time and loads the next level */
 public class IsTheLevelFinishedScript : MonoBehaviour
 {
 
@@ -40,6 +42,7 @@ public class IsTheLevelFinishedScript : MonoBehaviour
         }
     }
 
+    //When every order is finished the level gets wrapped up by stopping the timer and calculating a score
     void WrapUpTheLevel()
     {
 
@@ -58,6 +61,7 @@ public class IsTheLevelFinishedScript : MonoBehaviour
 
     }
 
+    //Responsible for which level should be loaded next, and if the game is over show the end screen
     void LoadTheNextLevel()
     {
 

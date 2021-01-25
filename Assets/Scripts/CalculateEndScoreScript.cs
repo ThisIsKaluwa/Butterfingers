@@ -65,10 +65,12 @@ public class CalculateEndScoreScript : MonoBehaviour
 
     }
 
+    //shows the player their endscore
     public static void ShowEndScore() {
         endWindow.style.display = DisplayStyle.Flex;
     }
 
+    //Button takes the player back to the start menu
     void EndGame() {
         SceneManager.LoadScene(0);
     }
