@@ -1,0 +1,94 @@
+\hypertarget{class_cola_script}{}\doxysection{Cola\+Script Class Reference}
+\label{class_cola_script}\index{ColaScript@{ColaScript}}
+Inheritance diagram for Cola\+Script\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cola_script}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cola_script_ac74b995f4e1c8e0e611787511ca5791a}\label{class_cola_script_ac74b995f4e1c8e0e611787511ca5791a}} 
+Particle\+System {\bfseries particles}
+\item 
+\mbox{\Hypertarget{class_cola_script_a965c203ea97f0da6d66fbe606e285235}\label{class_cola_script_a965c203ea97f0da6d66fbe606e285235}} 
+Game\+Object {\bfseries Liquid}
+\item 
+\mbox{\Hypertarget{class_cola_script_aae35e45e85aa1a45e7a4399cf6e7d5f2}\label{class_cola_script_aae35e45e85aa1a45e7a4399cf6e7d5f2}} 
+Game\+Object {\bfseries Glass}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cola_script_a848a6fa87c003f457a566554b26adec7}\label{class_cola_script_a848a6fa87c003f457a566554b26adec7}} 
+void \mbox{\hyperlink{class_cola_script_a848a6fa87c003f457a566554b26adec7}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Start is called before the first frame update. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cola_script_a1607e44f155d3408e9d9752ac541c1a3}\label{class_cola_script_a1607e44f155d3408e9d9752ac541c1a3}} 
+void \mbox{\hyperlink{class_cola_script_a1607e44f155d3408e9d9752ac541c1a3}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cola_script_a4730200250bd15381b5d2b2d9374d127}{Spawn\+Liquid}} ()
+\item 
+void \mbox{\hyperlink{class_cola_script_a5e4bb1ce03e48f8a317018a93a41747b}{Initialize\+If\+Needed}} ()
+\item 
+void \mbox{\hyperlink{class_cola_script_a6de0e282bba78c4269592c0f3b34bcde}{Despawn\+Liquid}} ()
+\item 
+bool \mbox{\hyperlink{class_cola_script_a2467058b05d4b5e5172e46cf7cd003e9}{check\+If\+Glass\+Upright}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cola_script_a86d3221cd3b7a2fb931d16de1d4066c6}\label{class_cola_script_a86d3221cd3b7a2fb931d16de1d4066c6}} 
+Particle\+System.\+Particle\mbox{[}$\,$\mbox{]} {\bfseries particle}
+\item 
+\mbox{\Hypertarget{class_cola_script_adb618bab3d42c52cbcc0b25291255901}\label{class_cola_script_adb618bab3d42c52cbcc0b25291255901}} 
+Collider {\bfseries collide}
+\item 
+\mbox{\Hypertarget{class_cola_script_ac14fa48d7b72a74dd93c4e5488c5ea48}\label{class_cola_script_ac14fa48d7b72a74dd93c4e5488c5ea48}} 
+bool {\bfseries glass\+Is\+Full} = false
+\item 
+\mbox{\Hypertarget{class_cola_script_a06120935142e77cadfcff2f5ed781511}\label{class_cola_script_a06120935142e77cadfcff2f5ed781511}} 
+bool {\bfseries glass\+Is\+Upright} = true
+\item 
+\mbox{\Hypertarget{class_cola_script_a57516208e3c4a8d053e81bb0c271cfe4}\label{class_cola_script_a57516208e3c4a8d053e81bb0c271cfe4}} 
+bool {\bfseries once\+Filled} = false
+\item 
+\mbox{\Hypertarget{class_cola_script_ac8dbfef5be5851e479498f5611edafce}\label{class_cola_script_ac8dbfef5be5851e479498f5611edafce}} 
+\mbox{\hyperlink{class_all_glasses_filled_script}{All\+Glasses\+Filled\+Script}} {\bfseries filled\+Script}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cola_script_a2467058b05d4b5e5172e46cf7cd003e9}\label{class_cola_script_a2467058b05d4b5e5172e46cf7cd003e9}} 
+\index{ColaScript@{ColaScript}!checkIfGlassUpright@{checkIfGlassUpright}}
+\index{checkIfGlassUpright@{checkIfGlassUpright}!ColaScript@{ColaScript}}
+\doxysubsubsection{\texorpdfstring{checkIfGlassUpright()}{checkIfGlassUpright()}}
+{\footnotesize\ttfamily bool Cola\+Script.\+check\+If\+Glass\+Upright (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+See if the glass can be filled with liquid, or if it is too tilted for that \mbox{\Hypertarget{class_cola_script_a6de0e282bba78c4269592c0f3b34bcde}\label{class_cola_script_a6de0e282bba78c4269592c0f3b34bcde}} 
+\index{ColaScript@{ColaScript}!DespawnLiquid@{DespawnLiquid}}
+\index{DespawnLiquid@{DespawnLiquid}!ColaScript@{ColaScript}}
+\doxysubsubsection{\texorpdfstring{DespawnLiquid()}{DespawnLiquid()}}
+{\footnotesize\ttfamily void Cola\+Script.\+Despawn\+Liquid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+If the glass is tipped over more than a specific angle, \textquotesingle{}empty\textquotesingle{} the cup, by diminishing the liquid inside \mbox{\Hypertarget{class_cola_script_a5e4bb1ce03e48f8a317018a93a41747b}\label{class_cola_script_a5e4bb1ce03e48f8a317018a93a41747b}} 
+\index{ColaScript@{ColaScript}!InitializeIfNeeded@{InitializeIfNeeded}}
+\index{InitializeIfNeeded@{InitializeIfNeeded}!ColaScript@{ColaScript}}
+\doxysubsubsection{\texorpdfstring{InitializeIfNeeded()}{InitializeIfNeeded()}}
+{\footnotesize\ttfamily void Cola\+Script.\+Initialize\+If\+Needed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Initialize the particle system with a set amount of particles if it doesn\textquotesingle{}t exist correctly \mbox{\Hypertarget{class_cola_script_a4730200250bd15381b5d2b2d9374d127}\label{class_cola_script_a4730200250bd15381b5d2b2d9374d127}} 
+\index{ColaScript@{ColaScript}!SpawnLiquid@{SpawnLiquid}}
+\index{SpawnLiquid@{SpawnLiquid}!ColaScript@{ColaScript}}
+\doxysubsubsection{\texorpdfstring{SpawnLiquid()}{SpawnLiquid()}}
+{\footnotesize\ttfamily void Cola\+Script.\+Spawn\+Liquid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Creates the \textquotesingle{}liquid\textquotesingle{} inside the glass Get\+Particles is allocation free because we reuse the particle buffer between updates
+
+Change only the particles that are alive
+
+Apply the particle changes to the Particle System
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Lena/\+Desktop/\+Unity/\+Butterfingers/\+Assets/\+Scripts/Cola\+Script.\+cs\end{DoxyCompactItemize}

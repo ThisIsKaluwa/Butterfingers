@@ -1,0 +1,70 @@
+\hypertarget{class_fries_script}{}\doxysection{Fries\+Script Class Reference}
+\label{class_fries_script}\index{FriesScript@{FriesScript}}
+Inheritance diagram for Fries\+Script\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_fries_script}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_fries_script_af53370f323a212f8458de2a13b6fcb99}\label{class_fries_script_af53370f323a212f8458de2a13b6fcb99}} 
+Game\+Object {\bfseries Fry}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_fries_script_abe2a46f304bff74aefbaea68037ee7a3}\label{class_fries_script_abe2a46f304bff74aefbaea68037ee7a3}} 
+void \mbox{\hyperlink{class_fries_script_abe2a46f304bff74aefbaea68037ee7a3}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Start is called before the first frame update. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_fries_script_a310d3c346b84d054edcfa88510b30cc4}\label{class_fries_script_a310d3c346b84d054edcfa88510b30cc4}} 
+void \mbox{\hyperlink{class_fries_script_a310d3c346b84d054edcfa88510b30cc4}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fries_script_a30b7debb437cf765b08cca44b8622ad0}{Spawn\+The\+Fries}} (int amount)
+\item 
+void \mbox{\hyperlink{class_fries_script_a38f69fbe43fe5543604c3490c23d749d}{On\+Trigger\+Enter}} (Collider other)
+\item 
+void \mbox{\hyperlink{class_fries_script_a7947c6b6c11fa9236b9eb64dab569ddf}{On\+Trigger\+Exit}} (Collider other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_fries_script_aa14a2c473949497027cfe11113a58ecb}\label{class_fries_script_aa14a2c473949497027cfe11113a58ecb}} 
+Renderer\mbox{[}$\,$\mbox{]} {\bfseries ketchup}
+\item 
+\mbox{\Hypertarget{class_fries_script_a7845cb055b528b2257563047eecfa7a4}\label{class_fries_script_a7845cb055b528b2257563047eecfa7a4}} 
+int {\bfseries all\+The\+Fries} = 5
+\item 
+\mbox{\Hypertarget{class_fries_script_af492173e5eb07b4ba38572830a85e321}\label{class_fries_script_af492173e5eb07b4ba38572830a85e321}} 
+List$<$ Game\+Object $>$ {\bfseries collected\+Fries} = new List$<$Game\+Object$>$()
+\item 
+\mbox{\Hypertarget{class_fries_script_a87d358435e1525024ac70dd3f2954877}\label{class_fries_script_a87d358435e1525024ac70dd3f2954877}} 
+\mbox{\hyperlink{class_is_all_stacked_script}{Is\+All\+Stacked\+Script}} {\bfseries done\+Script}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_fries_script_a38f69fbe43fe5543604c3490c23d749d}\label{class_fries_script_a38f69fbe43fe5543604c3490c23d749d}} 
+\index{FriesScript@{FriesScript}!OnTriggerEnter@{OnTriggerEnter}}
+\index{OnTriggerEnter@{OnTriggerEnter}!FriesScript@{FriesScript}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter()}{OnTriggerEnter()}}
+{\footnotesize\ttfamily void Fries\+Script.\+On\+Trigger\+Enter (\begin{DoxyParamCaption}\item[{Collider}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Counts how many fries are put into the tray \mbox{\Hypertarget{class_fries_script_a7947c6b6c11fa9236b9eb64dab569ddf}\label{class_fries_script_a7947c6b6c11fa9236b9eb64dab569ddf}} 
+\index{FriesScript@{FriesScript}!OnTriggerExit@{OnTriggerExit}}
+\index{OnTriggerExit@{OnTriggerExit}!FriesScript@{FriesScript}}
+\doxysubsubsection{\texorpdfstring{OnTriggerExit()}{OnTriggerExit()}}
+{\footnotesize\ttfamily void Fries\+Script.\+On\+Trigger\+Exit (\begin{DoxyParamCaption}\item[{Collider}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Counts how many fries exit the tray \mbox{\Hypertarget{class_fries_script_a30b7debb437cf765b08cca44b8622ad0}\label{class_fries_script_a30b7debb437cf765b08cca44b8622ad0}} 
+\index{FriesScript@{FriesScript}!SpawnTheFries@{SpawnTheFries}}
+\index{SpawnTheFries@{SpawnTheFries}!FriesScript@{FriesScript}}
+\doxysubsubsection{\texorpdfstring{SpawnTheFries()}{SpawnTheFries()}}
+{\footnotesize\ttfamily void Fries\+Script.\+Spawn\+The\+Fries (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Instantiate a set amount of fries somewhere in the scene thats reachable by hand 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Lena/\+Desktop/\+Unity/\+Butterfingers/\+Assets/\+Scripts/Fries\+Script.\+cs\end{DoxyCompactItemize}

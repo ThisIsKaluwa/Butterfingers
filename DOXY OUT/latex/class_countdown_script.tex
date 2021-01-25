@@ -1,0 +1,71 @@
+\hypertarget{class_countdown_script}{}\doxysection{Countdown\+Script Class Reference}
+\label{class_countdown_script}\index{CountdownScript@{CountdownScript}}
+Inheritance diagram for Countdown\+Script\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_countdown_script}
+\end{center}
+\end{figure}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_countdown_script_a90f1b7d5d8d69b4f68521fdd37aee8bb}{On\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_this}{This}} function is called when the object becomes enabled and active. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_countdown_script_a0d391694d1c5af3c12d0dcdaa83cff59}{Start}} ()
+\item 
+\mbox{\Hypertarget{class_countdown_script_a3f8b6df4677c8ebe36636096cdae8e9f}\label{class_countdown_script_a3f8b6df4677c8ebe36636096cdae8e9f}} 
+void \mbox{\hyperlink{class_countdown_script_a3f8b6df4677c8ebe36636096cdae8e9f}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_countdown_script_af42fc48f1f549a975add210b5d926d20}\label{class_countdown_script_af42fc48f1f549a975add210b5d926d20}} 
+void \mbox{\hyperlink{class_countdown_script_af42fc48f1f549a975add210b5d926d20}{Display\+Time}} (float time\+To\+Display)
+\begin{DoxyCompactList}\small\item\em Show the time the player still has in seconds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_countdown_script_acb341926d542e43f53fae6e10b8d21d2}\label{class_countdown_script_acb341926d542e43f53fae6e10b8d21d2}} 
+void \mbox{\hyperlink{class_countdown_script_acb341926d542e43f53fae6e10b8d21d2}{Display\+String}} (string string\+To\+Display)
+\begin{DoxyCompactList}\small\item\em Show the timer on the display. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_countdown_script_a72ff8a41ff299e97be673710c37575ca}\label{class_countdown_script_a72ff8a41ff299e97be673710c37575ca}} 
+void \mbox{\hyperlink{class_countdown_script_a72ff8a41ff299e97be673710c37575ca}{Run}} ()
+\begin{DoxyCompactList}\small\item\em once the game begins to run, don\textquotesingle{}t show the timer anymore \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_countdown_script_adbfbfe0a19c18aa88fae4316c5419135}\label{class_countdown_script_adbfbfe0a19c18aa88fae4316c5419135}} 
+float {\bfseries time\+Remaining} = 5
+\item 
+\mbox{\Hypertarget{class_countdown_script_a62c1443f83232515f17c875b3e739d32}\label{class_countdown_script_a62c1443f83232515f17c875b3e739d32}} 
+bool {\bfseries timer\+Is\+Running} = false
+\item 
+\mbox{\Hypertarget{class_countdown_script_a05349a4029462a872f8100bb10e4fba0}\label{class_countdown_script_a05349a4029462a872f8100bb10e4fba0}} 
+Label {\bfseries timer\+Label}
+\item 
+\mbox{\Hypertarget{class_countdown_script_a848084338ddb124893c6da5a95781fb3}\label{class_countdown_script_a848084338ddb124893c6da5a95781fb3}} 
+Visual\+Element \mbox{\hyperlink{class_countdown_script_a848084338ddb124893c6da5a95781fb3}{timer\+Container}}
+\begin{DoxyCompactList}\small\item\em for displaying the seconds on screen in game \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_countdown_script_aa3e3917a51424e500136b86fbf9ae5d3}\label{class_countdown_script_aa3e3917a51424e500136b86fbf9ae5d3}} 
+int {\bfseries how\+Many\+Lives}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_countdown_script_a90f1b7d5d8d69b4f68521fdd37aee8bb}\label{class_countdown_script_a90f1b7d5d8d69b4f68521fdd37aee8bb}} 
+\index{CountdownScript@{CountdownScript}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!CountdownScript@{CountdownScript}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily void Countdown\+Script.\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_this}{This}} function is called when the object becomes enabled and active. 
+
+Gets the UI Document
+
+Gets the Timer Label from the U\+I\+Document with a Query\mbox{\Hypertarget{class_countdown_script_a0d391694d1c5af3c12d0dcdaa83cff59}\label{class_countdown_script_a0d391694d1c5af3c12d0dcdaa83cff59}} 
+\index{CountdownScript@{CountdownScript}!Start@{Start}}
+\index{Start@{Start}!CountdownScript@{CountdownScript}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Countdown\+Script.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Starts the timer automatically if more than 0 lives
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Lena/\+Desktop/\+Unity/\+Butterfingers/\+Assets/\+Scripts/Countdown\+Script.\+cs\end{DoxyCompactItemize}

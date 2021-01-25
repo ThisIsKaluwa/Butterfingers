@@ -1,0 +1,75 @@
+\hypertarget{class_spawn_condiments}{}\doxysection{Spawn\+Condiments Class Reference}
+\label{class_spawn_condiments}\index{SpawnCondiments@{SpawnCondiments}}
+Inheritance diagram for Spawn\+Condiments\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_spawn_condiments}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_spawn_condiments_a377ac32b8340624402b3b7d089853fdc}\label{class_spawn_condiments_a377ac32b8340624402b3b7d089853fdc}} 
+Particle\+System {\bfseries Ketchup}
+\item 
+\mbox{\Hypertarget{class_spawn_condiments_a221bd3ac5357cbc2067c89d8fb28c1cd}\label{class_spawn_condiments_a221bd3ac5357cbc2067c89d8fb28c1cd}} 
+Particle\+System {\bfseries Mustard}
+\item 
+\mbox{\Hypertarget{class_spawn_condiments_a4668bcc6d21db8a60ca78df37de5b78c}\label{class_spawn_condiments_a4668bcc6d21db8a60ca78df37de5b78c}} 
+Game\+Object {\bfseries Condiments\+Spawn\+Here}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_spawn_condiments_a351fb91f2e939c57f577e7c0a729ebdf}\label{class_spawn_condiments_a351fb91f2e939c57f577e7c0a729ebdf}} 
+void \mbox{\hyperlink{class_spawn_condiments_a351fb91f2e939c57f577e7c0a729ebdf}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Start is called before the first frame update. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spawn_condiments_ae76f3a9e580250120cfe9870217c45d7}\label{class_spawn_condiments_ae76f3a9e580250120cfe9870217c45d7}} 
+void \mbox{\hyperlink{class_spawn_condiments_ae76f3a9e580250120cfe9870217c45d7}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_spawn_condiments_ab5993e7080e738df2cf740fe123d7346}{spawn\+Condiment}} ()
+\begin{DoxyCompactList}\small\item\em Makes the condiments visible if particles hit the item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_spawn_condiments_a98abefac314219be3c15a4d0e7144230}{Initialize\+If\+Needed}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_spawn_condiments_aebde8e9cdb8682ba6c79d5939e215cf7}\label{class_spawn_condiments_aebde8e9cdb8682ba6c79d5939e215cf7}} 
+bool {\bfseries no\+Ketchup\+Yet} = true
+\item 
+\mbox{\Hypertarget{class_spawn_condiments_a7a2aae58986716fef74565ad75fed25c}\label{class_spawn_condiments_a7a2aae58986716fef74565ad75fed25c}} 
+bool {\bfseries no\+Mustard\+Yet} = true
+\item 
+\mbox{\Hypertarget{class_spawn_condiments_acb1ae4c81a887ebe9fe496f6dad07da7}\label{class_spawn_condiments_acb1ae4c81a887ebe9fe496f6dad07da7}} 
+Renderer\mbox{[}$\,$\mbox{]} {\bfseries condiments}
+\item 
+\mbox{\Hypertarget{class_spawn_condiments_a4b8cbc0b0422f42ef255311c8130acfa}\label{class_spawn_condiments_a4b8cbc0b0422f42ef255311c8130acfa}} 
+Particle\+System {\bfseries particles}
+\item 
+\mbox{\Hypertarget{class_spawn_condiments_a29d87c52a6afc6e75762b5e819bae82d}\label{class_spawn_condiments_a29d87c52a6afc6e75762b5e819bae82d}} 
+Particle\+System.\+Particle\mbox{[}$\,$\mbox{]} {\bfseries particle}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_spawn_condiments_a98abefac314219be3c15a4d0e7144230}\label{class_spawn_condiments_a98abefac314219be3c15a4d0e7144230}} 
+\index{SpawnCondiments@{SpawnCondiments}!InitializeIfNeeded@{InitializeIfNeeded}}
+\index{InitializeIfNeeded@{InitializeIfNeeded}!SpawnCondiments@{SpawnCondiments}}
+\doxysubsubsection{\texorpdfstring{InitializeIfNeeded()}{InitializeIfNeeded()}}
+{\footnotesize\ttfamily void Spawn\+Condiments.\+Initialize\+If\+Needed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Initialize the particle system with a set amount of particles if it doesn\textquotesingle{}t exist correctly \mbox{\Hypertarget{class_spawn_condiments_ab5993e7080e738df2cf740fe123d7346}\label{class_spawn_condiments_ab5993e7080e738df2cf740fe123d7346}} 
+\index{SpawnCondiments@{SpawnCondiments}!spawnCondiment@{spawnCondiment}}
+\index{spawnCondiment@{spawnCondiment}!SpawnCondiments@{SpawnCondiments}}
+\doxysubsubsection{\texorpdfstring{spawnCondiment()}{spawnCondiment()}}
+{\footnotesize\ttfamily void Spawn\+Condiments.\+spawn\+Condiment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Makes the condiments visible if particles hit the item. 
+
+Change only the particles that are alive
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Lena/\+Desktop/\+Unity/\+Butterfingers/\+Assets/\+Scripts/Spawn\+Condiments.\+cs\end{DoxyCompactItemize}

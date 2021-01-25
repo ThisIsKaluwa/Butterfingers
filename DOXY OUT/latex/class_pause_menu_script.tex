@@ -1,0 +1,90 @@
+\hypertarget{class_pause_menu_script}{}\doxysection{Pause\+Menu\+Script Class Reference}
+\label{class_pause_menu_script}\index{PauseMenuScript@{PauseMenuScript}}
+Inheritance diagram for Pause\+Menu\+Script\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pause_menu_script}
+\end{center}
+\end{figure}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pause_menu_script_a4b016c7b5f112f3396982c065b3529f5}{On\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_this}{This}} function is called when the object becomes enabled and active. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pause_menu_script_a851c2b813e44a38cdcd801bcdd549097}\label{class_pause_menu_script_a851c2b813e44a38cdcd801bcdd549097}} 
+void \mbox{\hyperlink{class_pause_menu_script_a851c2b813e44a38cdcd801bcdd549097}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Start is called before the first frame update. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pause_menu_script_af433bd92474fa6181ff0c8afe5791dc7}\label{class_pause_menu_script_af433bd92474fa6181ff0c8afe5791dc7}} 
+void \mbox{\hyperlink{class_pause_menu_script_af433bd92474fa6181ff0c8afe5791dc7}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pause_menu_script_a9eedcd406392a0af822591bab3e2f3ad}\label{class_pause_menu_script_a9eedcd406392a0af822591bab3e2f3ad}} 
+void \mbox{\hyperlink{class_pause_menu_script_a9eedcd406392a0af822591bab3e2f3ad}{Pause}} ()
+\begin{DoxyCompactList}\small\item\em When the player hits pause the timer stops. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pause_menu_script_a2c5f6684b90eaef926d1b6266cf79b03}\label{class_pause_menu_script_a2c5f6684b90eaef926d1b6266cf79b03}} 
+void \mbox{\hyperlink{class_pause_menu_script_a2c5f6684b90eaef926d1b6266cf79b03}{End\+Game}} ()
+\begin{DoxyCompactList}\small\item\em end the game and brings the player back to the start menu \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pause_menu_script_a70e86f6b2a3ba54b8555d57bddd7d6e3}\label{class_pause_menu_script_a70e86f6b2a3ba54b8555d57bddd7d6e3}} 
+void \mbox{\hyperlink{class_pause_menu_script_a70e86f6b2a3ba54b8555d57bddd7d6e3}{Toggle\+Tutorial}} ()
+\begin{DoxyCompactList}\small\item\em shows and hides the tutorial \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pause_menu_script_a49a668d4c67608d70b994e85db57bbb0}\label{class_pause_menu_script_a49a668d4c67608d70b994e85db57bbb0}} 
+void \mbox{\hyperlink{class_pause_menu_script_a49a668d4c67608d70b994e85db57bbb0}{Close\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em closes the menu and brings the player back to the level, the timer runs again \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pause_menu_script_adb534b184da9f82d1b0e53a5d13d6767}\label{class_pause_menu_script_adb534b184da9f82d1b0e53a5d13d6767}} 
+void \mbox{\hyperlink{class_pause_menu_script_adb534b184da9f82d1b0e53a5d13d6767}{Retry}} ()
+\begin{DoxyCompactList}\small\item\em reloads the same level again \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pause_menu_script_a72f10dc79264df5f4c2eb2665374018f}\label{class_pause_menu_script_a72f10dc79264df5f4c2eb2665374018f}} 
+bool {\bfseries tutorial\+Shown} = false
+\item 
+\mbox{\Hypertarget{class_pause_menu_script_ab97e71b47b8a327614384ad0dc8cda0a}\label{class_pause_menu_script_ab97e71b47b8a327614384ad0dc8cda0a}} 
+bool {\bfseries is\+Paused} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pause_menu_script_a8d0f7b84d105944cd265f50d4e39b40e}\label{class_pause_menu_script_a8d0f7b84d105944cd265f50d4e39b40e}} 
+static Button {\bfseries retry\+Button}
+\item 
+\mbox{\Hypertarget{class_pause_menu_script_a192a47259a09d06756d0b25f1afb35e2}\label{class_pause_menu_script_a192a47259a09d06756d0b25f1afb35e2}} 
+static Button {\bfseries tutorial\+Button}
+\item 
+\mbox{\Hypertarget{class_pause_menu_script_aa4577889f5529c349a4782fa9d3e8e4a}\label{class_pause_menu_script_aa4577889f5529c349a4782fa9d3e8e4a}} 
+static Button {\bfseries end\+Game\+Button}
+\item 
+\mbox{\Hypertarget{class_pause_menu_script_a53cd7a81e2c4abb757fa810bf526f63a}\label{class_pause_menu_script_a53cd7a81e2c4abb757fa810bf526f63a}} 
+static Button {\bfseries close\+Button}
+\item 
+\mbox{\Hypertarget{class_pause_menu_script_a3684273f56e759d9e69b3515535dcb74}\label{class_pause_menu_script_a3684273f56e759d9e69b3515535dcb74}} 
+static Button {\bfseries close\+Tutorial\+Button}
+\item 
+\mbox{\Hypertarget{class_pause_menu_script_a3b680f91e90a6bc49aed9d83ce7cbceb}\label{class_pause_menu_script_a3b680f91e90a6bc49aed9d83ce7cbceb}} 
+static Visual\+Element {\bfseries menu\+Wrapper}
+\item 
+\mbox{\Hypertarget{class_pause_menu_script_ab53c6d1b7ec006a855f885ed9ce5cc44}\label{class_pause_menu_script_ab53c6d1b7ec006a855f885ed9ce5cc44}} 
+static Visual\+Element {\bfseries tutorial\+Wrapper}
+\item 
+\mbox{\Hypertarget{class_pause_menu_script_a6059b455fdbf57ca5db0fa9cb468a610}\label{class_pause_menu_script_a6059b455fdbf57ca5db0fa9cb468a610}} 
+static Visual\+Element {\bfseries menu\+Container}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pause_menu_script_a4b016c7b5f112f3396982c065b3529f5}\label{class_pause_menu_script_a4b016c7b5f112f3396982c065b3529f5}} 
+\index{PauseMenuScript@{PauseMenuScript}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!PauseMenuScript@{PauseMenuScript}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily void Pause\+Menu\+Script.\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_this}{This}} function is called when the object becomes enabled and active. 
+
+Gets the UI Document
+
+Gets all the Menu Components by Query
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Lena/\+Desktop/\+Unity/\+Butterfingers/\+Assets/\+Scripts/Pause\+Menu\+Script.\+cs\end{DoxyCompactItemize}

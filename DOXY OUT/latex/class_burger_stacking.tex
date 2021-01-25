@@ -1,0 +1,106 @@
+\hypertarget{class_burger_stacking}{}\doxysection{Burger\+Stacking Class Reference}
+\label{class_burger_stacking}\index{BurgerStacking@{BurgerStacking}}
+Inheritance diagram for Burger\+Stacking\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_burger_stacking}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_burger_stacking_a489cdbe6d5d372a78a8802d3d1b84923}\label{class_burger_stacking_a489cdbe6d5d372a78a8802d3d1b84923}} 
+Game\+Object {\bfseries Top\+Bun}
+\item 
+\mbox{\Hypertarget{class_burger_stacking_ab078278167583c840b4c9a2035b352a3}\label{class_burger_stacking_ab078278167583c840b4c9a2035b352a3}} 
+Game\+Object {\bfseries Cucumber}
+\item 
+\mbox{\Hypertarget{class_burger_stacking_abc62bd122fdb77b65f36a772ed86088a}\label{class_burger_stacking_abc62bd122fdb77b65f36a772ed86088a}} 
+Game\+Object {\bfseries Patty}
+\item 
+\mbox{\Hypertarget{class_burger_stacking_a637b6ee25c70cf5bbd9d3fc2f7984816}\label{class_burger_stacking_a637b6ee25c70cf5bbd9d3fc2f7984816}} 
+Game\+Object {\bfseries Bottom\+Bun}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_burger_stacking_a0e1ca529a3b04d558963df0b9f88a741}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Start is called before the first frame update. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_burger_stacking_a5316a07fed230f47d9a9108fb5284ff9}\label{class_burger_stacking_a5316a07fed230f47d9a9108fb5284ff9}} 
+void \mbox{\hyperlink{class_burger_stacking_a5316a07fed230f47d9a9108fb5284ff9}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_burger_stacking_a20b13e7705a0292cf0f0a961d807d6b6}{check\+If\+Top\+Bun\+Upright}} ()
+\item 
+bool \mbox{\hyperlink{class_burger_stacking_a752f63842f1ae52077c2ce46f3ba5430}{is\+Top\+Bun\+Correct}} ()
+\item 
+bool \mbox{\hyperlink{class_burger_stacking_ad6c05311f70f2f3c1397a20f7a02dde9}{is\+Patty\+Correct}} ()
+\item 
+bool \mbox{\hyperlink{class_burger_stacking_ac7b7435c6d88b50975acf68f41631b0d}{is\+Cucumber\+Correct}} ()
+\item 
+bool \mbox{\hyperlink{class_burger_stacking_a59a4d554b9f2f0eac22d72c68d2c3c54}{are\+Condiments\+Correct}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_burger_stacking_a861fa0be9815a43801833ab9fd69f394}\label{class_burger_stacking_a861fa0be9815a43801833ab9fd69f394}} 
+bool {\bfseries is\+Stacked} = false
+\item 
+\mbox{\Hypertarget{class_burger_stacking_a6bb5efcf83f0db17223de4fd7bbe18a4}\label{class_burger_stacking_a6bb5efcf83f0db17223de4fd7bbe18a4}} 
+Renderer\mbox{[}$\,$\mbox{]} {\bfseries condiments}
+\item 
+\mbox{\Hypertarget{class_burger_stacking_a32c6209d3e9aa81435a79b904d2043b0}\label{class_burger_stacking_a32c6209d3e9aa81435a79b904d2043b0}} 
+\mbox{\hyperlink{class_is_all_stacked_script}{Is\+All\+Stacked\+Script}} {\bfseries stacked}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_burger_stacking_a59a4d554b9f2f0eac22d72c68d2c3c54}\label{class_burger_stacking_a59a4d554b9f2f0eac22d72c68d2c3c54}} 
+\index{BurgerStacking@{BurgerStacking}!areCondimentsCorrect@{areCondimentsCorrect}}
+\index{areCondimentsCorrect@{areCondimentsCorrect}!BurgerStacking@{BurgerStacking}}
+\doxysubsubsection{\texorpdfstring{areCondimentsCorrect()}{areCondimentsCorrect()}}
+{\footnotesize\ttfamily bool Burger\+Stacking.\+are\+Condiments\+Correct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Checks if mustard and ketchup are spawned, must both be on the same side \mbox{\Hypertarget{class_burger_stacking_a20b13e7705a0292cf0f0a961d807d6b6}\label{class_burger_stacking_a20b13e7705a0292cf0f0a961d807d6b6}} 
+\index{BurgerStacking@{BurgerStacking}!checkIfTopBunUpright@{checkIfTopBunUpright}}
+\index{checkIfTopBunUpright@{checkIfTopBunUpright}!BurgerStacking@{BurgerStacking}}
+\doxysubsubsection{\texorpdfstring{checkIfTopBunUpright()}{checkIfTopBunUpright()}}
+{\footnotesize\ttfamily bool Burger\+Stacking.\+check\+If\+Top\+Bun\+Upright (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Checks if the upper bun of the buger is upright \begin{DoxyReturn}{Returns}
+true if the burger bun is upright (can be slightly tilted) 
+
+false if the burger bun is flipped upside down 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_burger_stacking_ac7b7435c6d88b50975acf68f41631b0d}\label{class_burger_stacking_ac7b7435c6d88b50975acf68f41631b0d}} 
+\index{BurgerStacking@{BurgerStacking}!isCucumberCorrect@{isCucumberCorrect}}
+\index{isCucumberCorrect@{isCucumberCorrect}!BurgerStacking@{BurgerStacking}}
+\doxysubsubsection{\texorpdfstring{isCucumberCorrect()}{isCucumberCorrect()}}
+{\footnotesize\ttfamily bool Burger\+Stacking.\+is\+Cucumber\+Correct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Checks if cucumber is placed correctly \mbox{\Hypertarget{class_burger_stacking_ad6c05311f70f2f3c1397a20f7a02dde9}\label{class_burger_stacking_ad6c05311f70f2f3c1397a20f7a02dde9}} 
+\index{BurgerStacking@{BurgerStacking}!isPattyCorrect@{isPattyCorrect}}
+\index{isPattyCorrect@{isPattyCorrect}!BurgerStacking@{BurgerStacking}}
+\doxysubsubsection{\texorpdfstring{isPattyCorrect()}{isPattyCorrect()}}
+{\footnotesize\ttfamily bool Burger\+Stacking.\+is\+Patty\+Correct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Checks if the burger patty is correctly placed \mbox{\Hypertarget{class_burger_stacking_a752f63842f1ae52077c2ce46f3ba5430}\label{class_burger_stacking_a752f63842f1ae52077c2ce46f3ba5430}} 
+\index{BurgerStacking@{BurgerStacking}!isTopBunCorrect@{isTopBunCorrect}}
+\index{isTopBunCorrect@{isTopBunCorrect}!BurgerStacking@{BurgerStacking}}
+\doxysubsubsection{\texorpdfstring{isTopBunCorrect()}{isTopBunCorrect()}}
+{\footnotesize\ttfamily bool Burger\+Stacking.\+is\+Top\+Bun\+Correct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Checks if the upper burger bun is correctly placed \mbox{\Hypertarget{class_burger_stacking_a0e1ca529a3b04d558963df0b9f88a741}\label{class_burger_stacking_a0e1ca529a3b04d558963df0b9f88a741}} 
+\index{BurgerStacking@{BurgerStacking}!Start@{Start}}
+\index{Start@{Start}!BurgerStacking@{BurgerStacking}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Burger\+Stacking.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Start is called before the first frame update. 
+
+increment how many items need to be stacked in the entire scene by one
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Lena/\+Desktop/\+Unity/\+Butterfingers/\+Assets/\+Scripts/Burger\+Stacking.\+cs\end{DoxyCompactItemize}

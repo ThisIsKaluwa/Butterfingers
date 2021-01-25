@@ -1,0 +1,86 @@
+\hypertarget{class_level_timer_script}{}\doxysection{Level\+Timer\+Script Class Reference}
+\label{class_level_timer_script}\index{LevelTimerScript@{LevelTimerScript}}
+Inheritance diagram for Level\+Timer\+Script\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_level_timer_script}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_level_timer_script_a9b8a35fa1eeb5ac5c9ef022b54a591b6}\label{class_level_timer_script_a9b8a35fa1eeb5ac5c9ef022b54a591b6}} 
+static float {\bfseries time\+Remaining}
+\item 
+\mbox{\Hypertarget{class_level_timer_script_a2327b60348b6786271e16778b4a3b068}\label{class_level_timer_script_a2327b60348b6786271e16778b4a3b068}} 
+static bool {\bfseries timer\+Is\+Running} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_level_timer_script_a27e3926cc61b41811ccc6f297d4df199}{On\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_this}{This}} function is called when the object becomes enabled and active. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_level_timer_script_a52edb4a6833b34120d1aa68c5b99f4b9}\label{class_level_timer_script_a52edb4a6833b34120d1aa68c5b99f4b9}} 
+void {\bfseries Start} ()
+\item 
+void \mbox{\hyperlink{class_level_timer_script_a0f1df76b21e2587caf54044fdc4968e2}{start\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Starts the timer with the correct amount of seconds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_level_timer_script_a8ef65a832c002782528b07feec9fde60}\label{class_level_timer_script_a8ef65a832c002782528b07feec9fde60}} 
+void \mbox{\hyperlink{class_level_timer_script_a8ef65a832c002782528b07feec9fde60}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Update is called once per frame. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_level_timer_script_a6578848e4a92dcccd74232855d31ca17}\label{class_level_timer_script_a6578848e4a92dcccd74232855d31ca17}} 
+void \mbox{\hyperlink{class_level_timer_script_a6578848e4a92dcccd74232855d31ca17}{Lost}} ()
+\begin{DoxyCompactList}\small\item\em if the time runs out, one life gets deducted and the scene reloads \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_level_timer_script_a696d29197b917264b97b0a1f3dc4146a}{Display\+Time}} (float time\+To\+Display)
+\begin{DoxyCompactList}\small\item\em Converts the remaining float time to a minute\+:seconds String. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_level_timer_script_a9172d137dfc4c24c8a421c85a5257587}\label{class_level_timer_script_a9172d137dfc4c24c8a421c85a5257587}} 
+Label {\bfseries timer\+Label}
+\item 
+\mbox{\Hypertarget{class_level_timer_script_a59015d27e5965cec870c19bb2ce28be5}\label{class_level_timer_script_a59015d27e5965cec870c19bb2ce28be5}} 
+Visual\+Element \mbox{\hyperlink{class_level_timer_script_a59015d27e5965cec870c19bb2ce28be5}{message\+Wrapper}}
+\begin{DoxyCompactList}\small\item\em for displaying the seconds on screen in game \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_level_timer_script_a696d29197b917264b97b0a1f3dc4146a}\label{class_level_timer_script_a696d29197b917264b97b0a1f3dc4146a}} 
+\index{LevelTimerScript@{LevelTimerScript}!DisplayTime@{DisplayTime}}
+\index{DisplayTime@{DisplayTime}!LevelTimerScript@{LevelTimerScript}}
+\doxysubsubsection{\texorpdfstring{DisplayTime()}{DisplayTime()}}
+{\footnotesize\ttfamily void Level\+Timer\+Script.\+Display\+Time (\begin{DoxyParamCaption}\item[{float}]{time\+To\+Display }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Converts the remaining float time to a minute\+:seconds String. 
+
+Calculates and stores the timer value in sec
+
+Sets the timer value to the label\mbox{\Hypertarget{class_level_timer_script_a27e3926cc61b41811ccc6f297d4df199}\label{class_level_timer_script_a27e3926cc61b41811ccc6f297d4df199}} 
+\index{LevelTimerScript@{LevelTimerScript}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!LevelTimerScript@{LevelTimerScript}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily void Level\+Timer\+Script.\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_this}{This}} function is called when the object becomes enabled and active. 
+
+Gets the UI Document
+
+Gets the Timer Label from the U\+I\+Document with a Query\mbox{\Hypertarget{class_level_timer_script_a0f1df76b21e2587caf54044fdc4968e2}\label{class_level_timer_script_a0f1df76b21e2587caf54044fdc4968e2}} 
+\index{LevelTimerScript@{LevelTimerScript}!startTimer@{startTimer}}
+\index{startTimer@{startTimer}!LevelTimerScript@{LevelTimerScript}}
+\doxysubsubsection{\texorpdfstring{startTimer()}{startTimer()}}
+{\footnotesize\ttfamily void Level\+Timer\+Script.\+start\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Starts the timer with the correct amount of seconds. 
+
+Starts the timer automatically
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Lena/\+Desktop/\+Unity/\+Butterfingers/\+Assets/\+Scripts/Level\+Timer\+Script.\+cs\end{DoxyCompactItemize}
